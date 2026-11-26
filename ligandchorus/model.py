@@ -52,8 +52,13 @@ class StructAwareFlowModel(nn.Module):
                 use_attention=True, use_chemical=True, use_temperature=True,
                 guidance_scale=guidance_scale)
 
-        for p in self.ligandmpnn.parameters():
-            p.requires_grad = False
+        self.ligandmpnn.requires_grad_(False)
+        self.ligandmpnn.eval()
+
+    def train(self, mode=True):
+        super().train(mode)
+        self.ligandmpnn.eval()
+        return self
 
     def forward(self, feature_dict, noisy_sequence, t):
         with torch.no_grad():
@@ -87,11 +92,14 @@ class StructAwareFlowModel(nn.Module):
         loss_masked = loss_all * mask_positions.float()
         return loss_masked.sum() / mask_positions.float().sum().clamp(min=1)
 
-    def compute_substitution_loss(self, feature_dict, clean_sequence, noisy_sequence, t):
+    def compute_substitution_loss(self, feature_dict, clean_sequence, noisy_sequence, t, *, encoded=None):
         """Predict clean residue identities from externally corrupted tokens (plan 2)."""
         valid = (feature_dict["mask"].bool() & feature_dict["chain_mask"].bool()
                  & (clean_sequence >= 0) & (clean_sequence < self.mask_token))
         if not valid.any():
             raise ValueError("Substitution loss requires at least one labeled design position")
-        logits = self.forward(feature_dict, noisy_sequence, t)
+        if encoded is None:
+            logits = self.forward(feature_dict, noisy_sequence, t)
+        else:
+            logits = self.decode(encoded, feature_dict["mask"], noisy_sequence, t)
         return F.cross_entropy(logits[valid][:, :self.mask_token].float(), clean_sequence[valid])

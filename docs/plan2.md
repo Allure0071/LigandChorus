@@ -1,0 +1,22 @@
+# 方案二：替换噪声与天然残基交叉熵
+
+正式协作仓库为 LigandChorus。方案一由同学负责，采用分轮揭开掩码。方案二在 `cloud` 分支开发，研究已有氨基酸能否在后续轮次得到修正。
+
+## 训练目标
+
+一次训练输入是氨基酸替换后得到的序列 `noisy_sequence`、结构条件和噪声阶段。监督目标始终为替换前的天然序列 `clean_sequence`。在结构有效、允许设计、天然身份属于 20 种标准氨基酸的位置上，取模型给天然类别的负对数概率，再对这些位置求平均。替换后碰巧保留原身份的位置也参与监督。
+
+例如天然是 L，加噪后变成 I。网络输入 I，交叉熵仍查 L 的概率。如果另一个位置天然是 V，加噪后还是 V，也查 V 的概率。BLOSUM 决定输入中哪些替换更常发生。把 BLOSUM 行归一化后用作交叉熵软标签，则会改变监督目标，应作为独立对照。
+
+## 仓库接口
+
+调用 `model.compute_substitution_loss(features, clean_sequence, noisy_sequence, t)`。两份序列使用相同的 `[B, L]` 整数编码，时间条件使用浮点 `[B]`。沿用 E18 的 21 维头，只对前 20 个 logits 做交叉熵归一化；token 20 是未知或掩码标记。批次没有有效监督时明确报错。
+
+方案二的时间约定拟采用前向噪声阶段编号 1 至 5，归一化为 `t = stage / 5`，1 对应最大噪声。原 E18 掩码训练的 t 表示已知概率，方向相反；复用训练过的 E18 时间嵌入时需要显式对齐语义。仓库的氨基酸顺序为 `ACDEFGHIKLMNPQRSTVWY`，加载替换矩阵时按字母重排。五阶段是本项目设想，原论文与本项目的阶段预算不同。
+
+当前分支提供损失接口。前向替换核、终点先验、对应的反向采样器和训练 CLI 的策略选择仍待实现。现有采样器只写回未填位置；要评价替换去噪，需另外验证已填位置能再次更新。对照实验以普通交叉熵为共同目标，比较均匀替换与 BLOSUM 替换。
+
+## 依据
+
+- [GraDe-IF，NeurIPS 2023](https://papers.neurips.cc/paper_files/paper/2023/hash/20888d00c5df685de2c09790040e0327-Abstract-Conference.html) 和[作者实现](https://github.com/ykiiiiii/GraDe_IF/blob/main/diffusion/gradeif.py)。`BlosumTransition` 定义转移，`pred_x0` 模式预测干净序列，默认 `loss_type='CE'`。
+- [D3PM，Austin 等](https://arxiv.org/abs/2107.03006)。给出离散转移矩阵的扩散框架，以及变分项与辅助交叉熵的联合目标。本项目首个损失接口对应干净类别预测。

@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "E18 structure-aware parallel decoding for fixed-backbone enzyme sequence design"
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = ["numpy>=1.24", "torch>=2.5"]
+dependencies = ["numpy>=1.23.5", "torch>=2.5.1"]
 
 [tool.setuptools.packages.find]
 include = ["ligandchorus*"]

@@ -12,7 +12,7 @@ The training and inference entry points are available through `python -m ligandc
 
 ## Structural inputs
 
-Both commands take preprocessed NumPy `.npz` records. Use the following keys.
+Both commands accept preprocessed structural records as NumPy `.npz` files or in the original E18 PyTorch data shards. Records contain the following arrays.
 
 | Key | Shape | Meaning |
 | --- | --- | --- |
@@ -25,7 +25,36 @@ Both commands take preprocessed NumPy `.npz` records. Use the following keys.
 
 Token IDs 0–19 follow `ACDEFGHIKLMNPQRSTVWY`. Token 20 denotes a mask or an unknown residue. During inference, `S` provides only the record shape and may contain placeholder tokens.
 
-## Training and inference
+## Use the existing server data
+
+The original E18 manifest has JSON Lines entries with `key`, `split`, `shard`, and `index`. Keep the manifest and `shards/` under the same directory, or pass `--shard-root` with the directory that contains `shards/`. The commands read the existing shards directly.
+
+Point the shell variables at your server data directory and the two local checkpoint files.
+
+```sh
+DATA_ROOT=/path/to/data
+LIGANDMPNN_WEIGHTS=/path/to/ligandmpnn_v_32_010_25.pt
+E18_WEIGHTS=/path/to/struct_aware_10kstruct.pt
+STRUCTURE_KEY=1a28_1
+```
+
+Run the trained E18 checkpoint on a structure selected by its exact manifest key.
+
+```sh
+python -m ligandchorus.infer --manifest "$DATA_ROOT/manifest_strict.jsonl" \
+  --key "$STRUCTURE_KEY" --weights "$E18_WEIGHTS" --output samples.npy
+```
+
+To retrain, initialize from the official LigandMPNN checkpoint. The training command keeps the manifest order, selects the first 10,000 assemblies with `split=train` by default, and trains the decoder for 25,000 optimizer steps.
+
+```sh
+python -m ligandchorus.train --manifest "$DATA_ROOT/manifest_strict.jsonl" \
+  --encoder-weights "$LIGANDMPNN_WEIGHTS" --output e18_retrained.pt
+```
+
+The server workflow was checked with PyTorch 2.5.1 and NumPy 1.23.5. Use data shards from your trusted project storage.
+
+## Use standalone NPZ inputs
 
 The training manifest is JSON Lines with one `{"path": "structures/example.npz"}` entry per training assembly. Relative paths are resolved against the manifest's directory. Supply the official `ligandmpnn_v_32_010_25.pt` checkpoint to initialize the frozen encoder. An inference run takes the resulting full E18 state dictionary.
 

@@ -8,12 +8,17 @@ import torch
 
 from .features import load_record, structure_to_feature_dict
 from .model import build_model
+from .records import RecordStore, find_entry
 from .sampling import sample
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, required=True, help="Structural record (.npz)")
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--input", type=Path, help="Structural record (.npz)")
+    source.add_argument("--manifest", type=Path, help="JSONL manifest containing a keyed structure")
+    parser.add_argument("--key", help="Structure key in the manifest")
+    parser.add_argument("--shard-root", type=Path, help="Directory for shard paths (defaults to the manifest directory)")
     parser.add_argument("--weights", type=Path, required=True, help="Full E18 state dictionary")
     parser.add_argument("--output", type=Path, required=True, help="Path for sampled token array (.npy)")
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
@@ -23,8 +28,17 @@ def main():
     parser.add_argument("--inside-temperature", type=float, default=0.29)
     parser.add_argument("--outside-temperature", type=float, default=0.24)
     args = parser.parse_args()
+    if args.manifest and not args.key:
+        parser.error("--manifest requires --key")
+    if args.input and (args.key is not None or args.shard_root is not None):
+        parser.error("--key and --shard-root require --manifest")
     device = torch.device(args.device)
-    features = structure_to_feature_dict(load_record(args.input), device)
+    if args.input:
+        record = load_record(args.input)
+    else:
+        entry = find_entry(args.manifest, args.key)
+        record = RecordStore(args.manifest, args.shard_root).read(entry)
+    features = structure_to_feature_dict(record, device)
     model = build_model(device)
     model.load_state_dict(torch.load(args.weights, map_location="cpu", weights_only=True))
     tokens = sample(

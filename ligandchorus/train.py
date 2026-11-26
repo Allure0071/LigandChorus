@@ -1,14 +1,14 @@
 """Train the E18 decoder with a frozen LigandMPNN encoder."""
 
 import argparse
-import json
 from pathlib import Path
 
 import numpy as np
 import torch
 
-from .features import load_record, structure_to_feature_dict
+from .features import structure_to_feature_dict
 from .model import build_model
+from .records import RecordStore, training_entries
 
 
 def train(model, features, device, steps, batch_size, learning_rate, seed):
@@ -34,7 +34,8 @@ def train(model, features, device, steps, batch_size, learning_rate, seed):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--manifest", type=Path, required=True, help="JSONL of training NPZ paths")
+    parser.add_argument("--manifest", type=Path, required=True, help="JSONL of NPZ paths or PyTorch shard entries")
+    parser.add_argument("--shard-root", type=Path, help="Directory for shard paths (defaults to the manifest directory)")
     parser.add_argument("--encoder-weights", type=Path, required=True, help="Official LigandMPNN checkpoint")
     parser.add_argument("--output", type=Path, required=True, help="Path for the full E18 state dictionary")
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
@@ -48,10 +49,9 @@ def main():
         parser.error("structures, steps, and batch-size must be positive")
     if args.output.exists():
         parser.error(f"Output already exists: {args.output}")
-    with args.manifest.open(encoding="utf-8") as stream:
-        records = [json.loads(line) for line in stream if line.strip()][:args.structures]
+    records = training_entries(args.manifest, args.structures)
     if not records:
-        parser.error("The training manifest is empty")
+        parser.error("The manifest contains no training records")
 
     torch.manual_seed(args.seed)
     device = torch.device(args.device)
@@ -60,10 +60,10 @@ def main():
     model.ligandmpnn.load_state_dict(state["model_state_dict"])
     model.train()
     model.ligandmpnn.eval()
-    features = [
-        structure_to_feature_dict(load_record(args.manifest.parent / item["path"]), "cpu")
-        for item in records
-    ]
+    print(f"Loading {len(records)} training assemblies", flush=True)
+    source = RecordStore(args.manifest, args.shard_root)
+    features = [structure_to_feature_dict(source.read(item), "cpu") for item in records]
+    del source
     train(model, features, device, args.steps, args.batch_size, args.learning_rate, args.seed)
     with args.output.open("xb") as stream:
         torch.save(model.state_dict(), stream)

@@ -1,0 +1,4889 @@
+{
+  "device": {
+    "name": "NVIDIA GeForce RTX 4090 D",
+    "physical_gpu_index": 0,
+    "device": "cuda:0",
+    "shared_across_models": true
+  },
+  "samples": 10,
+  "method": {
+    "sample_budget": 10,
+    "model_residency": "one load and one off-panel warmup per phase",
+    "warm_seconds": "CUDA-synchronized model-specific input preparation, inference and required reconstruction. Excludes top-level model loading and final output file writes.",
+    "case_wall_seconds": "CUDA-synchronized wall time of the resident per-case call with output serialization and per-model checks.",
+    "model_load_timing": "Engine initialization and checkpoint load reported separately.",
+    "scoring": "Run after all model phases and exclude from inference timings.",
+    "lasermpnn": "Sum upstream per-batch preprocessing, inference and required side-chain reconstruction. Output CA verifies against official idealization.",
+    "adflip": "Includes required iterative side-chain packing, parser audits and intermediate structure I/O."
+  },
+  "groups": {
+    "enzyme": {
+      "e18": {
+        "warm_seconds": {
+          "median": 0.04729831049917266,
+          "p90": 0.07140383492223919
+        },
+        "case_wall_seconds": {
+          "median": 0.047699188464321196,
+          "p90": 0.07174907290609553
+        }
+      },
+      "ligandmpnn": {
+        "warm_seconds": {
+          "median": 0.8467058385140263,
+          "p90": 1.3699512117425912
+        },
+        "case_wall_seconds": {
+          "median": 1.0786548319738358,
+          "p90": 1.8328502833261155
+        }
+      },
+      "lasermpnn": {
+        "warm_seconds": {
+          "median": 17.989245820906945,
+          "p90": 33.73654147168854
+        },
+        "case_wall_seconds": {
+          "median": 19.859450256975833,
+          "p90": 37.12845839348156
+        }
+      },
+      "adflip": {
+        "warm_seconds": {
+          "median": 35.22130064299563,
+          "p90": 52.193814828351606
+        },
+        "case_wall_seconds": {
+          "median": 35.22221638850169,
+          "p90": 52.19493435632903
+        }
+      }
+    },
+    "nonenzyme": {
+      "e18": {
+        "warm_seconds": {
+          "median": 0.04144006798742339,
+          "p90": 0.06560793936951086
+        },
+        "case_wall_seconds": {
+          "median": 0.04176595399621874,
+          "p90": 0.06595805138349534
+        }
+      },
+      "ligandmpnn": {
+        "warm_seconds": {
+          "median": 0.7227406154270284,
+          "p90": 1.4627650552545675
+        },
+        "case_wall_seconds": {
+          "median": 0.9248005530098453,
+          "p90": 1.8703557933680712
+        }
+      },
+      "lasermpnn": {
+        "warm_seconds": {
+          "median": 18.106278563500382,
+          "p90": 35.005804857017935
+        },
+        "case_wall_seconds": {
+          "median": 20.0806013335241,
+          "p90": 38.68885893780971
+        }
+      },
+      "adflip": {
+        "warm_seconds": {
+          "median": 34.11829959251918,
+          "p90": 50.32444493432995
+        },
+        "case_wall_seconds": {
+          "median": 34.119118187518325,
+          "p90": 50.325797884806526
+        }
+      }
+    }
+  },
+  "model_load": {
+    "e18": {
+      "load_seconds": 0.45869779610075057,
+      "device": "NVIDIA GeForce RTX 4090 D",
+      "warmup_cases": 1
+    },
+    "ligandmpnn": {
+      "load_seconds": 0.8592383890645579,
+      "device": "NVIDIA GeForce RTX 4090 D",
+      "warmup_cases": 1
+    },
+    "lasermpnn": {
+      "load_seconds": 2.7658346029929817,
+      "device": "NVIDIA GeForce RTX 4090 D",
+      "warmup_cases": 1
+    },
+    "adflip": {
+      "load_seconds": 26.812381199910305,
+      "device": "NVIDIA GeForce RTX 4090 D",
+      "warmup_cases": 1
+    }
+  },
+  "cases": [
+    {
+      "key": "1elb",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "1elb",
+          "samples": 10,
+          "warm_seconds": 0.04801102099008858,
+          "case_wall_seconds": 0.0484295500209555,
+          "seed": 20261127
+        },
+        "ligandmpnn": {
+          "key": "1elb",
+          "samples": 10,
+          "warm_seconds": 0.7998504920396954,
+          "case_wall_seconds": 1.011668591061607,
+          "seed": 20261127
+        },
+        "lasermpnn": {
+          "key": "1elb",
+          "samples": 10,
+          "warm_seconds": 18.565681370790116,
+          "case_wall_seconds": 20.506080599036068,
+          "seed": 20261127
+        },
+        "adflip": {
+          "key": "1elb",
+          "samples": 10,
+          "warm_seconds": 33.27540438401047,
+          "case_wall_seconds": 33.27665109408554,
+          "seed": 20261127
+        }
+      }
+    },
+    {
+      "key": "1elc",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "1elc",
+          "samples": 10,
+          "warm_seconds": 0.04785190999973565,
+          "case_wall_seconds": 0.0483099389821291,
+          "seed": 20261128
+        },
+        "ligandmpnn": {
+          "key": "1elc",
+          "samples": 10,
+          "warm_seconds": 0.8705982649698853,
+          "case_wall_seconds": 1.1559085010085255,
+          "seed": 20261128
+        },
+        "lasermpnn": {
+          "key": "1elc",
+          "samples": 10,
+          "warm_seconds": 17.765536272898316,
+          "case_wall_seconds": 19.568711717962287,
+          "seed": 20261128
+        },
+        "adflip": {
+          "key": "1elc",
+          "samples": 10,
+          "warm_seconds": 32.509442495997064,
+          "case_wall_seconds": 32.51028688403312,
+          "seed": 20261128
+        }
+      }
+    },
+    {
+      "key": "1qb1",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "1qb1",
+          "samples": 10,
+          "warm_seconds": 0.05009478493593633,
+          "case_wall_seconds": 0.05045914894435555,
+          "seed": 20261129
+        },
+        "ligandmpnn": {
+          "key": "1qb1",
+          "samples": 10,
+          "warm_seconds": 0.7722603450529277,
+          "case_wall_seconds": 1.032464227057062,
+          "seed": 20261129
+        },
+        "lasermpnn": {
+          "key": "1qb1",
+          "samples": 10,
+          "warm_seconds": 16.435007451102138,
+          "case_wall_seconds": 18.081727002980188,
+          "seed": 20261129
+        },
+        "adflip": {
+          "key": "1qb1",
+          "samples": 10,
+          "warm_seconds": 34.78491359797772,
+          "case_wall_seconds": 34.785693806945346,
+          "seed": 20261129
+        }
+      }
+    },
+    {
+      "key": "1v2n",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "1v2n",
+          "samples": 10,
+          "warm_seconds": 0.04611015203408897,
+          "case_wall_seconds": 0.04648536699824035,
+          "seed": 20261130
+        },
+        "ligandmpnn": {
+          "key": "1v2n",
+          "samples": 10,
+          "warm_seconds": 0.7329175369814038,
+          "case_wall_seconds": 0.9815818179631606,
+          "seed": 20261130
+        },
+        "lasermpnn": {
+          "key": "1v2n",
+          "samples": 10,
+          "warm_seconds": 17.313214878900908,
+          "case_wall_seconds": 19.11577331100125,
+          "seed": 20261130
+        },
+        "adflip": {
+          "key": "1v2n",
+          "samples": 10,
+          "warm_seconds": 32.40948350797407,
+          "case_wall_seconds": 32.41027466894593,
+          "seed": 20261130
+        }
+      }
+    },
+    {
+      "key": "3gy3",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3gy3",
+          "samples": 10,
+          "warm_seconds": 0.04648828005883843,
+          "case_wall_seconds": 0.04682187794242054,
+          "seed": 20261131
+        },
+        "ligandmpnn": {
+          "key": "3gy3",
+          "samples": 10,
+          "warm_seconds": 0.7736301639815792,
+          "case_wall_seconds": 1.0165178789757192,
+          "seed": 20261131
+        },
+        "lasermpnn": {
+          "key": "3gy3",
+          "samples": 10,
+          "warm_seconds": 17.163840359891765,
+          "case_wall_seconds": 19.00505276490003,
+          "seed": 20261131
+        },
+        "adflip": {
+          "key": "3gy3",
+          "samples": 10,
+          "warm_seconds": 20.542364067048766,
+          "case_wall_seconds": 20.54317259893287,
+          "seed": 20261131
+        }
+      }
+    },
+    {
+      "key": "3m35",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3m35",
+          "samples": 10,
+          "warm_seconds": 0.048865802004002035,
+          "case_wall_seconds": 0.0493182020727545,
+          "seed": 20261132
+        },
+        "ligandmpnn": {
+          "key": "3m35",
+          "samples": 10,
+          "warm_seconds": 0.8001703839981928,
+          "case_wall_seconds": 1.024287354084663,
+          "seed": 20261132
+        },
+        "lasermpnn": {
+          "key": "3m35",
+          "samples": 10,
+          "warm_seconds": 16.778324931976385,
+          "case_wall_seconds": 18.521910045063123,
+          "seed": 20261132
+        },
+        "adflip": {
+          "key": "3m35",
+          "samples": 10,
+          "warm_seconds": 33.625788584933616,
+          "case_wall_seconds": 33.626606788951904,
+          "seed": 20261132
+        }
+      }
+    },
+    {
+      "key": "1yc1",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "1yc1",
+          "samples": 10,
+          "warm_seconds": 0.046372713055461645,
+          "case_wall_seconds": 0.04679795994888991,
+          "seed": 20261133
+        },
+        "ligandmpnn": {
+          "key": "1yc1",
+          "samples": 10,
+          "warm_seconds": 0.81500570604112,
+          "case_wall_seconds": 1.021254169056192,
+          "seed": 20261133
+        },
+        "lasermpnn": {
+          "key": "1yc1",
+          "samples": 10,
+          "warm_seconds": 16.587381981080398,
+          "case_wall_seconds": 18.473949191044085,
+          "seed": 20261133
+        },
+        "adflip": {
+          "key": "1yc1",
+          "samples": 10,
+          "warm_seconds": 31.86745892406907,
+          "case_wall_seconds": 31.868268359918147,
+          "seed": 20261133
+        }
+      }
+    },
+    {
+      "key": "2bsm",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2bsm",
+          "samples": 10,
+          "warm_seconds": 0.07944217300973833,
+          "case_wall_seconds": 0.07990213599987328,
+          "seed": 20261134
+        },
+        "ligandmpnn": {
+          "key": "2bsm",
+          "samples": 10,
+          "warm_seconds": 1.3983072759583592,
+          "case_wall_seconds": 1.724353448022157,
+          "seed": 20261134
+        },
+        "lasermpnn": {
+          "key": "2bsm",
+          "samples": 10,
+          "warm_seconds": 31.655144089017995,
+          "case_wall_seconds": 34.95539051806554,
+          "seed": 20261134
+        },
+        "adflip": {
+          "key": "2bsm",
+          "samples": 10,
+          "warm_seconds": 48.03542317496613,
+          "case_wall_seconds": 48.036498542060144,
+          "seed": 20261134
+        }
+      }
+    },
+    {
+      "key": "2iwx",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2iwx",
+          "samples": 10,
+          "warm_seconds": 0.05007781402673572,
+          "case_wall_seconds": 0.05051236902363598,
+          "seed": 20261135
+        },
+        "ligandmpnn": {
+          "key": "2iwx",
+          "samples": 10,
+          "warm_seconds": 0.6100930059328675,
+          "case_wall_seconds": 0.8119131909916177,
+          "seed": 20261135
+        },
+        "lasermpnn": {
+          "key": "2iwx",
+          "samples": 10,
+          "warm_seconds": 16.823511567898095,
+          "case_wall_seconds": 18.66540331300348,
+          "seed": 20261135
+        },
+        "adflip": {
+          "key": "2iwx",
+          "samples": 10,
+          "warm_seconds": 31.172288661939092,
+          "case_wall_seconds": 31.173152595059946,
+          "seed": 20261135
+        }
+      }
+    },
+    {
+      "key": "2vw5",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2vw5",
+          "samples": 10,
+          "warm_seconds": 0.0613112150458619,
+          "case_wall_seconds": 0.06191081798169762,
+          "seed": 20261136
+        },
+        "ligandmpnn": {
+          "key": "2vw5",
+          "samples": 10,
+          "warm_seconds": 0.6675630540121347,
+          "case_wall_seconds": 0.88558059791103,
+          "seed": 20261136
+        },
+        "lasermpnn": {
+          "key": "2vw5",
+          "samples": 10,
+          "warm_seconds": 15.77852914284449,
+          "case_wall_seconds": 17.44942864496261,
+          "seed": 20261136
+        },
+        "adflip": {
+          "key": "2vw5",
+          "samples": 10,
+          "warm_seconds": 38.145888487109914,
+          "case_wall_seconds": 38.147077652974986,
+          "seed": 20261136
+        }
+      }
+    },
+    {
+      "key": "2vwc",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2vwc",
+          "samples": 10,
+          "warm_seconds": 0.04396481497678906,
+          "case_wall_seconds": 0.04428725701291114,
+          "seed": 20261137
+        },
+        "ligandmpnn": {
+          "key": "2vwc",
+          "samples": 10,
+          "warm_seconds": 0.6122491769492626,
+          "case_wall_seconds": 0.7754320519743487,
+          "seed": 20261137
+        },
+        "lasermpnn": {
+          "key": "2vwc",
+          "samples": 10,
+          "warm_seconds": 15.560121263028122,
+          "case_wall_seconds": 17.20660150202457,
+          "seed": 20261137
+        },
+        "adflip": {
+          "key": "2vwc",
+          "samples": 10,
+          "warm_seconds": 24.18614824989345,
+          "case_wall_seconds": 24.186929767020047,
+          "seed": 20261137
+        }
+      }
+    },
+    {
+      "key": "2weq",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2weq",
+          "samples": 10,
+          "warm_seconds": 0.06932034704368562,
+          "case_wall_seconds": 0.06968812202103436,
+          "seed": 20261138
+        },
+        "ligandmpnn": {
+          "key": "2weq",
+          "samples": 10,
+          "warm_seconds": 1.3670578020391986,
+          "case_wall_seconds": 1.7269050150644034,
+          "seed": 20261138
+        },
+        "lasermpnn": {
+          "key": "2weq",
+          "samples": 10,
+          "warm_seconds": 30.957715310971253,
+          "case_wall_seconds": 34.14752654789481,
+          "seed": 20261138
+        },
+        "adflip": {
+          "key": "2weq",
+          "samples": 10,
+          "warm_seconds": 52.44783969700802,
+          "case_wall_seconds": 52.44893090997357,
+          "seed": 20261138
+        }
+      }
+    },
+    {
+      "key": "2xab",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2xab",
+          "samples": 10,
+          "warm_seconds": 0.047269842005334795,
+          "case_wall_seconds": 0.047637649928219616,
+          "seed": 20261139
+        },
+        "ligandmpnn": {
+          "key": "2xab",
+          "samples": 10,
+          "warm_seconds": 0.5933374420274049,
+          "case_wall_seconds": 0.750942533952184,
+          "seed": 20261139
+        },
+        "lasermpnn": {
+          "key": "2xab",
+          "samples": 10,
+          "warm_seconds": 15.74168561026454,
+          "case_wall_seconds": 17.427151086973026,
+          "seed": 20261139
+        },
+        "adflip": {
+          "key": "2xab",
+          "samples": 10,
+          "warm_seconds": 29.96304029005114,
+          "case_wall_seconds": 29.963795384042896,
+          "seed": 20261139
+        }
+      }
+    },
+    {
+      "key": "2xht",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2xht",
+          "samples": 10,
+          "warm_seconds": 0.04715014295652509,
+          "case_wall_seconds": 0.04755646304693073,
+          "seed": 20261140
+        },
+        "ligandmpnn": {
+          "key": "2xht",
+          "samples": 10,
+          "warm_seconds": 0.6083116669906303,
+          "case_wall_seconds": 0.7981159780174494,
+          "seed": 20261140
+        },
+        "lasermpnn": {
+          "key": "2xht",
+          "samples": 10,
+          "warm_seconds": 16.552733890130185,
+          "case_wall_seconds": 18.24099599895999,
+          "seed": 20261140
+        },
+        "adflip": {
+          "key": "2xht",
+          "samples": 10,
+          "warm_seconds": 33.29448440100532,
+          "case_wall_seconds": 33.29526557691861,
+          "seed": 20261140
+        }
+      }
+    },
+    {
+      "key": "2xjg",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2xjg",
+          "samples": 10,
+          "warm_seconds": 0.04732677899301052,
+          "case_wall_seconds": 0.047760727000422776,
+          "seed": 20261141
+        },
+        "ligandmpnn": {
+          "key": "2xjg",
+          "samples": 10,
+          "warm_seconds": 0.6747673089848831,
+          "case_wall_seconds": 0.8993639689870179,
+          "seed": 20261141
+        },
+        "lasermpnn": {
+          "key": "2xjg",
+          "samples": 10,
+          "warm_seconds": 16.10512524691876,
+          "case_wall_seconds": 17.776874184026383,
+          "seed": 20261141
+        },
+        "adflip": {
+          "key": "2xjg",
+          "samples": 10,
+          "warm_seconds": 33.379556101048365,
+          "case_wall_seconds": 33.380648809019476,
+          "seed": 20261141
+        }
+      }
+    },
+    {
+      "key": "2xjx",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2xjx",
+          "samples": 10,
+          "warm_seconds": 0.046175334020517766,
+          "case_wall_seconds": 0.04651815292891115,
+          "seed": 20261142
+        },
+        "ligandmpnn": {
+          "key": "2xjx",
+          "samples": 10,
+          "warm_seconds": 0.6362472879700363,
+          "case_wall_seconds": 0.8047984730219468,
+          "seed": 20261142
+        },
+        "lasermpnn": {
+          "key": "2xjx",
+          "samples": 10,
+          "warm_seconds": 17.540076224016957,
+          "case_wall_seconds": 19.353597459965385,
+          "seed": 20261142
+        },
+        "adflip": {
+          "key": "2xjx",
+          "samples": 10,
+          "warm_seconds": 36.871918939985335,
+          "case_wall_seconds": 36.87265959603246,
+          "seed": 20261142
+        }
+      }
+    },
+    {
+      "key": "2yge",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2yge",
+          "samples": 10,
+          "warm_seconds": 0.0446716210572049,
+          "case_wall_seconds": 0.045021514990366995,
+          "seed": 20261143
+        },
+        "ligandmpnn": {
+          "key": "2yge",
+          "samples": 10,
+          "warm_seconds": 0.6818988389568403,
+          "case_wall_seconds": 0.9524738199543208,
+          "seed": 20261143
+        },
+        "lasermpnn": {
+          "key": "2yge",
+          "samples": 10,
+          "warm_seconds": 17.292568240198307,
+          "case_wall_seconds": 19.02942478598561,
+          "seed": 20261143
+        },
+        "adflip": {
+          "key": "2yge",
+          "samples": 10,
+          "warm_seconds": 40.00733998697251,
+          "case_wall_seconds": 40.00828509707935,
+          "seed": 20261143
+        }
+      }
+    },
+    {
+      "key": "2ygf",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2ygf",
+          "samples": 10,
+          "warm_seconds": 0.046928399009630084,
+          "case_wall_seconds": 0.04731043800711632,
+          "seed": 20261144
+        },
+        "ligandmpnn": {
+          "key": "2ygf",
+          "samples": 10,
+          "warm_seconds": 0.6848108239937574,
+          "case_wall_seconds": 0.980430880910717,
+          "seed": 20261144
+        },
+        "lasermpnn": {
+          "key": "2ygf",
+          "samples": 10,
+          "warm_seconds": 16.91313803580124,
+          "case_wall_seconds": 18.804121363093145,
+          "seed": 20261144
+        },
+        "adflip": {
+          "key": "2ygf",
+          "samples": 10,
+          "warm_seconds": 39.14822745602578,
+          "case_wall_seconds": 39.14917437196709,
+          "seed": 20261144
+        }
+      }
+    },
+    {
+      "key": "2yi0",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2yi0",
+          "samples": 10,
+          "warm_seconds": 0.07724147697445005,
+          "case_wall_seconds": 0.07764211902394891,
+          "seed": 20261145
+        },
+        "ligandmpnn": {
+          "key": "2yi0",
+          "samples": 10,
+          "warm_seconds": 1.395991899073124,
+          "case_wall_seconds": 1.8363474979996681,
+          "seed": 20261145
+        },
+        "lasermpnn": {
+          "key": "2yi0",
+          "samples": 10,
+          "warm_seconds": 31.774404705967754,
+          "case_wall_seconds": 35.047632470028475,
+          "seed": 20261145
+        },
+        "adflip": {
+          "key": "2yi0",
+          "samples": 10,
+          "warm_seconds": 22.64893829706125,
+          "case_wall_seconds": 22.64987578499131,
+          "seed": 20261145
+        }
+      }
+    },
+    {
+      "key": "2yi7",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2yi7",
+          "samples": 10,
+          "warm_seconds": 0.07075520802754909,
+          "case_wall_seconds": 0.07109429000411183,
+          "seed": 20261146
+        },
+        "ligandmpnn": {
+          "key": "2yi7",
+          "samples": 10,
+          "warm_seconds": 1.3357354099862278,
+          "case_wall_seconds": 1.832461703917943,
+          "seed": 20261146
+        },
+        "lasermpnn": {
+          "key": "2yi7",
+          "samples": 10,
+          "warm_seconds": 32.426295457058586,
+          "case_wall_seconds": 35.87522379797883,
+          "seed": 20261146
+        },
+        "adflip": {
+          "key": "2yi7",
+          "samples": 10,
+          "warm_seconds": 55.6913548540324,
+          "case_wall_seconds": 55.69269055000041,
+          "seed": 20261146
+        }
+      }
+    },
+    {
+      "key": "3ekr",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3ekr",
+          "samples": 10,
+          "warm_seconds": 0.04690289800055325,
+          "case_wall_seconds": 0.04728850000537932,
+          "seed": 20261147
+        },
+        "ligandmpnn": {
+          "key": "3ekr",
+          "samples": 10,
+          "warm_seconds": 0.6271947959903628,
+          "case_wall_seconds": 0.7845899949315935,
+          "seed": 20261147
+        },
+        "lasermpnn": {
+          "key": "3ekr",
+          "samples": 10,
+          "warm_seconds": 16.462210373138078,
+          "case_wall_seconds": 18.157315894030035,
+          "seed": 20261147
+        },
+        "adflip": {
+          "key": "3ekr",
+          "samples": 10,
+          "warm_seconds": 30.956561294966377,
+          "case_wall_seconds": 30.957341367960908,
+          "seed": 20261147
+        }
+      }
+    },
+    {
+      "key": "3hek",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3hek",
+          "samples": 10,
+          "warm_seconds": 0.07764948601834476,
+          "case_wall_seconds": 0.07811764790676534,
+          "seed": 20261148
+        },
+        "ligandmpnn": {
+          "key": "3hek",
+          "samples": 10,
+          "warm_seconds": 1.2627252690726891,
+          "case_wall_seconds": 1.6137257399968803,
+          "seed": 20261148
+        },
+        "lasermpnn": {
+          "key": "3hek",
+          "samples": 10,
+          "warm_seconds": 34.62937582505401,
+          "case_wall_seconds": 38.165676889941096,
+          "seed": 20261148
+        },
+        "adflip": {
+          "key": "3hek",
+          "samples": 10,
+          "warm_seconds": 52.16558984294534,
+          "case_wall_seconds": 52.166712517035194,
+          "seed": 20261148
+        }
+      }
+    },
+    {
+      "key": "3k97",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3k97",
+          "samples": 10,
+          "warm_seconds": 0.04928258596919477,
+          "case_wall_seconds": 0.049697650014422834,
+          "seed": 20261149
+        },
+        "ligandmpnn": {
+          "key": "3k97",
+          "samples": 10,
+          "warm_seconds": 0.7914092049468309,
+          "case_wall_seconds": 1.0160783960018307,
+          "seed": 20261149
+        },
+        "lasermpnn": {
+          "key": "3k97",
+          "samples": 10,
+          "warm_seconds": 16.658001058152877,
+          "case_wall_seconds": 18.447361842961982,
+          "seed": 20261149
+        },
+        "adflip": {
+          "key": "3k97",
+          "samples": 10,
+          "warm_seconds": 32.228577782050706,
+          "case_wall_seconds": 32.229339092969894,
+          "seed": 20261149
+        }
+      }
+    },
+    {
+      "key": "3vha",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3vha",
+          "samples": 10,
+          "warm_seconds": 0.04856221191585064,
+          "case_wall_seconds": 0.048919989028945565,
+          "seed": 20261150
+        },
+        "ligandmpnn": {
+          "key": "3vha",
+          "samples": 10,
+          "warm_seconds": 0.8349446520442143,
+          "case_wall_seconds": 1.113251933013089,
+          "seed": 20261150
+        },
+        "lasermpnn": {
+          "key": "3vha",
+          "samples": 10,
+          "warm_seconds": 17.316204683855176,
+          "case_wall_seconds": 19.148543700925075,
+          "seed": 20261150
+        },
+        "adflip": {
+          "key": "3vha",
+          "samples": 10,
+          "warm_seconds": 31.52531681198161,
+          "case_wall_seconds": 31.52610045298934,
+          "seed": 20261150
+        }
+      }
+    },
+    {
+      "key": "3vhc",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3vhc",
+          "samples": 10,
+          "warm_seconds": 0.042732911999337375,
+          "case_wall_seconds": 0.04309183801524341,
+          "seed": 20261151
+        },
+        "ligandmpnn": {
+          "key": "3vhc",
+          "samples": 10,
+          "warm_seconds": 0.7907145019853488,
+          "case_wall_seconds": 0.9558620009338483,
+          "seed": 20261151
+        },
+        "lasermpnn": {
+          "key": "3vhc",
+          "samples": 10,
+          "warm_seconds": 16.619179966044612,
+          "case_wall_seconds": 18.538346679066308,
+          "seed": 20261151
+        },
+        "adflip": {
+          "key": "3vhc",
+          "samples": 10,
+          "warm_seconds": 34.46401087590493,
+          "case_wall_seconds": 34.46472971898038,
+          "seed": 20261151
+        }
+      }
+    },
+    {
+      "key": "3vhd",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3vhd",
+          "samples": 10,
+          "warm_seconds": 0.041608092025853693,
+          "case_wall_seconds": 0.04195072501897812,
+          "seed": 20261152
+        },
+        "ligandmpnn": {
+          "key": "3vhd",
+          "samples": 10,
+          "warm_seconds": 0.6730861010728404,
+          "case_wall_seconds": 0.8316864200169221,
+          "seed": 20261152
+        },
+        "lasermpnn": {
+          "key": "3vhd",
+          "samples": 10,
+          "warm_seconds": 16.26809809182305,
+          "case_wall_seconds": 17.95388271601405,
+          "seed": 20261152
+        },
+        "adflip": {
+          "key": "3vhd",
+          "samples": 10,
+          "warm_seconds": 30.876436203019693,
+          "case_wall_seconds": 30.877174195018597,
+          "seed": 20261152
+        }
+      }
+    },
+    {
+      "key": "3wha",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3wha",
+          "samples": 10,
+          "warm_seconds": 0.04193073103670031,
+          "case_wall_seconds": 0.042284197988919914,
+          "seed": 20261153
+        },
+        "ligandmpnn": {
+          "key": "3wha",
+          "samples": 10,
+          "warm_seconds": 0.6023609039839357,
+          "case_wall_seconds": 0.7641309840837494,
+          "seed": 20261153
+        },
+        "lasermpnn": {
+          "key": "3wha",
+          "samples": 10,
+          "warm_seconds": 16.080167442909442,
+          "case_wall_seconds": 17.740927906008437,
+          "seed": 20261153
+        },
+        "adflip": {
+          "key": "3wha",
+          "samples": 10,
+          "warm_seconds": 30.37651500001084,
+          "case_wall_seconds": 30.37725591904018,
+          "seed": 20261153
+        }
+      }
+    },
+    {
+      "key": "4egk",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4egk",
+          "samples": 10,
+          "warm_seconds": 0.041885563055984676,
+          "case_wall_seconds": 0.04225158295594156,
+          "seed": 20261154
+        },
+        "ligandmpnn": {
+          "key": "4egk",
+          "samples": 10,
+          "warm_seconds": 0.6821774269919842,
+          "case_wall_seconds": 0.9555400731042027,
+          "seed": 20261154
+        },
+        "lasermpnn": {
+          "key": "4egk",
+          "samples": 10,
+          "warm_seconds": 17.05811234121211,
+          "case_wall_seconds": 18.78662114206236,
+          "seed": 20261154
+        },
+        "adflip": {
+          "key": "4egk",
+          "samples": 10,
+          "warm_seconds": 35.26819794799667,
+          "case_wall_seconds": 35.26914925198071,
+          "seed": 20261154
+        }
+      }
+    },
+    {
+      "key": "4fcq",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4fcq",
+          "samples": 10,
+          "warm_seconds": 0.04342577897477895,
+          "case_wall_seconds": 0.043770733987912536,
+          "seed": 20261155
+        },
+        "ligandmpnn": {
+          "key": "4fcq",
+          "samples": 10,
+          "warm_seconds": 0.7371770769823343,
+          "case_wall_seconds": 0.9480558729264885,
+          "seed": 20261155
+        },
+        "lasermpnn": {
+          "key": "4fcq",
+          "samples": 10,
+          "warm_seconds": 17.24315590399783,
+          "case_wall_seconds": 19.047361855045892,
+          "seed": 20261155
+        },
+        "adflip": {
+          "key": "4fcq",
+          "samples": 10,
+          "warm_seconds": 30.134385942015797,
+          "case_wall_seconds": 30.135121203027666,
+          "seed": 20261155
+        }
+      }
+    },
+    {
+      "key": "4nh8",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4nh8",
+          "samples": 10,
+          "warm_seconds": 0.0412182129221037,
+          "case_wall_seconds": 0.04161557101178914,
+          "seed": 20261156
+        },
+        "ligandmpnn": {
+          "key": "4nh8",
+          "samples": 10,
+          "warm_seconds": 0.7274973629973829,
+          "case_wall_seconds": 0.9149176790378988,
+          "seed": 20261156
+        },
+        "lasermpnn": {
+          "key": "4nh8",
+          "samples": 10,
+          "warm_seconds": 16.332432204973884,
+          "case_wall_seconds": 18.03932306205388,
+          "seed": 20261156
+        },
+        "adflip": {
+          "key": "4nh8",
+          "samples": 10,
+          "warm_seconds": 30.664689905010164,
+          "case_wall_seconds": 30.66536816000007,
+          "seed": 20261156
+        }
+      }
+    },
+    {
+      "key": "4o04",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4o04",
+          "samples": 10,
+          "warm_seconds": 0.041282946011051536,
+          "case_wall_seconds": 0.04162044799886644,
+          "seed": 20261157
+        },
+        "ligandmpnn": {
+          "key": "4o04",
+          "samples": 10,
+          "warm_seconds": 0.6784658590331674,
+          "case_wall_seconds": 0.8860678049968556,
+          "seed": 20261157
+        },
+        "lasermpnn": {
+          "key": "4o04",
+          "samples": 10,
+          "warm_seconds": 16.697867154842243,
+          "case_wall_seconds": 18.40494101389777,
+          "seed": 20261157
+        },
+        "adflip": {
+          "key": "4o04",
+          "samples": 10,
+          "warm_seconds": 29.800771014997736,
+          "case_wall_seconds": 29.801517562009394,
+          "seed": 20261157
+        }
+      }
+    },
+    {
+      "key": "4o05",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4o05",
+          "samples": 10,
+          "warm_seconds": 0.04135045094881207,
+          "case_wall_seconds": 0.041695580002851784,
+          "seed": 20261158
+        },
+        "ligandmpnn": {
+          "key": "4o05",
+          "samples": 10,
+          "warm_seconds": 0.6909629070432857,
+          "case_wall_seconds": 0.8882951969280839,
+          "seed": 20261158
+        },
+        "lasermpnn": {
+          "key": "4o05",
+          "samples": 10,
+          "warm_seconds": 16.946913508931175,
+          "case_wall_seconds": 18.682584232999943,
+          "seed": 20261158
+        },
+        "adflip": {
+          "key": "4o05",
+          "samples": 10,
+          "warm_seconds": 31.40084370004479,
+          "case_wall_seconds": 31.401551118004136,
+          "seed": 20261158
+        }
+      }
+    },
+    {
+      "key": "4o07",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4o07",
+          "samples": 10,
+          "warm_seconds": 0.04557048005517572,
+          "case_wall_seconds": 0.045978519949130714,
+          "seed": 20261159
+        },
+        "ligandmpnn": {
+          "key": "4o07",
+          "samples": 10,
+          "warm_seconds": 0.6701973780291155,
+          "case_wall_seconds": 0.8249330209800974,
+          "seed": 20261159
+        },
+        "lasermpnn": {
+          "key": "4o07",
+          "samples": 10,
+          "warm_seconds": 16.795134325977415,
+          "case_wall_seconds": 18.56336743198335,
+          "seed": 20261159
+        },
+        "adflip": {
+          "key": "4o07",
+          "samples": 10,
+          "warm_seconds": 31.168965660966933,
+          "case_wall_seconds": 31.16970463609323,
+          "seed": 20261159
+        }
+      }
+    },
+    {
+      "key": "4o09",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4o09",
+          "samples": 10,
+          "warm_seconds": 0.04165136499796063,
+          "case_wall_seconds": 0.04200487397611141,
+          "seed": 20261160
+        },
+        "ligandmpnn": {
+          "key": "4o09",
+          "samples": 10,
+          "warm_seconds": 0.6651768559822813,
+          "case_wall_seconds": 0.8204009489854798,
+          "seed": 20261160
+        },
+        "lasermpnn": {
+          "key": "4o09",
+          "samples": 10,
+          "warm_seconds": 16.828078208025545,
+          "case_wall_seconds": 18.566986866062507,
+          "seed": 20261160
+        },
+        "adflip": {
+          "key": "4o09",
+          "samples": 10,
+          "warm_seconds": 31.495053241960704,
+          "case_wall_seconds": 31.495784831000492,
+          "seed": 20261160
+        }
+      }
+    },
+    {
+      "key": "4o0b",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4o0b",
+          "samples": 10,
+          "warm_seconds": 0.04137401410844177,
+          "case_wall_seconds": 0.041702440939843655,
+          "seed": 20261161
+        },
+        "ligandmpnn": {
+          "key": "4o0b",
+          "samples": 10,
+          "warm_seconds": 0.6715861250413582,
+          "case_wall_seconds": 0.88752501597628,
+          "seed": 20261161
+        },
+        "lasermpnn": {
+          "key": "4o0b",
+          "samples": 10,
+          "warm_seconds": 16.654259340954013,
+          "case_wall_seconds": 18.411179856979288,
+          "seed": 20261161
+        },
+        "adflip": {
+          "key": "4o0b",
+          "samples": 10,
+          "warm_seconds": 31.01450848695822,
+          "case_wall_seconds": 31.015428383019753,
+          "seed": 20261161
+        }
+      }
+    },
+    {
+      "key": "4xip",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4xip",
+          "samples": 10,
+          "warm_seconds": 0.04312634910456836,
+          "case_wall_seconds": 0.04343856603372842,
+          "seed": 20261162
+        },
+        "ligandmpnn": {
+          "key": "4xip",
+          "samples": 10,
+          "warm_seconds": 0.6455588730750605,
+          "case_wall_seconds": 0.8499950090190396,
+          "seed": 20261162
+        },
+        "lasermpnn": {
+          "key": "4xip",
+          "samples": 10,
+          "warm_seconds": 17.179895856999792,
+          "case_wall_seconds": 18.872949806042016,
+          "seed": 20261162
+        },
+        "adflip": {
+          "key": "4xip",
+          "samples": 10,
+          "warm_seconds": 27.400841048918664,
+          "case_wall_seconds": 27.40162480098661,
+          "seed": 20261162
+        }
+      }
+    },
+    {
+      "key": "4xir",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4xir",
+          "samples": 10,
+          "warm_seconds": 0.04140827793162316,
+          "case_wall_seconds": 0.04173767508473247,
+          "seed": 20261163
+        },
+        "ligandmpnn": {
+          "key": "4xir",
+          "samples": 10,
+          "warm_seconds": 0.6721279789926484,
+          "case_wall_seconds": 0.8339440920390189,
+          "seed": 20261163
+        },
+        "lasermpnn": {
+          "key": "4xir",
+          "samples": 10,
+          "warm_seconds": 16.558799953898415,
+          "case_wall_seconds": 18.286761507042684,
+          "seed": 20261163
+        },
+        "adflip": {
+          "key": "4xir",
+          "samples": 10,
+          "warm_seconds": 30.821907955920324,
+          "case_wall_seconds": 30.82272536691744,
+          "seed": 20261163
+        }
+      }
+    },
+    {
+      "key": "5lny",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5lny",
+          "samples": 10,
+          "warm_seconds": 0.04180643893778324,
+          "case_wall_seconds": 0.04216884693596512,
+          "seed": 20261164
+        },
+        "ligandmpnn": {
+          "key": "5lny",
+          "samples": 10,
+          "warm_seconds": 0.6247072460828349,
+          "case_wall_seconds": 0.8634704670403153,
+          "seed": 20261164
+        },
+        "lasermpnn": {
+          "key": "5lny",
+          "samples": 10,
+          "warm_seconds": 16.161441702977754,
+          "case_wall_seconds": 17.814369337051176,
+          "seed": 20261164
+        },
+        "adflip": {
+          "key": "5lny",
+          "samples": 10,
+          "warm_seconds": 25.898575264029205,
+          "case_wall_seconds": 25.899498970946297,
+          "seed": 20261164
+        }
+      }
+    },
+    {
+      "key": "5nyh",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5nyh",
+          "samples": 10,
+          "warm_seconds": 0.05863669095560908,
+          "case_wall_seconds": 0.05897940008435398,
+          "seed": 20261165
+        },
+        "ligandmpnn": {
+          "key": "5nyh",
+          "samples": 10,
+          "warm_seconds": 1.3550915840314701,
+          "case_wall_seconds": 1.9291239510057494,
+          "seed": 20261165
+        },
+        "lasermpnn": {
+          "key": "5nyh",
+          "samples": 10,
+          "warm_seconds": 33.700135547085665,
+          "case_wall_seconds": 37.089752312982455,
+          "seed": 20261165
+        },
+        "adflip": {
+          "key": "5nyh",
+          "samples": 10,
+          "warm_seconds": 48.20661898702383,
+          "case_wall_seconds": 48.20771756907925,
+          "seed": 20261165
+        }
+      }
+    },
+    {
+      "key": "6el5",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6el5",
+          "samples": 10,
+          "warm_seconds": 0.035390038043260574,
+          "case_wall_seconds": 0.03570405801292509,
+          "seed": 20261166
+        },
+        "ligandmpnn": {
+          "key": "6el5",
+          "samples": 10,
+          "warm_seconds": 0.7993082720786333,
+          "case_wall_seconds": 1.0344676709501073,
+          "seed": 20261166
+        },
+        "lasermpnn": {
+          "key": "6el5",
+          "samples": 10,
+          "warm_seconds": 16.29326593200676,
+          "case_wall_seconds": 17.93349877302535,
+          "seed": 20261166
+        },
+        "adflip": {
+          "key": "6el5",
+          "samples": 10,
+          "warm_seconds": 35.17440333799459,
+          "case_wall_seconds": 35.17528352502268,
+          "seed": 20261166
+        }
+      }
+    },
+    {
+      "key": "6elo",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6elo",
+          "samples": 10,
+          "warm_seconds": 0.03641548298764974,
+          "case_wall_seconds": 0.036743188044056296,
+          "seed": 20261167
+        },
+        "ligandmpnn": {
+          "key": "6elo",
+          "samples": 10,
+          "warm_seconds": 0.8684322719927877,
+          "case_wall_seconds": 1.1104236689861864,
+          "seed": 20261167
+        },
+        "lasermpnn": {
+          "key": "6elo",
+          "samples": 10,
+          "warm_seconds": 16.06810765201226,
+          "case_wall_seconds": 17.686785168014467,
+          "seed": 20261167
+        },
+        "adflip": {
+          "key": "6elo",
+          "samples": 10,
+          "warm_seconds": 34.86710731196217,
+          "case_wall_seconds": 34.868070584954694,
+          "seed": 20261167
+        }
+      }
+    },
+    {
+      "key": "6elp",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6elp",
+          "samples": 10,
+          "warm_seconds": 0.03507679689209908,
+          "case_wall_seconds": 0.03537410800345242,
+          "seed": 20261168
+        },
+        "ligandmpnn": {
+          "key": "6elp",
+          "samples": 10,
+          "warm_seconds": 0.8584670249838382,
+          "case_wall_seconds": 1.087722011958249,
+          "seed": 20261168
+        },
+        "lasermpnn": {
+          "key": "6elp",
+          "samples": 10,
+          "warm_seconds": 16.336770122055896,
+          "case_wall_seconds": 17.983715303009376,
+          "seed": 20261168
+        },
+        "adflip": {
+          "key": "6elp",
+          "samples": 10,
+          "warm_seconds": 35.697270998032764,
+          "case_wall_seconds": 35.69816563697532,
+          "seed": 20261168
+        }
+      }
+    },
+    {
+      "key": "6ey9",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6ey9",
+          "samples": 10,
+          "warm_seconds": 0.035073812934570014,
+          "case_wall_seconds": 0.03537901700474322,
+          "seed": 20261169
+        },
+        "ligandmpnn": {
+          "key": "6ey9",
+          "samples": 10,
+          "warm_seconds": 0.8594530500704423,
+          "case_wall_seconds": 1.1258889880264178,
+          "seed": 20261169
+        },
+        "lasermpnn": {
+          "key": "6ey9",
+          "samples": 10,
+          "warm_seconds": 16.570669037173502,
+          "case_wall_seconds": 18.26628578302916,
+          "seed": 20261169
+        },
+        "adflip": {
+          "key": "6ey9",
+          "samples": 10,
+          "warm_seconds": 35.517470641992986,
+          "case_wall_seconds": 35.51861542998813,
+          "seed": 20261169
+        }
+      }
+    },
+    {
+      "key": "6eyb",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6eyb",
+          "samples": 10,
+          "warm_seconds": 0.03484051406849176,
+          "case_wall_seconds": 0.035134328063577414,
+          "seed": 20261170
+        },
+        "ligandmpnn": {
+          "key": "6eyb",
+          "samples": 10,
+          "warm_seconds": 0.8677068039542064,
+          "case_wall_seconds": 1.123707656050101,
+          "seed": 20261170
+        },
+        "lasermpnn": {
+          "key": "6eyb",
+          "samples": 10,
+          "warm_seconds": 15.220857253996655,
+          "case_wall_seconds": 16.811702296021394,
+          "seed": 20261170
+        },
+        "adflip": {
+          "key": "6eyb",
+          "samples": 10,
+          "warm_seconds": 31.509690660983324,
+          "case_wall_seconds": 31.510574852931313,
+          "seed": 20261170
+        }
+      }
+    },
+    {
+      "key": "6f1n",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6f1n",
+          "samples": 10,
+          "warm_seconds": 0.03521911695133895,
+          "case_wall_seconds": 0.0355096539715305,
+          "seed": 20261171
+        },
+        "ligandmpnn": {
+          "key": "6f1n",
+          "samples": 10,
+          "warm_seconds": 0.8721746639348567,
+          "case_wall_seconds": 1.1211574031040072,
+          "seed": 20261171
+        },
+        "lasermpnn": {
+          "key": "6f1n",
+          "samples": 10,
+          "warm_seconds": 15.271601371117868,
+          "case_wall_seconds": 16.90552744397428,
+          "seed": 20261171
+        },
+        "adflip": {
+          "key": "6f1n",
+          "samples": 10,
+          "warm_seconds": 23.57639135303907,
+          "case_wall_seconds": 23.577377186040394,
+          "seed": 20261171
+        }
+      }
+    },
+    {
+      "key": "6n8x",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6n8x",
+          "samples": 10,
+          "warm_seconds": 0.0352174510480836,
+          "case_wall_seconds": 0.035546628991141915,
+          "seed": 20261172
+        },
+        "ligandmpnn": {
+          "key": "6n8x",
+          "samples": 10,
+          "warm_seconds": 0.8798702670028433,
+          "case_wall_seconds": 1.0711178729543462,
+          "seed": 20261172
+        },
+        "lasermpnn": {
+          "key": "6n8x",
+          "samples": 10,
+          "warm_seconds": 15.49668103910517,
+          "case_wall_seconds": 17.44049749104306,
+          "seed": 20261172
+        },
+        "adflip": {
+          "key": "6n8x",
+          "samples": 10,
+          "warm_seconds": 31.089621003950015,
+          "case_wall_seconds": 31.0903173959814,
+          "seed": 20261172
+        }
+      }
+    },
+    {
+      "key": "6olx",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6olx",
+          "samples": 10,
+          "warm_seconds": 0.03510733996517956,
+          "case_wall_seconds": 0.035416230908595026,
+          "seed": 20261173
+        },
+        "ligandmpnn": {
+          "key": "6olx",
+          "samples": 10,
+          "warm_seconds": 0.8805161509662867,
+          "case_wall_seconds": 1.0768857710063457,
+          "seed": 20261173
+        },
+        "lasermpnn": {
+          "key": "6olx",
+          "samples": 10,
+          "warm_seconds": 15.48216389620211,
+          "case_wall_seconds": 17.08299140597228,
+          "seed": 20261173
+        },
+        "adflip": {
+          "key": "6olx",
+          "samples": 10,
+          "warm_seconds": 19.418231470044702,
+          "case_wall_seconds": 19.418941183015704,
+          "seed": 20261173
+        }
+      }
+    },
+    {
+      "key": "1yqj",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "1yqj",
+          "samples": 10,
+          "warm_seconds": 0.052183778025209904,
+          "case_wall_seconds": 0.05252899299375713,
+          "seed": 20261174
+        },
+        "ligandmpnn": {
+          "key": "1yqj",
+          "samples": 10,
+          "warm_seconds": 1.2798850749386474,
+          "case_wall_seconds": 1.5605782789643854,
+          "seed": 20261174
+        },
+        "lasermpnn": {
+          "key": "1yqj",
+          "samples": 10,
+          "warm_seconds": 27.064130437909625,
+          "case_wall_seconds": 30.022547089029104,
+          "seed": 20261174
+        },
+        "adflip": {
+          "key": "1yqj",
+          "samples": 10,
+          "warm_seconds": 43.80899821803905,
+          "case_wall_seconds": 43.81001160398591,
+          "seed": 20261174
+        }
+      }
+    },
+    {
+      "key": "2baj",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2baj",
+          "samples": 10,
+          "warm_seconds": 0.049797154031693935,
+          "case_wall_seconds": 0.05011942097917199,
+          "seed": 20261175
+        },
+        "ligandmpnn": {
+          "key": "2baj",
+          "samples": 10,
+          "warm_seconds": 1.0112433799076825,
+          "case_wall_seconds": 1.3710659219650552,
+          "seed": 20261175
+        },
+        "lasermpnn": {
+          "key": "2baj",
+          "samples": 10,
+          "warm_seconds": 24.590029263985343,
+          "case_wall_seconds": 27.351553360000253,
+          "seed": 20261175
+        },
+        "adflip": {
+          "key": "2baj",
+          "samples": 10,
+          "warm_seconds": 41.07633102708496,
+          "case_wall_seconds": 41.077218175982125,
+          "seed": 20261175
+        }
+      }
+    },
+    {
+      "key": "2bak",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2bak",
+          "samples": 10,
+          "warm_seconds": 0.04987779108341783,
+          "case_wall_seconds": 0.05021547095384449,
+          "seed": 20261176
+        },
+        "ligandmpnn": {
+          "key": "2bak",
+          "samples": 10,
+          "warm_seconds": 1.1331587770255283,
+          "case_wall_seconds": 1.4525830809725448,
+          "seed": 20261176
+        },
+        "lasermpnn": {
+          "key": "2bak",
+          "samples": 10,
+          "warm_seconds": 24.504379903082736,
+          "case_wall_seconds": 27.180031683994457,
+          "seed": 20261176
+        },
+        "adflip": {
+          "key": "2bak",
+          "samples": 10,
+          "warm_seconds": 40.480420139967464,
+          "case_wall_seconds": 40.48136018693913,
+          "seed": 20261176
+        }
+      }
+    },
+    {
+      "key": "2bal",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2bal",
+          "samples": 10,
+          "warm_seconds": 0.05000415211543441,
+          "case_wall_seconds": 0.05031048902310431,
+          "seed": 20261177
+        },
+        "ligandmpnn": {
+          "key": "2bal",
+          "samples": 10,
+          "warm_seconds": 1.0684939780039713,
+          "case_wall_seconds": 1.4358649509958923,
+          "seed": 20261177
+        },
+        "lasermpnn": {
+          "key": "2bal",
+          "samples": 10,
+          "warm_seconds": 24.373002359992824,
+          "case_wall_seconds": 26.987089911010116,
+          "seed": 20261177
+        },
+        "adflip": {
+          "key": "2bal",
+          "samples": 10,
+          "warm_seconds": 39.89247740607243,
+          "case_wall_seconds": 39.89347605907824,
+          "seed": 20261177
+        }
+      }
+    },
+    {
+      "key": "2ojg",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2ojg",
+          "samples": 10,
+          "warm_seconds": 0.05112208495847881,
+          "case_wall_seconds": 0.05145000200718641,
+          "seed": 20261178
+        },
+        "ligandmpnn": {
+          "key": "2ojg",
+          "samples": 10,
+          "warm_seconds": 1.1657441429561004,
+          "case_wall_seconds": 1.4668854700867087,
+          "seed": 20261178
+        },
+        "lasermpnn": {
+          "key": "2ojg",
+          "samples": 10,
+          "warm_seconds": 24.555777505156584,
+          "case_wall_seconds": 27.169181254925206,
+          "seed": 20261178
+        },
+        "adflip": {
+          "key": "2ojg",
+          "samples": 10,
+          "warm_seconds": 41.26330974698067,
+          "case_wall_seconds": 41.26489709701855,
+          "seed": 20261178
+        }
+      }
+    },
+    {
+      "key": "2ojj",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2ojj",
+          "samples": 10,
+          "warm_seconds": 0.050933410064317286,
+          "case_wall_seconds": 0.051241882028989494,
+          "seed": 20261179
+        },
+        "ligandmpnn": {
+          "key": "2ojj",
+          "samples": 10,
+          "warm_seconds": 1.2424234270583838,
+          "case_wall_seconds": 1.5798805949743837,
+          "seed": 20261179
+        },
+        "lasermpnn": {
+          "key": "2ojj",
+          "samples": 10,
+          "warm_seconds": 25.198190165800042,
+          "case_wall_seconds": 28.070413229987025,
+          "seed": 20261179
+        },
+        "adflip": {
+          "key": "2ojj",
+          "samples": 10,
+          "warm_seconds": 41.57035013905261,
+          "case_wall_seconds": 41.571366042946465,
+          "seed": 20261179
+        }
+      }
+    },
+    {
+      "key": "2yix",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2yix",
+          "samples": 10,
+          "warm_seconds": 0.05163543508388102,
+          "case_wall_seconds": 0.0519523280672729,
+          "seed": 20261180
+        },
+        "ligandmpnn": {
+          "key": "2yix",
+          "samples": 10,
+          "warm_seconds": 1.0850321189500391,
+          "case_wall_seconds": 1.4429139950079843,
+          "seed": 20261180
+        },
+        "lasermpnn": {
+          "key": "2yix",
+          "samples": 10,
+          "warm_seconds": 25.49705149093643,
+          "case_wall_seconds": 28.249080031062476,
+          "seed": 20261180
+        },
+        "adflip": {
+          "key": "2yix",
+          "samples": 10,
+          "warm_seconds": 42.04457086592447,
+          "case_wall_seconds": 42.04549227003008,
+          "seed": 20261180
+        }
+      }
+    },
+    {
+      "key": "3d7z",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3d7z",
+          "samples": 10,
+          "warm_seconds": 0.051037656026892364,
+          "case_wall_seconds": 0.05133561999537051,
+          "seed": 20261181
+        },
+        "ligandmpnn": {
+          "key": "3d7z",
+          "samples": 10,
+          "warm_seconds": 1.0386745220748708,
+          "case_wall_seconds": 1.3078863029368222,
+          "seed": 20261181
+        },
+        "lasermpnn": {
+          "key": "3d7z",
+          "samples": 10,
+          "warm_seconds": 25.357311194995418,
+          "case_wall_seconds": 28.070656807976775,
+          "seed": 20261181
+        },
+        "adflip": {
+          "key": "3d7z",
+          "samples": 10,
+          "warm_seconds": 40.69827147806063,
+          "case_wall_seconds": 40.699232924031094,
+          "seed": 20261181
+        }
+      }
+    },
+    {
+      "key": "3d83",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3d83",
+          "samples": 10,
+          "warm_seconds": 0.05331937992013991,
+          "case_wall_seconds": 0.05360066099092364,
+          "seed": 20261182
+        },
+        "ligandmpnn": {
+          "key": "3d83",
+          "samples": 10,
+          "warm_seconds": 1.110489315004088,
+          "case_wall_seconds": 1.381605778937228,
+          "seed": 20261182
+        },
+        "lasermpnn": {
+          "key": "3d83",
+          "samples": 10,
+          "warm_seconds": 25.190723321866244,
+          "case_wall_seconds": 27.8701764580328,
+          "seed": 20261182
+        },
+        "adflip": {
+          "key": "3d83",
+          "samples": 10,
+          "warm_seconds": 41.27631721890066,
+          "case_wall_seconds": 41.27730913402047,
+          "seed": 20261182
+        }
+      }
+    },
+    {
+      "key": "3gcs",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3gcs",
+          "samples": 10,
+          "warm_seconds": 0.04856965795625001,
+          "case_wall_seconds": 0.04887606203556061,
+          "seed": 20261183
+        },
+        "ligandmpnn": {
+          "key": "3gcs",
+          "samples": 10,
+          "warm_seconds": 0.9556364110903814,
+          "case_wall_seconds": 1.2124071690486744,
+          "seed": 20261183
+        },
+        "lasermpnn": {
+          "key": "3gcs",
+          "samples": 10,
+          "warm_seconds": 24.651599094970152,
+          "case_wall_seconds": 27.236576316994615,
+          "seed": 20261183
+        },
+        "adflip": {
+          "key": "3gcs",
+          "samples": 10,
+          "warm_seconds": 38.362476460053585,
+          "case_wall_seconds": 38.363371726940386,
+          "seed": 20261183
+        }
+      }
+    },
+    {
+      "key": "3gcu",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3gcu",
+          "samples": 10,
+          "warm_seconds": 0.08703907998278737,
+          "case_wall_seconds": 0.08741402195300907,
+          "seed": 20261184
+        },
+        "ligandmpnn": {
+          "key": "3gcu",
+          "samples": 10,
+          "warm_seconds": 1.9427144530927762,
+          "case_wall_seconds": 2.544086214969866,
+          "seed": 20261184
+        },
+        "lasermpnn": {
+          "key": "3gcu",
+          "samples": 10,
+          "warm_seconds": 49.31639164080843,
+          "case_wall_seconds": 54.43959068204276,
+          "seed": 20261184
+        },
+        "adflip": {
+          "key": "3gcu",
+          "samples": 10,
+          "warm_seconds": 42.52462838194333,
+          "case_wall_seconds": 42.52624537993688,
+          "seed": 20261184
+        }
+      }
+    },
+    {
+      "key": "3iph",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3iph",
+          "samples": 10,
+          "warm_seconds": 0.05127132998313755,
+          "case_wall_seconds": 0.05160657304804772,
+          "seed": 20261185
+        },
+        "ligandmpnn": {
+          "key": "3iph",
+          "samples": 10,
+          "warm_seconds": 1.0048523229779676,
+          "case_wall_seconds": 1.300185558036901,
+          "seed": 20261185
+        },
+        "lasermpnn": {
+          "key": "3iph",
+          "samples": 10,
+          "warm_seconds": 24.894454997964203,
+          "case_wall_seconds": 27.606257423991337,
+          "seed": 20261185
+        },
+        "adflip": {
+          "key": "3iph",
+          "samples": 10,
+          "warm_seconds": 44.978412354015745,
+          "case_wall_seconds": 44.979516737977974,
+          "seed": 20261185
+        }
+      }
+    },
+    {
+      "key": "3iw6",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3iw6",
+          "samples": 10,
+          "warm_seconds": 0.048595382017083466,
+          "case_wall_seconds": 0.04891532892361283,
+          "seed": 20261186
+        },
+        "ligandmpnn": {
+          "key": "3iw6",
+          "samples": 10,
+          "warm_seconds": 1.0720721220131963,
+          "case_wall_seconds": 1.344994071056135,
+          "seed": 20261186
+        },
+        "lasermpnn": {
+          "key": "3iw6",
+          "samples": 10,
+          "warm_seconds": 27.786084049963392,
+          "case_wall_seconds": 30.759467430994846,
+          "seed": 20261186
+        },
+        "adflip": {
+          "key": "3iw6",
+          "samples": 10,
+          "warm_seconds": 41.712735412991606,
+          "case_wall_seconds": 41.713777045020834,
+          "seed": 20261186
+        }
+      }
+    },
+    {
+      "key": "3o8p",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3o8p",
+          "samples": 10,
+          "warm_seconds": 0.05214835493825376,
+          "case_wall_seconds": 0.052483845967799425,
+          "seed": 20261187
+        },
+        "ligandmpnn": {
+          "key": "3o8p",
+          "samples": 10,
+          "warm_seconds": 0.9682695029769093,
+          "case_wall_seconds": 1.2241189779015258,
+          "seed": 20261187
+        },
+        "lasermpnn": {
+          "key": "3o8p",
+          "samples": 10,
+          "warm_seconds": 26.209593977895565,
+          "case_wall_seconds": 28.991356473998167,
+          "seed": 20261187
+        },
+        "adflip": {
+          "key": "3o8p",
+          "samples": 10,
+          "warm_seconds": 40.47746841609478,
+          "case_wall_seconds": 40.47848130506463,
+          "seed": 20261187
+        }
+      }
+    },
+    {
+      "key": "4qyy",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4qyy",
+          "samples": 10,
+          "warm_seconds": 0.04860792099498212,
+          "case_wall_seconds": 0.04894798097666353,
+          "seed": 20261188
+        },
+        "ligandmpnn": {
+          "key": "4qyy",
+          "samples": 10,
+          "warm_seconds": 1.0745546959806234,
+          "case_wall_seconds": 1.4329297149088234,
+          "seed": 20261188
+        },
+        "lasermpnn": {
+          "key": "4qyy",
+          "samples": 10,
+          "warm_seconds": 25.42621002404485,
+          "case_wall_seconds": 28.164980556000955,
+          "seed": 20261188
+        },
+        "adflip": {
+          "key": "4qyy",
+          "samples": 10,
+          "warm_seconds": 50.99306747794617,
+          "case_wall_seconds": 50.99443526403047,
+          "seed": 20261188
+        }
+      }
+    },
+    {
+      "key": "5jq5",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5jq5",
+          "samples": 10,
+          "warm_seconds": 0.04421904997434467,
+          "case_wall_seconds": 0.04451901593711227,
+          "seed": 20261189
+        },
+        "ligandmpnn": {
+          "key": "5jq5",
+          "samples": 10,
+          "warm_seconds": 0.8327808639733121,
+          "case_wall_seconds": 1.080423892941326,
+          "seed": 20261189
+        },
+        "lasermpnn": {
+          "key": "5jq5",
+          "samples": 10,
+          "warm_seconds": 21.652117916033603,
+          "case_wall_seconds": 23.887153694056906,
+          "seed": 20261189
+        },
+        "adflip": {
+          "key": "5jq5",
+          "samples": 10,
+          "warm_seconds": 38.917402128106914,
+          "case_wall_seconds": 38.91836108802818,
+          "seed": 20261189
+        }
+      }
+    },
+    {
+      "key": "5l2s",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5l2s",
+          "samples": 10,
+          "warm_seconds": 0.04206739098299295,
+          "case_wall_seconds": 0.04237212799489498,
+          "seed": 20261190
+        },
+        "ligandmpnn": {
+          "key": "5l2s",
+          "samples": 10,
+          "warm_seconds": 0.7647798829711974,
+          "case_wall_seconds": 0.9626869769999757,
+          "seed": 20261190
+        },
+        "lasermpnn": {
+          "key": "5l2s",
+          "samples": 10,
+          "warm_seconds": 19.401872481103055,
+          "case_wall_seconds": 21.47136132605374,
+          "seed": 20261190
+        },
+        "adflip": {
+          "key": "5l2s",
+          "samples": 10,
+          "warm_seconds": 34.408612699015066,
+          "case_wall_seconds": 34.40948696597479,
+          "seed": 20261190
+        }
+      }
+    },
+    {
+      "key": "6cpw",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6cpw",
+          "samples": 10,
+          "warm_seconds": 0.048661004984751344,
+          "case_wall_seconds": 0.048973150085657835,
+          "seed": 20261191
+        },
+        "ligandmpnn": {
+          "key": "6cpw",
+          "samples": 10,
+          "warm_seconds": 0.951649057911709,
+          "case_wall_seconds": 1.2976639330154285,
+          "seed": 20261191
+        },
+        "lasermpnn": {
+          "key": "6cpw",
+          "samples": 10,
+          "warm_seconds": 24.107463723164983,
+          "case_wall_seconds": 26.725482498994097,
+          "seed": 20261191
+        },
+        "adflip": {
+          "key": "6cpw",
+          "samples": 10,
+          "warm_seconds": 49.663969813031144,
+          "case_wall_seconds": 49.6652194079943,
+          "seed": 20261191
+        }
+      }
+    },
+    {
+      "key": "3zm9",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3zm9",
+          "samples": 10,
+          "warm_seconds": 0.051180043956264853,
+          "case_wall_seconds": 0.05149644904304296,
+          "seed": 20261192
+        },
+        "ligandmpnn": {
+          "key": "3zm9",
+          "samples": 10,
+          "warm_seconds": 1.0250760179478675,
+          "case_wall_seconds": 1.4055116079980507,
+          "seed": 20261192
+        },
+        "lasermpnn": {
+          "key": "3zm9",
+          "samples": 10,
+          "warm_seconds": 26.697665904997848,
+          "case_wall_seconds": 29.54853869602084,
+          "seed": 20261192
+        },
+        "adflip": {
+          "key": "3zm9",
+          "samples": 10,
+          "warm_seconds": 51.28097777697258,
+          "case_wall_seconds": 51.2822674610652,
+          "seed": 20261192
+        }
+      }
+    },
+    {
+      "key": "4cga",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4cga",
+          "samples": 10,
+          "warm_seconds": 0.09516715200152248,
+          "case_wall_seconds": 0.09551287803333253,
+          "seed": 20261193
+        },
+        "ligandmpnn": {
+          "key": "4cga",
+          "samples": 10,
+          "warm_seconds": 2.0512831789674237,
+          "case_wall_seconds": 2.8719064040342346,
+          "seed": 20261193
+        },
+        "lasermpnn": {
+          "key": "4cga",
+          "samples": 10,
+          "warm_seconds": 53.045904148952104,
+          "case_wall_seconds": 58.82313819602132,
+          "seed": 20261193
+        },
+        "adflip": {
+          "key": "4cga",
+          "samples": 10,
+          "warm_seconds": 88.38699300901499,
+          "case_wall_seconds": 88.38915638800245,
+          "seed": 20261193
+        }
+      }
+    },
+    {
+      "key": "4da5",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4da5",
+          "samples": 10,
+          "warm_seconds": 0.0917725790059194,
+          "case_wall_seconds": 0.09211716800928116,
+          "seed": 20261194
+        },
+        "ligandmpnn": {
+          "key": "4da5",
+          "samples": 10,
+          "warm_seconds": 1.9595997279975563,
+          "case_wall_seconds": 2.7400801080511883,
+          "seed": 20261194
+        },
+        "lasermpnn": {
+          "key": "4da5",
+          "samples": 10,
+          "warm_seconds": 50.33114185195882,
+          "case_wall_seconds": 55.70238702406641,
+          "seed": 20261194
+        },
+        "adflip": {
+          "key": "4da5",
+          "samples": 10,
+          "warm_seconds": 82.47447864501737,
+          "case_wall_seconds": 82.47643079399131,
+          "seed": 20261194
+        }
+      }
+    },
+    {
+      "key": "5eqp",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5eqp",
+          "samples": 10,
+          "warm_seconds": 0.09460633201524615,
+          "case_wall_seconds": 0.09496272297110409,
+          "seed": 20261195
+        },
+        "ligandmpnn": {
+          "key": "5eqp",
+          "samples": 10,
+          "warm_seconds": 2.0316300130216405,
+          "case_wall_seconds": 2.664994530030526,
+          "seed": 20261195
+        },
+        "lasermpnn": {
+          "key": "5eqp",
+          "samples": 10,
+          "warm_seconds": 55.24820545502007,
+          "case_wall_seconds": 61.45825917099137,
+          "seed": 20261195
+        },
+        "adflip": {
+          "key": "5eqp",
+          "samples": 10,
+          "warm_seconds": 67.71286889805924,
+          "case_wall_seconds": 67.7144681639038,
+          "seed": 20261195
+        }
+      }
+    },
+    {
+      "key": "5eqy",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5eqy",
+          "samples": 10,
+          "warm_seconds": 0.0900517669506371,
+          "case_wall_seconds": 0.09041253197938204,
+          "seed": 20261196
+        },
+        "ligandmpnn": {
+          "key": "5eqy",
+          "samples": 10,
+          "warm_seconds": 2.0392655639443547,
+          "case_wall_seconds": 2.6633961560437456,
+          "seed": 20261196
+        },
+        "lasermpnn": {
+          "key": "5eqy",
+          "samples": 10,
+          "warm_seconds": 55.11508860101458,
+          "case_wall_seconds": 61.414359232992865,
+          "seed": 20261196
+        },
+        "adflip": {
+          "key": "5eqy",
+          "samples": 10,
+          "warm_seconds": 71.41945186001249,
+          "case_wall_seconds": 71.420966036967,
+          "seed": 20261196
+        }
+      }
+    },
+    {
+      "key": "5fut",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5fut",
+          "samples": 10,
+          "warm_seconds": 0.051859501050785184,
+          "case_wall_seconds": 0.05220306199043989,
+          "seed": 20261197
+        },
+        "ligandmpnn": {
+          "key": "5fut",
+          "samples": 10,
+          "warm_seconds": 1.039165368070826,
+          "case_wall_seconds": 1.4309250839287415,
+          "seed": 20261197
+        },
+        "lasermpnn": {
+          "key": "5fut",
+          "samples": 10,
+          "warm_seconds": 27.136274412972853,
+          "case_wall_seconds": 30.07388720905874,
+          "seed": 20261197
+        },
+        "adflip": {
+          "key": "5fut",
+          "samples": 10,
+          "warm_seconds": 53.24160073895473,
+          "case_wall_seconds": 53.24283132504206,
+          "seed": 20261197
+        }
+      }
+    },
+    {
+      "key": "4yml",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4yml",
+          "samples": 10,
+          "warm_seconds": 0.06642619695048779,
+          "case_wall_seconds": 0.06675984198227525,
+          "seed": 20261198
+        },
+        "ligandmpnn": {
+          "key": "4yml",
+          "samples": 10,
+          "warm_seconds": 1.337952321046032,
+          "case_wall_seconds": 1.7255161659559235,
+          "seed": 20261198
+        },
+        "lasermpnn": {
+          "key": "4yml",
+          "samples": 10,
+          "warm_seconds": 34.06419479311444,
+          "case_wall_seconds": 37.47681311797351,
+          "seed": 20261198
+        },
+        "adflip": {
+          "key": "4yml",
+          "samples": 10,
+          "warm_seconds": 50.06275826098863,
+          "case_wall_seconds": 50.06394352798816,
+          "seed": 20261198
+        }
+      }
+    },
+    {
+      "key": "6c2r",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6c2r",
+          "samples": 10,
+          "warm_seconds": 0.06785782205406576,
+          "case_wall_seconds": 0.06825264496728778,
+          "seed": 20261199
+        },
+        "ligandmpnn": {
+          "key": "6c2r",
+          "samples": 10,
+          "warm_seconds": 1.4543494650861248,
+          "case_wall_seconds": 2.0028035159921274,
+          "seed": 20261199
+        },
+        "lasermpnn": {
+          "key": "6c2r",
+          "samples": 10,
+          "warm_seconds": 37.09926812991034,
+          "case_wall_seconds": 41.03215878200717,
+          "seed": 20261199
+        },
+        "adflip": {
+          "key": "6c2r",
+          "samples": 10,
+          "warm_seconds": 66.39867853198666,
+          "case_wall_seconds": 66.40041184297297,
+          "seed": 20261199
+        }
+      }
+    },
+    {
+      "key": "1a28",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1a28",
+          "samples": 10,
+          "warm_seconds": 0.04334351699799299,
+          "case_wall_seconds": 0.04367946204729378,
+          "seed": 20261200
+        },
+        "ligandmpnn": {
+          "key": "1a28",
+          "samples": 10,
+          "warm_seconds": 0.7307947099907324,
+          "case_wall_seconds": 0.9356005070731044,
+          "seed": 20261200
+        },
+        "lasermpnn": {
+          "key": "1a28",
+          "samples": 10,
+          "warm_seconds": 18.957355141756125,
+          "case_wall_seconds": 20.993083607056178,
+          "seed": 20261200
+        },
+        "adflip": {
+          "key": "1a28",
+          "samples": 10,
+          "warm_seconds": 34.89191436802503,
+          "case_wall_seconds": 34.89279720606282,
+          "seed": 20261200
+        }
+      }
+    },
+    {
+      "key": "1e3g",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1e3g",
+          "samples": 10,
+          "warm_seconds": 0.04199150099884719,
+          "case_wall_seconds": 0.04229320609010756,
+          "seed": 20261201
+        },
+        "ligandmpnn": {
+          "key": "1e3g",
+          "samples": 10,
+          "warm_seconds": 0.7280504440423101,
+          "case_wall_seconds": 0.9256483539938927,
+          "seed": 20261201
+        },
+        "lasermpnn": {
+          "key": "1e3g",
+          "samples": 10,
+          "warm_seconds": 18.591261903871782,
+          "case_wall_seconds": 20.52777890197467,
+          "seed": 20261201
+        },
+        "adflip": {
+          "key": "1e3g",
+          "samples": 10,
+          "warm_seconds": 37.140794466016814,
+          "case_wall_seconds": 37.14164053706918,
+          "seed": 20261201
+        }
+      }
+    },
+    {
+      "key": "1i37",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1i37",
+          "samples": 10,
+          "warm_seconds": 0.041414674022234976,
+          "case_wall_seconds": 0.04172700003255159,
+          "seed": 20261202
+        },
+        "ligandmpnn": {
+          "key": "1i37",
+          "samples": 10,
+          "warm_seconds": 0.7171404910041019,
+          "case_wall_seconds": 0.9460682870121673,
+          "seed": 20261202
+        },
+        "lasermpnn": {
+          "key": "1i37",
+          "samples": 10,
+          "warm_seconds": 18.13276486110408,
+          "case_wall_seconds": 20.03876919997856,
+          "seed": 20261202
+        },
+        "adflip": {
+          "key": "1i37",
+          "samples": 10,
+          "warm_seconds": 33.56970661203377,
+          "case_wall_seconds": 33.57060483295936,
+          "seed": 20261202
+        }
+      }
+    },
+    {
+      "key": "1sqn",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1sqn",
+          "samples": 10,
+          "warm_seconds": 0.042251648963429034,
+          "case_wall_seconds": 0.042575819068588316,
+          "seed": 20261203
+        },
+        "ligandmpnn": {
+          "key": "1sqn",
+          "samples": 10,
+          "warm_seconds": 0.7233044129097834,
+          "case_wall_seconds": 0.9070092610782012,
+          "seed": 20261203
+        },
+        "lasermpnn": {
+          "key": "1sqn",
+          "samples": 10,
+          "warm_seconds": 18.305564149981365,
+          "case_wall_seconds": 20.258239607093856,
+          "seed": 20261203
+        },
+        "adflip": {
+          "key": "1sqn",
+          "samples": 10,
+          "warm_seconds": 33.47475286806002,
+          "case_wall_seconds": 33.47556640196126,
+          "seed": 20261203
+        }
+      }
+    },
+    {
+      "key": "1z95",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1z95",
+          "samples": 10,
+          "warm_seconds": 0.03959447203669697,
+          "case_wall_seconds": 0.03992660401854664,
+          "seed": 20261204
+        },
+        "ligandmpnn": {
+          "key": "1z95",
+          "samples": 10,
+          "warm_seconds": 0.6894294769736007,
+          "case_wall_seconds": 0.8662806579377502,
+          "seed": 20261204
+        },
+        "lasermpnn": {
+          "key": "1z95",
+          "samples": 10,
+          "warm_seconds": 18.079792265896685,
+          "case_wall_seconds": 20.076957089011557,
+          "seed": 20261204
+        },
+        "adflip": {
+          "key": "1z95",
+          "samples": 10,
+          "warm_seconds": 33.500110566965304,
+          "case_wall_seconds": 33.50087542599067,
+          "seed": 20261204
+        }
+      }
+    },
+    {
+      "key": "2ihq",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2ihq",
+          "samples": 10,
+          "warm_seconds": 0.040631976909935474,
+          "case_wall_seconds": 0.040927555062808096,
+          "seed": 20261205
+        },
+        "ligandmpnn": {
+          "key": "2ihq",
+          "samples": 10,
+          "warm_seconds": 0.7840328690363094,
+          "case_wall_seconds": 0.9662383410613984,
+          "seed": 20261205
+        },
+        "lasermpnn": {
+          "key": "2ihq",
+          "samples": 10,
+          "warm_seconds": 20.2263739380287,
+          "case_wall_seconds": 22.559003492002375,
+          "seed": 20261205
+        },
+        "adflip": {
+          "key": "2ihq",
+          "samples": 10,
+          "warm_seconds": 34.12465233600233,
+          "case_wall_seconds": 34.12544646195602,
+          "seed": 20261205
+        }
+      }
+    },
+    {
+      "key": "2oax",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2oax",
+          "samples": 10,
+          "warm_seconds": 0.03804599097929895,
+          "case_wall_seconds": 0.03835105104371905,
+          "seed": 20261206
+        },
+        "ligandmpnn": {
+          "key": "2oax",
+          "samples": 10,
+          "warm_seconds": 0.6786553899291903,
+          "case_wall_seconds": 0.8516125970054418,
+          "seed": 20261206
+        },
+        "lasermpnn": {
+          "key": "2oax",
+          "samples": 10,
+          "warm_seconds": 18.064067587954924,
+          "case_wall_seconds": 20.084245578036644,
+          "seed": 20261206
+        },
+        "adflip": {
+          "key": "2oax",
+          "samples": 10,
+          "warm_seconds": 34.868805062025785,
+          "case_wall_seconds": 34.86993396899197,
+          "seed": 20261206
+        }
+      }
+    },
+    {
+      "key": "3b5r",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "3b5r",
+          "samples": 10,
+          "warm_seconds": 0.04003202903550118,
+          "case_wall_seconds": 0.04030742903705686,
+          "seed": 20261207
+        },
+        "ligandmpnn": {
+          "key": "3b5r",
+          "samples": 10,
+          "warm_seconds": 0.7221768179442734,
+          "case_wall_seconds": 0.9227491560159251,
+          "seed": 20261207
+        },
+        "lasermpnn": {
+          "key": "3b5r",
+          "samples": 10,
+          "warm_seconds": 18.045784396934323,
+          "case_wall_seconds": 19.964441732969135,
+          "seed": 20261207
+        },
+        "adflip": {
+          "key": "3b5r",
+          "samples": 10,
+          "warm_seconds": 34.11194684903603,
+          "case_wall_seconds": 34.11278991308063,
+          "seed": 20261207
+        }
+      }
+    },
+    {
+      "key": "3b65",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "3b65",
+          "samples": 10,
+          "warm_seconds": 0.03912466706242412,
+          "case_wall_seconds": 0.03945268702227622,
+          "seed": 20261208
+        },
+        "ligandmpnn": {
+          "key": "3b65",
+          "samples": 10,
+          "warm_seconds": 0.7939615159993991,
+          "case_wall_seconds": 0.9873051209142432,
+          "seed": 20261208
+        },
+        "lasermpnn": {
+          "key": "3b65",
+          "samples": 10,
+          "warm_seconds": 19.15414336998947,
+          "case_wall_seconds": 21.17605472006835,
+          "seed": 20261208
+        },
+        "adflip": {
+          "key": "3b65",
+          "samples": 10,
+          "warm_seconds": 35.29153475607745,
+          "case_wall_seconds": 35.292451497982256,
+          "seed": 20261208
+        }
+      }
+    },
+    {
+      "key": "5hcv",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5hcv",
+          "samples": 10,
+          "warm_seconds": 0.03904605295974761,
+          "case_wall_seconds": 0.03937325603328645,
+          "seed": 20261209
+        },
+        "ligandmpnn": {
+          "key": "5hcv",
+          "samples": 10,
+          "warm_seconds": 0.6882110750302672,
+          "case_wall_seconds": 0.8844625370111316,
+          "seed": 20261209
+        },
+        "lasermpnn": {
+          "key": "5hcv",
+          "samples": 10,
+          "warm_seconds": 17.4586230389541,
+          "case_wall_seconds": 19.32782057498116,
+          "seed": 20261209
+        },
+        "adflip": {
+          "key": "5hcv",
+          "samples": 10,
+          "warm_seconds": 34.51102130091749,
+          "case_wall_seconds": 34.511877626995556,
+          "seed": 20261209
+        }
+      }
+    },
+    {
+      "key": "1gx8",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1gx8",
+          "samples": 10,
+          "warm_seconds": 0.05845629097893834,
+          "case_wall_seconds": 0.05882429890334606,
+          "seed": 20261210
+        },
+        "ligandmpnn": {
+          "key": "1gx8",
+          "samples": 10,
+          "warm_seconds": 0.9403795510297641,
+          "case_wall_seconds": 1.2288688539993018,
+          "seed": 20261210
+        },
+        "lasermpnn": {
+          "key": "1gx8",
+          "samples": 10,
+          "warm_seconds": 24.51042907719966,
+          "case_wall_seconds": 27.291453398996964,
+          "seed": 20261210
+        },
+        "adflip": {
+          "key": "1gx8",
+          "samples": 10,
+          "warm_seconds": 42.992330279084854,
+          "case_wall_seconds": 42.99332658294588,
+          "seed": 20261210
+        }
+      }
+    },
+    {
+      "key": "4gny",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4gny",
+          "samples": 10,
+          "warm_seconds": 0.05745258601382375,
+          "case_wall_seconds": 0.0578475360525772,
+          "seed": 20261211
+        },
+        "ligandmpnn": {
+          "key": "4gny",
+          "samples": 10,
+          "warm_seconds": 0.9142293290933594,
+          "case_wall_seconds": 1.2549271520692855,
+          "seed": 20261211
+        },
+        "lasermpnn": {
+          "key": "4gny",
+          "samples": 10,
+          "warm_seconds": 26.150413523893803,
+          "case_wall_seconds": 29.071364303003065,
+          "seed": 20261211
+        },
+        "adflip": {
+          "key": "4gny",
+          "samples": 10,
+          "warm_seconds": 45.15455799805932,
+          "case_wall_seconds": 45.15584385895636,
+          "seed": 20261211
+        }
+      }
+    },
+    {
+      "key": "6gf9",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6gf9",
+          "samples": 10,
+          "warm_seconds": 0.036882677930407226,
+          "case_wall_seconds": 0.037234316929243505,
+          "seed": 20261212
+        },
+        "ligandmpnn": {
+          "key": "6gf9",
+          "samples": 10,
+          "warm_seconds": 0.475528541021049,
+          "case_wall_seconds": 0.7235746459336951,
+          "seed": 20261212
+        },
+        "lasermpnn": {
+          "key": "6gf9",
+          "samples": 10,
+          "warm_seconds": 12.764857647940516,
+          "case_wall_seconds": 14.147041259915568,
+          "seed": 20261212
+        },
+        "adflip": {
+          "key": "6gf9",
+          "samples": 10,
+          "warm_seconds": 29.61988006392494,
+          "case_wall_seconds": 29.6206636010902,
+          "seed": 20261212
+        }
+      }
+    },
+    {
+      "key": "6gfs",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6gfs",
+          "samples": 10,
+          "warm_seconds": 0.03701897105202079,
+          "case_wall_seconds": 0.037388348020613194,
+          "seed": 20261213
+        },
+        "ligandmpnn": {
+          "key": "6gfs",
+          "samples": 10,
+          "warm_seconds": 0.4810795510420576,
+          "case_wall_seconds": 0.6484395479783416,
+          "seed": 20261213
+        },
+        "lasermpnn": {
+          "key": "6gfs",
+          "samples": 10,
+          "warm_seconds": 13.025840748799965,
+          "case_wall_seconds": 14.559960671002045,
+          "seed": 20261213
+        },
+        "adflip": {
+          "key": "6gfs",
+          "samples": 10,
+          "warm_seconds": 29.61971738107968,
+          "case_wall_seconds": 29.620484379003756,
+          "seed": 20261213
+        }
+      }
+    },
+    {
+      "key": "6ghh",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6ghh",
+          "samples": 10,
+          "warm_seconds": 0.03701703192200512,
+          "case_wall_seconds": 0.03736806905362755,
+          "seed": 20261214
+        },
+        "ligandmpnn": {
+          "key": "6ghh",
+          "samples": 10,
+          "warm_seconds": 0.5313493829453364,
+          "case_wall_seconds": 0.7085857499623671,
+          "seed": 20261214
+        },
+        "lasermpnn": {
+          "key": "6ghh",
+          "samples": 10,
+          "warm_seconds": 12.995639094966464,
+          "case_wall_seconds": 14.396481750998646,
+          "seed": 20261214
+        },
+        "adflip": {
+          "key": "6ghh",
+          "samples": 10,
+          "warm_seconds": 30.123251790064387,
+          "case_wall_seconds": 30.123996730078943,
+          "seed": 20261214
+        }
+      }
+    },
+    {
+      "key": "1kdk",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1kdk",
+          "samples": 10,
+          "warm_seconds": 0.06210962403565645,
+          "case_wall_seconds": 0.06251268601045012,
+          "seed": 20261215
+        },
+        "ligandmpnn": {
+          "key": "1kdk",
+          "samples": 10,
+          "warm_seconds": 1.121353812981397,
+          "case_wall_seconds": 1.4016490109497681,
+          "seed": 20261215
+        },
+        "lasermpnn": {
+          "key": "1kdk",
+          "samples": 10,
+          "warm_seconds": 26.363710989127867,
+          "case_wall_seconds": 29.056462018052116,
+          "seed": 20261215
+        },
+        "adflip": {
+          "key": "1kdk",
+          "samples": 10,
+          "warm_seconds": 41.347720843041316,
+          "case_wall_seconds": 41.348660268005915,
+          "seed": 20261215
+        }
+      }
+    },
+    {
+      "key": "1lhu",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1lhu",
+          "samples": 10,
+          "warm_seconds": 0.062203995999880135,
+          "case_wall_seconds": 0.06258787901606411,
+          "seed": 20261216
+        },
+        "ligandmpnn": {
+          "key": "1lhu",
+          "samples": 10,
+          "warm_seconds": 1.0120454670395702,
+          "case_wall_seconds": 1.2940276999725029,
+          "seed": 20261216
+        },
+        "lasermpnn": {
+          "key": "1lhu",
+          "samples": 10,
+          "warm_seconds": 27.011940337135457,
+          "case_wall_seconds": 29.758433377020992,
+          "seed": 20261216
+        },
+        "adflip": {
+          "key": "1lhu",
+          "samples": 10,
+          "warm_seconds": 40.167405935935676,
+          "case_wall_seconds": 40.16847413301002,
+          "seed": 20261216
+        }
+      }
+    },
+    {
+      "key": "1qkt",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1qkt",
+          "samples": 10,
+          "warm_seconds": 0.08152166102081537,
+          "case_wall_seconds": 0.08191205398179591,
+          "seed": 20261217
+        },
+        "ligandmpnn": {
+          "key": "1qkt",
+          "samples": 10,
+          "warm_seconds": 1.4260440029902384,
+          "case_wall_seconds": 1.836436221958138,
+          "seed": 20261217
+        },
+        "lasermpnn": {
+          "key": "1qkt",
+          "samples": 10,
+          "warm_seconds": 37.2055603209883,
+          "case_wall_seconds": 41.369328606990166,
+          "seed": 20261217
+        },
+        "adflip": {
+          "key": "1qkt",
+          "samples": 10,
+          "warm_seconds": 54.91888669808395,
+          "case_wall_seconds": 54.92000918602571,
+          "seed": 20261217
+        }
+      }
+    },
+    {
+      "key": "1sj0",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1sj0",
+          "samples": 10,
+          "warm_seconds": 0.07676003396045417,
+          "case_wall_seconds": 0.07717240392230451,
+          "seed": 20261218
+        },
+        "ligandmpnn": {
+          "key": "1sj0",
+          "samples": 10,
+          "warm_seconds": 1.4388353399699554,
+          "case_wall_seconds": 1.9483855899889022,
+          "seed": 20261218
+        },
+        "lasermpnn": {
+          "key": "1sj0",
+          "samples": 10,
+          "warm_seconds": 35.91541853209492,
+          "case_wall_seconds": 39.826772234984674,
+          "seed": 20261218
+        },
+        "adflip": {
+          "key": "1sj0",
+          "samples": 10,
+          "warm_seconds": 50.78988304210361,
+          "case_wall_seconds": 50.79108311410528,
+          "seed": 20261218
+        }
+      }
+    },
+    {
+      "key": "2ayr",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2ayr",
+          "samples": 10,
+          "warm_seconds": 0.0769642440136522,
+          "case_wall_seconds": 0.07729758298955858,
+          "seed": 20261219
+        },
+        "ligandmpnn": {
+          "key": "2ayr",
+          "samples": 10,
+          "warm_seconds": 1.546132183051668,
+          "case_wall_seconds": 2.030489880940877,
+          "seed": 20261219
+        },
+        "lasermpnn": {
+          "key": "2ayr",
+          "samples": 10,
+          "warm_seconds": 36.76482941606082,
+          "case_wall_seconds": 40.961461255908944,
+          "seed": 20261219
+        },
+        "adflip": {
+          "key": "2ayr",
+          "samples": 10,
+          "warm_seconds": 53.85352193203289,
+          "case_wall_seconds": 53.85477727197576,
+          "seed": 20261219
+        }
+      }
+    },
+    {
+      "key": "2e2r",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2e2r",
+          "samples": 10,
+          "warm_seconds": 0.06567463302053511,
+          "case_wall_seconds": 0.06604304199572653,
+          "seed": 20261220
+        },
+        "ligandmpnn": {
+          "key": "2e2r",
+          "samples": 10,
+          "warm_seconds": 1.4911934490082785,
+          "case_wall_seconds": 1.8545433989493176,
+          "seed": 20261220
+        },
+        "lasermpnn": {
+          "key": "2e2r",
+          "samples": 10,
+          "warm_seconds": 36.196985200978816,
+          "case_wall_seconds": 40.1964993980946,
+          "seed": 20261220
+        },
+        "adflip": {
+          "key": "2e2r",
+          "samples": 10,
+          "warm_seconds": 49.50089072796982,
+          "case_wall_seconds": 49.50200064398814,
+          "seed": 20261220
+        }
+      }
+    },
+    {
+      "key": "2p7g",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2p7g",
+          "samples": 10,
+          "warm_seconds": 0.04252505593467504,
+          "case_wall_seconds": 0.04316191899124533,
+          "seed": 20261221
+        },
+        "ligandmpnn": {
+          "key": "2p7g",
+          "samples": 10,
+          "warm_seconds": 0.7049688360420987,
+          "case_wall_seconds": 0.9557008279953152,
+          "seed": 20261221
+        },
+        "lasermpnn": {
+          "key": "2p7g",
+          "samples": 10,
+          "warm_seconds": 17.762238929863088,
+          "case_wall_seconds": 19.663871253025718,
+          "seed": 20261221
+        },
+        "adflip": {
+          "key": "2p7g",
+          "samples": 10,
+          "warm_seconds": 31.081880245008506,
+          "case_wall_seconds": 31.082627604948357,
+          "seed": 20261221
+        }
+      }
+    },
+    {
+      "key": "2p7z",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2p7z",
+          "samples": 10,
+          "warm_seconds": 0.03687909909058362,
+          "case_wall_seconds": 0.03717559692449868,
+          "seed": 20261222
+        },
+        "ligandmpnn": {
+          "key": "2p7z",
+          "samples": 10,
+          "warm_seconds": 0.6818109969608486,
+          "case_wall_seconds": 0.8717484950320795,
+          "seed": 20261222
+        },
+        "lasermpnn": {
+          "key": "2p7z",
+          "samples": 10,
+          "warm_seconds": 15.837290625786409,
+          "case_wall_seconds": 17.629854334983975,
+          "seed": 20261222
+        },
+        "adflip": {
+          "key": "2p7z",
+          "samples": 10,
+          "warm_seconds": 31.18231280997861,
+          "case_wall_seconds": 31.183141652029008,
+          "seed": 20261222
+        }
+      }
+    },
+    {
+      "key": "2pog",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2pog",
+          "samples": 10,
+          "warm_seconds": 0.06461349804885685,
+          "case_wall_seconds": 0.06495021004229784,
+          "seed": 20261223
+        },
+        "ligandmpnn": {
+          "key": "2pog",
+          "samples": 10,
+          "warm_seconds": 1.4223483050009236,
+          "case_wall_seconds": 1.8509946529520676,
+          "seed": 20261223
+        },
+        "lasermpnn": {
+          "key": "2pog",
+          "samples": 10,
+          "warm_seconds": 34.904736670898274,
+          "case_wall_seconds": 38.56242412701249,
+          "seed": 20261223
+        },
+        "adflip": {
+          "key": "2pog",
+          "samples": 10,
+          "warm_seconds": 50.272729589021765,
+          "case_wall_seconds": 50.27409952599555,
+          "seed": 20261223
+        }
+      }
+    },
+    {
+      "key": "2qe4",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2qe4",
+          "samples": 10,
+          "warm_seconds": 0.06074766407255083,
+          "case_wall_seconds": 0.06108863407280296,
+          "seed": 20261224
+        },
+        "ligandmpnn": {
+          "key": "2qe4",
+          "samples": 10,
+          "warm_seconds": 1.5535905819851905,
+          "case_wall_seconds": 1.9488932979293168,
+          "seed": 20261224
+        },
+        "lasermpnn": {
+          "key": "2qe4",
+          "samples": 10,
+          "warm_seconds": 30.065694273100235,
+          "case_wall_seconds": 33.449117430020124,
+          "seed": 20261224
+        },
+        "adflip": {
+          "key": "2qe4",
+          "samples": 10,
+          "warm_seconds": 46.966730167972855,
+          "case_wall_seconds": 46.96789383306168,
+          "seed": 20261224
+        }
+      }
+    },
+    {
+      "key": "6i61",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6i61",
+          "samples": 10,
+          "warm_seconds": 0.06485387997236103,
+          "case_wall_seconds": 0.06518581602722406,
+          "seed": 20261225
+        },
+        "ligandmpnn": {
+          "key": "6i61",
+          "samples": 10,
+          "warm_seconds": 1.6054353810613975,
+          "case_wall_seconds": 2.0791866299696267,
+          "seed": 20261225
+        },
+        "lasermpnn": {
+          "key": "6i61",
+          "samples": 10,
+          "warm_seconds": 34.17099696211517,
+          "case_wall_seconds": 37.818228192976676,
+          "seed": 20261225
+        },
+        "adflip": {
+          "key": "6i61",
+          "samples": 10,
+          "warm_seconds": 51.26909626205452,
+          "case_wall_seconds": 51.27027018403169,
+          "seed": 20261225
+        }
+      }
+    },
+    {
+      "key": "6i64",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6i64",
+          "samples": 10,
+          "warm_seconds": 0.06463992595672607,
+          "case_wall_seconds": 0.06497009703889489,
+          "seed": 20261226
+        },
+        "ligandmpnn": {
+          "key": "6i64",
+          "samples": 10,
+          "warm_seconds": 1.4627064289525151,
+          "case_wall_seconds": 2.0300646560499445,
+          "seed": 20261226
+        },
+        "lasermpnn": {
+          "key": "6i64",
+          "samples": 10,
+          "warm_seconds": 33.70590234792326,
+          "case_wall_seconds": 37.46101538196672,
+          "seed": 20261226
+        },
+        "adflip": {
+          "key": "6i64",
+          "samples": 10,
+          "warm_seconds": 49.434386865003034,
+          "case_wall_seconds": 49.435535801923834,
+          "seed": 20261226
+        }
+      }
+    },
+    {
+      "key": "6i67",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6i67",
+          "samples": 10,
+          "warm_seconds": 0.0656005289638415,
+          "case_wall_seconds": 0.06594860798213631,
+          "seed": 20261227
+        },
+        "ligandmpnn": {
+          "key": "6i67",
+          "samples": 10,
+          "warm_seconds": 1.4672534400597215,
+          "case_wall_seconds": 1.8265439430251718,
+          "seed": 20261227
+        },
+        "lasermpnn": {
+          "key": "6i67",
+          "samples": 10,
+          "warm_seconds": 32.52651323995087,
+          "case_wall_seconds": 35.899608689011075,
+          "seed": 20261227
+        },
+        "adflip": {
+          "key": "6i67",
+          "samples": 10,
+          "warm_seconds": 52.24653833499178,
+          "case_wall_seconds": 52.247758566983975,
+          "seed": 20261227
+        }
+      }
+    },
+    {
+      "key": "2ydw",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2ydw",
+          "samples": 10,
+          "warm_seconds": 0.03528405900578946,
+          "case_wall_seconds": 0.03559271898120642,
+          "seed": 20261228
+        },
+        "ligandmpnn": {
+          "key": "2ydw",
+          "samples": 10,
+          "warm_seconds": 0.654482412035577,
+          "case_wall_seconds": 0.8908101549604908,
+          "seed": 20261228
+        },
+        "lasermpnn": {
+          "key": "2ydw",
+          "samples": 10,
+          "warm_seconds": 15.776617798139341,
+          "case_wall_seconds": 17.41370309900958,
+          "seed": 20261228
+        },
+        "adflip": {
+          "key": "2ydw",
+          "samples": 10,
+          "warm_seconds": 36.67591238103341,
+          "case_wall_seconds": 36.67687095096335,
+          "seed": 20261228
+        }
+      }
+    },
+    {
+      "key": "2yek",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2yek",
+          "samples": 10,
+          "warm_seconds": 0.037385910050943494,
+          "case_wall_seconds": 0.03769453999120742,
+          "seed": 20261229
+        },
+        "ligandmpnn": {
+          "key": "2yek",
+          "samples": 10,
+          "warm_seconds": 0.7399781950516626,
+          "case_wall_seconds": 0.970905733993277,
+          "seed": 20261229
+        },
+        "lasermpnn": {
+          "key": "2yek",
+          "samples": 10,
+          "warm_seconds": 16.34225032199174,
+          "case_wall_seconds": 18.26191696501337,
+          "seed": 20261229
+        },
+        "adflip": {
+          "key": "2yek",
+          "samples": 10,
+          "warm_seconds": 37.908197511103936,
+          "case_wall_seconds": 37.909347641980276,
+          "seed": 20261229
+        }
+      }
+    },
+    {
+      "key": "4lyw",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4lyw",
+          "samples": 10,
+          "warm_seconds": 0.02769312704913318,
+          "case_wall_seconds": 0.027965691057033837,
+          "seed": 20261230
+        },
+        "ligandmpnn": {
+          "key": "4lyw",
+          "samples": 10,
+          "warm_seconds": 0.3774400920374319,
+          "case_wall_seconds": 0.5044045400572941,
+          "seed": 20261230
+        },
+        "lasermpnn": {
+          "key": "4lyw",
+          "samples": 10,
+          "warm_seconds": 9.39497134310659,
+          "case_wall_seconds": 10.401556117925793,
+          "seed": 20261230
+        },
+        "adflip": {
+          "key": "4lyw",
+          "samples": 10,
+          "warm_seconds": 30.244869480957277,
+          "case_wall_seconds": 30.245702150044963,
+          "seed": 20261230
+        }
+      }
+    },
+    {
+      "key": "4qev",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4qev",
+          "samples": 10,
+          "warm_seconds": 0.026015321956947446,
+          "case_wall_seconds": 0.026320167002268136,
+          "seed": 20261231
+        },
+        "ligandmpnn": {
+          "key": "4qev",
+          "samples": 10,
+          "warm_seconds": 0.3668336709961295,
+          "case_wall_seconds": 0.479028461035341,
+          "seed": 20261231
+        },
+        "lasermpnn": {
+          "key": "4qev",
+          "samples": 10,
+          "warm_seconds": 8.193233184865676,
+          "case_wall_seconds": 9.092733360943384,
+          "seed": 20261231
+        },
+        "adflip": {
+          "key": "4qev",
+          "samples": 10,
+          "warm_seconds": 17.981235938961618,
+          "case_wall_seconds": 17.982022620970383,
+          "seed": 20261231
+        }
+      }
+    },
+    {
+      "key": "4qew",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4qew",
+          "samples": 10,
+          "warm_seconds": 0.027561101014725864,
+          "case_wall_seconds": 0.027853281004354358,
+          "seed": 20261232
+        },
+        "ligandmpnn": {
+          "key": "4qew",
+          "samples": 10,
+          "warm_seconds": 0.3729964289814234,
+          "case_wall_seconds": 0.48421865911222994,
+          "seed": 20261232
+        },
+        "lasermpnn": {
+          "key": "4qew",
+          "samples": 10,
+          "warm_seconds": 8.426065332023427,
+          "case_wall_seconds": 9.34497104107868,
+          "seed": 20261232
+        },
+        "adflip": {
+          "key": "4qew",
+          "samples": 10,
+          "warm_seconds": 26.80947122699581,
+          "case_wall_seconds": 26.810229885973968,
+          "seed": 20261232
+        }
+      }
+    },
+    {
+      "key": "4uyf",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4uyf",
+          "samples": 10,
+          "warm_seconds": 0.026833478012122214,
+          "case_wall_seconds": 0.027140054036863148,
+          "seed": 20261233
+        },
+        "ligandmpnn": {
+          "key": "4uyf",
+          "samples": 10,
+          "warm_seconds": 0.40043752000201494,
+          "case_wall_seconds": 0.5891151069663465,
+          "seed": 20261233
+        },
+        "lasermpnn": {
+          "key": "4uyf",
+          "samples": 10,
+          "warm_seconds": 8.87008062005043,
+          "case_wall_seconds": 9.81962291104719,
+          "seed": 20261233
+        },
+        "adflip": {
+          "key": "4uyf",
+          "samples": 10,
+          "warm_seconds": 13.557612802949734,
+          "case_wall_seconds": 13.558727750903927,
+          "seed": 20261233
+        }
+      }
+    },
+    {
+      "key": "5acy",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5acy",
+          "samples": 10,
+          "warm_seconds": 0.026062847930006683,
+          "case_wall_seconds": 0.026329769985750318,
+          "seed": 20261234
+        },
+        "ligandmpnn": {
+          "key": "5acy",
+          "samples": 10,
+          "warm_seconds": 0.43071434495504946,
+          "case_wall_seconds": 0.5780822900123894,
+          "seed": 20261234
+        },
+        "lasermpnn": {
+          "key": "5acy",
+          "samples": 10,
+          "warm_seconds": 9.301947358995676,
+          "case_wall_seconds": 10.307216570945457,
+          "seed": 20261234
+        },
+        "adflip": {
+          "key": "5acy",
+          "samples": 10,
+          "warm_seconds": 26.79862871498335,
+          "case_wall_seconds": 26.79935910005588,
+          "seed": 20261234
+        }
+      }
+    },
+    {
+      "key": "5d26",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5d26",
+          "samples": 10,
+          "warm_seconds": 0.026266625034622848,
+          "case_wall_seconds": 0.02654556301422417,
+          "seed": 20261235
+        },
+        "ligandmpnn": {
+          "key": "5d26",
+          "samples": 10,
+          "warm_seconds": 0.4557100120000541,
+          "case_wall_seconds": 0.629638126003556,
+          "seed": 20261235
+        },
+        "lasermpnn": {
+          "key": "5d26",
+          "samples": 10,
+          "warm_seconds": 9.369159630849026,
+          "case_wall_seconds": 10.381761601078324,
+          "seed": 20261235
+        },
+        "adflip": {
+          "key": "5d26",
+          "samples": 10,
+          "warm_seconds": 31.50473405700177,
+          "case_wall_seconds": 31.5056729989592,
+          "seed": 20261235
+        }
+      }
+    },
+    {
+      "key": "5d3h",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5d3h",
+          "samples": 10,
+          "warm_seconds": 0.02696975599974394,
+          "case_wall_seconds": 0.02729999797884375,
+          "seed": 20261236
+        },
+        "ligandmpnn": {
+          "key": "5d3h",
+          "samples": 10,
+          "warm_seconds": 0.40228126605506986,
+          "case_wall_seconds": 0.5429912400431931,
+          "seed": 20261236
+        },
+        "lasermpnn": {
+          "key": "5d3h",
+          "samples": 10,
+          "warm_seconds": 9.175381826236844,
+          "case_wall_seconds": 10.169359048013575,
+          "seed": 20261236
+        },
+        "adflip": {
+          "key": "5d3h",
+          "samples": 10,
+          "warm_seconds": 30.571702806977555,
+          "case_wall_seconds": 30.57250076602213,
+          "seed": 20261236
+        }
+      }
+    },
+    {
+      "key": "5d3j",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5d3j",
+          "samples": 10,
+          "warm_seconds": 0.02731368097011,
+          "case_wall_seconds": 0.039987675030715764,
+          "seed": 20261237
+        },
+        "ligandmpnn": {
+          "key": "5d3j",
+          "samples": 10,
+          "warm_seconds": 0.40396790707018226,
+          "case_wall_seconds": 0.5381891439901665,
+          "seed": 20261237
+        },
+        "lasermpnn": {
+          "key": "5d3j",
+          "samples": 10,
+          "warm_seconds": 9.187464654096402,
+          "case_wall_seconds": 10.177755976910703,
+          "seed": 20261237
+        },
+        "adflip": {
+          "key": "5d3j",
+          "samples": 10,
+          "warm_seconds": 30.728538360097446,
+          "case_wall_seconds": 30.729461816023104,
+          "seed": 20261237
+        }
+      }
+    },
+    {
+      "key": "5d3l",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5d3l",
+          "samples": 10,
+          "warm_seconds": 0.0265666350023821,
+          "case_wall_seconds": 0.026860587997362018,
+          "seed": 20261238
+        },
+        "ligandmpnn": {
+          "key": "5d3l",
+          "samples": 10,
+          "warm_seconds": 0.4008295510429889,
+          "case_wall_seconds": 0.5235526090255007,
+          "seed": 20261238
+        },
+        "lasermpnn": {
+          "key": "5d3l",
+          "samples": 10,
+          "warm_seconds": 9.29946902312804,
+          "case_wall_seconds": 10.283841228927486,
+          "seed": 20261238
+        },
+        "adflip": {
+          "key": "5d3l",
+          "samples": 10,
+          "warm_seconds": 31.438584684045054,
+          "case_wall_seconds": 31.43958362203557,
+          "seed": 20261238
+        }
+      }
+    },
+    {
+      "key": "5d3t",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5d3t",
+          "samples": 10,
+          "warm_seconds": 0.02653082099277526,
+          "case_wall_seconds": 0.026834410964511335,
+          "seed": 20261239
+        },
+        "ligandmpnn": {
+          "key": "5d3t",
+          "samples": 10,
+          "warm_seconds": 0.40907432697713375,
+          "case_wall_seconds": 0.5488634289940819,
+          "seed": 20261239
+        },
+        "lasermpnn": {
+          "key": "5d3t",
+          "samples": 10,
+          "warm_seconds": 9.329037331975996,
+          "case_wall_seconds": 10.345622788066976,
+          "seed": 20261239
+        },
+        "adflip": {
+          "key": "5d3t",
+          "samples": 10,
+          "warm_seconds": 29.773009033990093,
+          "case_wall_seconds": 29.773766002967022,
+          "seed": 20261239
+        }
+      }
+    },
+    {
+      "key": "5dlx",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5dlx",
+          "samples": 10,
+          "warm_seconds": 0.026349982945248485,
+          "case_wall_seconds": 0.026619772892445326,
+          "seed": 20261240
+        },
+        "ligandmpnn": {
+          "key": "5dlx",
+          "samples": 10,
+          "warm_seconds": 0.39925829297862947,
+          "case_wall_seconds": 0.5312082449672744,
+          "seed": 20261240
+        },
+        "lasermpnn": {
+          "key": "5dlx",
+          "samples": 10,
+          "warm_seconds": 9.401561648934148,
+          "case_wall_seconds": 10.382102278061211,
+          "seed": 20261240
+        },
+        "adflip": {
+          "key": "5dlx",
+          "samples": 10,
+          "warm_seconds": 19.72850311093498,
+          "case_wall_seconds": 19.729266672045924,
+          "seed": 20261240
+        }
+      }
+    },
+    {
+      "key": "5e74",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5e74",
+          "samples": 10,
+          "warm_seconds": 0.026090299943462014,
+          "case_wall_seconds": 0.026395882945507765,
+          "seed": 20261241
+        },
+        "ligandmpnn": {
+          "key": "5e74",
+          "samples": 10,
+          "warm_seconds": 0.3751277179690078,
+          "case_wall_seconds": 0.48736496607307345,
+          "seed": 20261241
+        },
+        "lasermpnn": {
+          "key": "5e74",
+          "samples": 10,
+          "warm_seconds": 8.550792438909411,
+          "case_wall_seconds": 9.466303696040995,
+          "seed": 20261241
+        },
+        "adflip": {
+          "key": "5e74",
+          "samples": 10,
+          "warm_seconds": 28.377738830051385,
+          "case_wall_seconds": 28.37852751708124,
+          "seed": 20261241
+        }
+      }
+    },
+    {
+      "key": "6mh1",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6mh1",
+          "samples": 10,
+          "warm_seconds": 0.02801913395524025,
+          "case_wall_seconds": 0.02832775702700019,
+          "seed": 20261242
+        },
+        "ligandmpnn": {
+          "key": "6mh1",
+          "samples": 10,
+          "warm_seconds": 0.4024234850658104,
+          "case_wall_seconds": 0.5410849659238011,
+          "seed": 20261242
+        },
+        "lasermpnn": {
+          "key": "6mh1",
+          "samples": 10,
+          "warm_seconds": 9.3905194591498,
+          "case_wall_seconds": 10.49007329705637,
+          "seed": 20261242
+        },
+        "adflip": {
+          "key": "6mh1",
+          "samples": 10,
+          "warm_seconds": 27.430991186993197,
+          "case_wall_seconds": 27.431888949940912,
+          "seed": 20261242
+        }
+      }
+    },
+    {
+      "key": "6mh7",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6mh7",
+          "samples": 10,
+          "warm_seconds": 0.026621308061294258,
+          "case_wall_seconds": 0.026917811017483473,
+          "seed": 20261243
+        },
+        "ligandmpnn": {
+          "key": "6mh7",
+          "samples": 10,
+          "warm_seconds": 0.39644836296793073,
+          "case_wall_seconds": 0.5543191960314289,
+          "seed": 20261243
+        },
+        "lasermpnn": {
+          "key": "6mh7",
+          "samples": 10,
+          "warm_seconds": 9.4478157768026,
+          "case_wall_seconds": 10.45144111290574,
+          "seed": 20261243
+        },
+        "adflip": {
+          "key": "6mh7",
+          "samples": 10,
+          "warm_seconds": 29.671044699964114,
+          "case_wall_seconds": 29.671805975958705,
+          "seed": 20261243
+        }
+      }
+    },
+    {
+      "key": "2yfe",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2yfe",
+          "samples": 10,
+          "warm_seconds": 0.04258464998565614,
+          "case_wall_seconds": 0.04290716000832617,
+          "seed": 20261244
+        },
+        "ligandmpnn": {
+          "key": "2yfe",
+          "samples": 10,
+          "warm_seconds": 0.7623937700409442,
+          "case_wall_seconds": 1.0307861679466441,
+          "seed": 20261244
+        },
+        "lasermpnn": {
+          "key": "2yfe",
+          "samples": 10,
+          "warm_seconds": 19.211246229009703,
+          "case_wall_seconds": 21.254934823024087,
+          "seed": 20261244
+        },
+        "adflip": {
+          "key": "2yfe",
+          "samples": 10,
+          "warm_seconds": 43.83676628198009,
+          "case_wall_seconds": 43.83801616099663,
+          "seed": 20261244
+        }
+      }
+    },
+    {
+      "key": "4a4v",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4a4v",
+          "samples": 10,
+          "warm_seconds": 0.044643628993071616,
+          "case_wall_seconds": 0.04495014494750649,
+          "seed": 20261245
+        },
+        "ligandmpnn": {
+          "key": "4a4v",
+          "samples": 10,
+          "warm_seconds": 0.789467009017244,
+          "case_wall_seconds": 1.073100517038256,
+          "seed": 20261245
+        },
+        "lasermpnn": {
+          "key": "4a4v",
+          "samples": 10,
+          "warm_seconds": 19.112764863064513,
+          "case_wall_seconds": 21.135049559990875,
+          "seed": 20261245
+        },
+        "adflip": {
+          "key": "4a4v",
+          "samples": 10,
+          "warm_seconds": 43.56846287101507,
+          "case_wall_seconds": 43.56972746597603,
+          "seed": 20261245
+        }
+      }
+    },
+    {
+      "key": "4a4w",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4a4w",
+          "samples": 10,
+          "warm_seconds": 0.04148294904734939,
+          "case_wall_seconds": 0.041804907959885895,
+          "seed": 20261246
+        },
+        "ligandmpnn": {
+          "key": "4a4w",
+          "samples": 10,
+          "warm_seconds": 0.8089266360038891,
+          "case_wall_seconds": 1.0740406900877133,
+          "seed": 20261246
+        },
+        "lasermpnn": {
+          "key": "4a4w",
+          "samples": 10,
+          "warm_seconds": 19.098846505046822,
+          "case_wall_seconds": 21.329856078955345,
+          "seed": 20261246
+        },
+        "adflip": {
+          "key": "4a4w",
+          "samples": 10,
+          "warm_seconds": 42.78358590404969,
+          "case_wall_seconds": 42.78465500008315,
+          "seed": 20261246
+        }
+      }
+    },
+    {
+      "key": "5f9b",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5f9b",
+          "samples": 10,
+          "warm_seconds": 0.06966798298526555,
+          "case_wall_seconds": 0.07000602292828262,
+          "seed": 20261247
+        },
+        "ligandmpnn": {
+          "key": "5f9b",
+          "samples": 10,
+          "warm_seconds": 1.4368125170003623,
+          "case_wall_seconds": 1.8616858159657568,
+          "seed": 20261247
+        },
+        "lasermpnn": {
+          "key": "5f9b",
+          "samples": 10,
+          "warm_seconds": 36.42287623381708,
+          "case_wall_seconds": 40.35832161991857,
+          "seed": 20261247
+        },
+        "adflip": {
+          "key": "5f9b",
+          "samples": 10,
+          "warm_seconds": 55.656807368970476,
+          "case_wall_seconds": 55.658067350042984,
+          "seed": 20261247
+        }
+      }
+    },
+    {
+      "key": "5lsg",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "5lsg",
+          "samples": 10,
+          "warm_seconds": 0.042414068011567,
+          "case_wall_seconds": 0.04273059801198542,
+          "seed": 20261248
+        },
+        "ligandmpnn": {
+          "key": "5lsg",
+          "samples": 10,
+          "warm_seconds": 0.7318618949502707,
+          "case_wall_seconds": 0.932502749026753,
+          "seed": 20261248
+        },
+        "lasermpnn": {
+          "key": "5lsg",
+          "samples": 10,
+          "warm_seconds": 18.822116177063435,
+          "case_wall_seconds": 20.806768335052766,
+          "seed": 20261248
+        },
+        "adflip": {
+          "key": "5lsg",
+          "samples": 10,
+          "warm_seconds": 36.002324796048924,
+          "case_wall_seconds": 36.00312570098322,
+          "seed": 20261248
+        }
+      }
+    },
+    {
+      "key": "6dgq",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6dgq",
+          "samples": 10,
+          "warm_seconds": 0.04220537596847862,
+          "case_wall_seconds": 0.04253328894264996,
+          "seed": 20261249
+        },
+        "ligandmpnn": {
+          "key": "6dgq",
+          "samples": 10,
+          "warm_seconds": 0.7374352510087192,
+          "case_wall_seconds": 0.9542241779854521,
+          "seed": 20261249
+        },
+        "lasermpnn": {
+          "key": "6dgq",
+          "samples": 10,
+          "warm_seconds": 19.353638993925415,
+          "case_wall_seconds": 21.362300814012997,
+          "seed": 20261249
+        },
+        "adflip": {
+          "key": "6dgq",
+          "samples": 10,
+          "warm_seconds": 37.39848593703937,
+          "case_wall_seconds": 37.39930063893553,
+          "seed": 20261249
+        }
+      }
+    },
+    {
+      "key": "6dgr",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6dgr",
+          "samples": 10,
+          "warm_seconds": 0.07358920702245086,
+          "case_wall_seconds": 0.07393561501521617,
+          "seed": 20261250
+        },
+        "ligandmpnn": {
+          "key": "6dgr",
+          "samples": 10,
+          "warm_seconds": 1.463292691973038,
+          "case_wall_seconds": 2.3718826670665294,
+          "seed": 20261250
+        },
+        "lasermpnn": {
+          "key": "6dgr",
+          "samples": 10,
+          "warm_seconds": 37.56163745780941,
+          "case_wall_seconds": 41.75067224097438,
+          "seed": 20261250
+        },
+        "adflip": {
+          "key": "6dgr",
+          "samples": 10,
+          "warm_seconds": 30.747966017923318,
+          "case_wall_seconds": 30.749435803038068,
+          "seed": 20261250
+        }
+      }
+    },
+    {
+      "key": "1nhz",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "1nhz",
+          "samples": 10,
+          "warm_seconds": 0.042901934939436615,
+          "case_wall_seconds": 0.04334974696394056,
+          "seed": 20261251
+        },
+        "ligandmpnn": {
+          "key": "1nhz",
+          "samples": 10,
+          "warm_seconds": 0.6858793190913275,
+          "case_wall_seconds": 0.8716108399676159,
+          "seed": 20261251
+        },
+        "lasermpnn": {
+          "key": "1nhz",
+          "samples": 10,
+          "warm_seconds": 17.45748957793694,
+          "case_wall_seconds": 19.7066134409979,
+          "seed": 20261251
+        },
+        "adflip": {
+          "key": "1nhz",
+          "samples": 10,
+          "warm_seconds": 33.110983056016266,
+          "case_wall_seconds": 33.11168367601931,
+          "seed": 20261251
+        }
+      }
+    },
+    {
+      "key": "2b4l",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2b4l",
+          "samples": 10,
+          "warm_seconds": 0.045088588958606124,
+          "case_wall_seconds": 0.04542219697032124,
+          "seed": 20261252
+        },
+        "ligandmpnn": {
+          "key": "2b4l",
+          "samples": 10,
+          "warm_seconds": 0.9186864430084825,
+          "case_wall_seconds": 1.14384881593287,
+          "seed": 20261252
+        },
+        "lasermpnn": {
+          "key": "2b4l",
+          "samples": 10,
+          "warm_seconds": 19.57982266799081,
+          "case_wall_seconds": 21.63966201094445,
+          "seed": 20261252
+        },
+        "adflip": {
+          "key": "2b4l",
+          "samples": 10,
+          "warm_seconds": 33.55304193298798,
+          "case_wall_seconds": 33.55385617003776,
+          "seed": 20261252
+        }
+      }
+    },
+    {
+      "key": "2o0u",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "2o0u",
+          "samples": 10,
+          "warm_seconds": 0.04883194307330996,
+          "case_wall_seconds": 0.04913211800158024,
+          "seed": 20261253
+        },
+        "ligandmpnn": {
+          "key": "2o0u",
+          "samples": 10,
+          "warm_seconds": 1.0295767759671435,
+          "case_wall_seconds": 1.301626274944283,
+          "seed": 20261253
+        },
+        "lasermpnn": {
+          "key": "2o0u",
+          "samples": 10,
+          "warm_seconds": 24.02181803388521,
+          "case_wall_seconds": 26.945060903090052,
+          "seed": 20261253
+        },
+        "adflip": {
+          "key": "2o0u",
+          "samples": 10,
+          "warm_seconds": 41.33044182497542,
+          "case_wall_seconds": 41.33136363490485,
+          "seed": 20261253
+        }
+      }
+    },
+    {
+      "key": "2yel",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "2yel",
+          "samples": 10,
+          "warm_seconds": 0.026534500997513533,
+          "case_wall_seconds": 0.026829284033738077,
+          "seed": 20261254
+        },
+        "ligandmpnn": {
+          "key": "2yel",
+          "samples": 10,
+          "warm_seconds": 0.4093807640019804,
+          "case_wall_seconds": 0.5422465649899095,
+          "seed": 20261254
+        },
+        "lasermpnn": {
+          "key": "2yel",
+          "samples": 10,
+          "warm_seconds": 9.450944062089548,
+          "case_wall_seconds": 10.481691890046932,
+          "seed": 20261254
+        },
+        "adflip": {
+          "key": "2yel",
+          "samples": 10,
+          "warm_seconds": 27.89157607697416,
+          "case_wall_seconds": 27.892247348092496,
+          "seed": 20261254
+        }
+      }
+    },
+    {
+      "key": "3myg",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "3myg",
+          "samples": 10,
+          "warm_seconds": 0.04145331890322268,
+          "case_wall_seconds": 0.04178128100465983,
+          "seed": 20261255
+        },
+        "ligandmpnn": {
+          "key": "3myg",
+          "samples": 10,
+          "warm_seconds": 0.7190371749456972,
+          "case_wall_seconds": 0.9385395989520475,
+          "seed": 20261255
+        },
+        "lasermpnn": {
+          "key": "3myg",
+          "samples": 10,
+          "warm_seconds": 18.212955368915573,
+          "case_wall_seconds": 20.15018879598938,
+          "seed": 20261255
+        },
+        "adflip": {
+          "key": "3myg",
+          "samples": 10,
+          "warm_seconds": 34.525816790992394,
+          "case_wall_seconds": 34.52669446100481,
+          "seed": 20261255
+        }
+      }
+    },
+    {
+      "key": "3nq3",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "3nq3",
+          "samples": 10,
+          "warm_seconds": 0.031651066965423524,
+          "case_wall_seconds": 0.03194973198696971,
+          "seed": 20261256
+        },
+        "ligandmpnn": {
+          "key": "3nq3",
+          "samples": 10,
+          "warm_seconds": 0.5102458479814231,
+          "case_wall_seconds": 0.6454534130170941,
+          "seed": 20261256
+        },
+        "lasermpnn": {
+          "key": "3nq3",
+          "samples": 10,
+          "warm_seconds": 12.086098594940268,
+          "case_wall_seconds": 13.365996979991905,
+          "seed": 20261256
+        },
+        "adflip": {
+          "key": "3nq3",
+          "samples": 10,
+          "warm_seconds": 26.17375058901962,
+          "case_wall_seconds": 26.17442942294292,
+          "seed": 20261256
+        }
+      }
+    },
+    {
+      "key": "3uew",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "3uew",
+          "samples": 10,
+          "warm_seconds": 0.0500116259790957,
+          "case_wall_seconds": 0.05035687598865479,
+          "seed": 20261257
+        },
+        "ligandmpnn": {
+          "key": "3uew",
+          "samples": 10,
+          "warm_seconds": 0.8928353460505605,
+          "case_wall_seconds": 1.1314377489034086,
+          "seed": 20261257
+        },
+        "lasermpnn": {
+          "key": "3uew",
+          "samples": 10,
+          "warm_seconds": 22.876352772815153,
+          "case_wall_seconds": 25.26056088192854,
+          "seed": 20261257
+        },
+        "adflip": {
+          "key": "3uew",
+          "samples": 10,
+          "warm_seconds": 37.95892127195839,
+          "case_wall_seconds": 37.95983227097895,
+          "seed": 20261257
+        }
+      }
+    },
+    {
+      "key": "3uex",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "3uex",
+          "samples": 10,
+          "warm_seconds": 0.05055345594882965,
+          "case_wall_seconds": 0.05087550892494619,
+          "seed": 20261258
+        },
+        "ligandmpnn": {
+          "key": "3uex",
+          "samples": 10,
+          "warm_seconds": 0.9127897860016674,
+          "case_wall_seconds": 1.1617235250305384,
+          "seed": 20261258
+        },
+        "lasermpnn": {
+          "key": "3uex",
+          "samples": 10,
+          "warm_seconds": 23.485689569963142,
+          "case_wall_seconds": 25.91886593401432,
+          "seed": 20261258
+        },
+        "adflip": {
+          "key": "3uex",
+          "samples": 10,
+          "warm_seconds": 31.322498372057453,
+          "case_wall_seconds": 31.323505499050952,
+          "seed": 20261258
+        }
+      }
+    },
+    {
+      "key": "4flp",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4flp",
+          "samples": 10,
+          "warm_seconds": 0.02559158590156585,
+          "case_wall_seconds": 0.02591327193658799,
+          "seed": 20261259
+        },
+        "ligandmpnn": {
+          "key": "4flp",
+          "samples": 10,
+          "warm_seconds": 0.33914237504359335,
+          "case_wall_seconds": 0.44351579097565264,
+          "seed": 20261259
+        },
+        "lasermpnn": {
+          "key": "4flp",
+          "samples": 10,
+          "warm_seconds": 8.114198687952012,
+          "case_wall_seconds": 8.986497436999343,
+          "seed": 20261259
+        },
+        "adflip": {
+          "key": "4flp",
+          "samples": 10,
+          "warm_seconds": 25.81125284708105,
+          "case_wall_seconds": 25.812312863068655,
+          "seed": 20261259
+        }
+      }
+    },
+    {
+      "key": "4k0y",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "4k0y",
+          "samples": 10,
+          "warm_seconds": 0.04627103602979332,
+          "case_wall_seconds": 0.04661238694097847,
+          "seed": 20261260
+        },
+        "ligandmpnn": {
+          "key": "4k0y",
+          "samples": 10,
+          "warm_seconds": 0.7913061919389293,
+          "case_wall_seconds": 1.0718395819421858,
+          "seed": 20261260
+        },
+        "lasermpnn": {
+          "key": "4k0y",
+          "samples": 10,
+          "warm_seconds": 20.60280558699742,
+          "case_wall_seconds": 22.994656366063282,
+          "seed": 20261260
+        },
+        "adflip": {
+          "key": "4k0y",
+          "samples": 10,
+          "warm_seconds": 23.953748214058578,
+          "case_wall_seconds": 23.962468529003672,
+          "seed": 20261260
+        }
+      }
+    },
+    {
+      "key": "4kcx",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "4kcx",
+          "samples": 10,
+          "warm_seconds": 0.041465461952611804,
+          "case_wall_seconds": 0.04184872703626752,
+          "seed": 20261261
+        },
+        "ligandmpnn": {
+          "key": "4kcx",
+          "samples": 10,
+          "warm_seconds": 0.661303982953541,
+          "case_wall_seconds": 0.8934201889205724,
+          "seed": 20261261
+        },
+        "lasermpnn": {
+          "key": "4kcx",
+          "samples": 10,
+          "warm_seconds": 15.915745561011136,
+          "case_wall_seconds": 17.66177675698418,
+          "seed": 20261261
+        },
+        "adflip": {
+          "key": "4kcx",
+          "samples": 10,
+          "warm_seconds": 34.18574866291601,
+          "case_wall_seconds": 34.18670240405481,
+          "seed": 20261261
+        }
+      }
+    },
+    {
+      "key": "5op5",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5op5",
+          "samples": 10,
+          "warm_seconds": 0.0470744970953092,
+          "case_wall_seconds": 0.04740246804431081,
+          "seed": 20261262
+        },
+        "ligandmpnn": {
+          "key": "5op5",
+          "samples": 10,
+          "warm_seconds": 0.742570873000659,
+          "case_wall_seconds": 0.9358963809208944,
+          "seed": 20261262
+        },
+        "lasermpnn": {
+          "key": "5op5",
+          "samples": 10,
+          "warm_seconds": 20.323366942000575,
+          "case_wall_seconds": 22.59425571700558,
+          "seed": 20261262
+        },
+        "adflip": {
+          "key": "5op5",
+          "samples": 10,
+          "warm_seconds": 34.504168524057604,
+          "case_wall_seconds": 34.50494488503318,
+          "seed": 20261262
+        }
+      }
+    },
+    {
+      "key": "5oq8",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5oq8",
+          "samples": 10,
+          "warm_seconds": 0.04270214796997607,
+          "case_wall_seconds": 0.0430203799623996,
+          "seed": 20261263
+        },
+        "ligandmpnn": {
+          "key": "5oq8",
+          "samples": 10,
+          "warm_seconds": 0.7460671089356765,
+          "case_wall_seconds": 0.9493988150497898,
+          "seed": 20261263
+        },
+        "lasermpnn": {
+          "key": "5oq8",
+          "samples": 10,
+          "warm_seconds": 19.218538571964018,
+          "case_wall_seconds": 21.267282731016167,
+          "seed": 20261263
+        },
+        "adflip": {
+          "key": "5oq8",
+          "samples": 10,
+          "warm_seconds": 34.79651910508983,
+          "case_wall_seconds": 34.79739566100761,
+          "seed": 20261263
+        }
+      }
+    },
+    {
+      "key": "5v82",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "5v82",
+          "samples": 10,
+          "warm_seconds": 0.044595103012397885,
+          "case_wall_seconds": 0.0449360340135172,
+          "seed": 20261264
+        },
+        "ligandmpnn": {
+          "key": "5v82",
+          "samples": 10,
+          "warm_seconds": 0.7889583830256015,
+          "case_wall_seconds": 1.0660124029964209,
+          "seed": 20261264
+        },
+        "lasermpnn": {
+          "key": "5v82",
+          "samples": 10,
+          "warm_seconds": 21.310115790111013,
+          "case_wall_seconds": 23.93349440791644,
+          "seed": 20261264
+        },
+        "adflip": {
+          "key": "5v82",
+          "samples": 10,
+          "warm_seconds": 40.093660382088274,
+          "case_wall_seconds": 40.09470221900847,
+          "seed": 20261264
+        }
+      }
+    },
+    {
+      "key": "6md0",
+      "test_group": "nonenzyme",
+      "models": {
+        "e18": {
+          "key": "6md0",
+          "samples": 10,
+          "warm_seconds": 0.043197692022658885,
+          "case_wall_seconds": 0.04350258701015264,
+          "seed": 20261265
+        },
+        "ligandmpnn": {
+          "key": "6md0",
+          "samples": 10,
+          "warm_seconds": 0.733583179069683,
+          "case_wall_seconds": 0.923952752025798,
+          "seed": 20261265
+        },
+        "lasermpnn": {
+          "key": "6md0",
+          "samples": 10,
+          "warm_seconds": 19.42731044779066,
+          "case_wall_seconds": 21.594689504010603,
+          "seed": 20261265
+        },
+        "adflip": {
+          "key": "6md0",
+          "samples": 10,
+          "warm_seconds": 34.54637916001957,
+          "case_wall_seconds": 34.54723606794141,
+          "seed": 20261265
+        }
+      }
+    },
+    {
+      "key": "6no9",
+      "test_group": "enzyme",
+      "models": {
+        "e18": {
+          "key": "6no9",
+          "samples": 10,
+          "warm_seconds": 0.04354684497229755,
+          "case_wall_seconds": 0.043868683045729995,
+          "seed": 20261266
+        },
+        "ligandmpnn": {
+          "key": "6no9",
+          "samples": 10,
+          "warm_seconds": 0.8698283979902044,
+          "case_wall_seconds": 1.1516605339711532,
+          "seed": 20261266
+        },
+        "lasermpnn": {
+          "key": "6no9",
+          "samples": 10,
+          "warm_seconds": 21.208512585726567,
+          "case_wall_seconds": 23.44404753902927,
+          "seed": 20261266
+        },
+        "adflip": {
+          "key": "6no9",
+          "samples": 10,
+          "warm_seconds": 41.61205513996538,
+          "case_wall_seconds": 41.61314038897399,
+          "seed": 20261266
+        }
+      }
+    }
+  ]
+}

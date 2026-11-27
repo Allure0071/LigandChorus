@@ -1,0 +1,18 @@
+{
+  "name": "E18 formal checkpoint temperature calibration",
+  "validation_structures": 128,
+  "structure_manifest_sha256": "e7541c687f75d514de06308309acffa1a71a5374d2b203a64a7dad9029d6751d",
+  "validation_manifest_sha256": "0b0e54e43a03cc93b0fbfdd6040785aa18b462287421f57348ae1bf21df1e74c",
+  "e18_checkpoint_sha256": "627e77d91b499725ec0f51e51c494f8cfba658de18345573b276c4787d540158",
+  "ligandmpnn_checkpoint_sha256": "161cd264061fda9680cbb940255522ae42f2966c552d045d87913d9452a80970",
+  "sampling_source_sha256": "117895901d5dc3a20a591d6d1e162d6cecfa4e27d7af66a42449b548b41fe948",
+  "sample_count": 10,
+  "base_seed": 0,
+  "e18_max_steps": 20,
+  "ligandmpnn_temperature": 0.1,
+  "e18_temperature_grid": [0.12, 0.18, 0.22, 0.24, 0.29, 0.36],
+  "previous_e18_temperatures": [0.29, 0.24],
+  "aggregation": "Equal-weight mean across structures. Diversity is the mean pairwise sequence disagreement on the audited target chain or validated pocket.",
+  "selection": "Minimize the larger absolute difference from official LigandMPNN of the two mean diversities. Break ties by smaller sum of both absolute differences, then lower inside and outside temperatures in that order.",
+  "reporting": "Use tolerance of 1 percentage point for each diversity. Report recovery descriptively. Store only numeric metrics and metadata."
+}

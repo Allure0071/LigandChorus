@@ -76,12 +76,25 @@ class StructAwareFlowModel(nn.Module):
 
         return self.W_out(h_V)
 
-    def compute_loss(self, feature_dict, true_sequence):
+    def compute_loss(self, feature_dict, true_sequence, *, loss_mask=None, generator=None):
         B, L = true_sequence.shape
         device = true_sequence.device
-        t = torch.rand(B, device=device)
-        noisy_sequence, mask_positions = corrupt_data(true_sequence, t, self.mask_token)
+        t = torch.rand(B, device=device, generator=generator)
+        noisy_sequence, mask_positions = corrupt_data(
+            true_sequence, t, self.mask_token, generator=generator,
+        )
+        if loss_mask is not None:
+            mask_positions = mask_positions & loss_mask
+            # Keep short target chains measurable when random masking misses them.
+            first_target = loss_mask & (loss_mask.long().cumsum(dim=1) == 1)
+            fallback = ~mask_positions.any(dim=1, keepdim=True) & first_target
+            mask_positions = mask_positions | fallback
+            # Supply the other chains as structure without exposing their native tokens.
+            noisy_sequence = noisy_sequence.masked_fill(~loss_mask | fallback, self.mask_token)
+            feature_dict = {**feature_dict, "S": true_sequence.masked_fill(~loss_mask, self.mask_token)}
         logits = self.forward(feature_dict, noisy_sequence, t)
+        if loss_mask is not None:
+            return F.cross_entropy(logits[mask_positions], true_sequence[mask_positions])
         loss_all = F.cross_entropy(logits.view(-1, self.vocab_size),
                                    true_sequence.view(-1), reduction='none').view(B, L)
         loss_masked = loss_all * mask_positions.float()

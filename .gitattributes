@@ -1,1 +1,7 @@
 * text=auto eol=lf
+
+# Preserve original bytes for files referenced by the calibration digests.
+reproduction/2026-11-27/configs/calibration.json -text -eol
+reproduction/2026-11-27/configs/temperature_lock.json -text -eol
+reproduction/2026-11-27/results/calibration_selection.json -text -eol
+reproduction/2026-11-27/scripts/calibrate.py -text -eol

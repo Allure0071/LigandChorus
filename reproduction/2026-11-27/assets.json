@@ -1,0 +1,129 @@
+{
+  "files": {
+    "training_manifest": {
+      "path": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/inputs/structures.jsonl",
+      "bytes": 1035450,
+      "sha256": "e7541c687f75d514de06308309acffa1a71a5374d2b203a64a7dad9029d6751d"
+    },
+    "enzyme_training_targets": {
+      "path": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/inputs/train_targets.jsonl",
+      "bytes": 211870,
+      "sha256": "527c26869833dc9c939a4fb2960483bf3ea2626b726d2537fbabf8d5be40dfac"
+    },
+    "validation_panel": {
+      "path": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/inputs/validation.jsonl",
+      "bytes": 16906,
+      "sha256": "0b0e54e43a03cc93b0fbfdd6040785aa18b462287421f57348ae1bf21df1e74c"
+    },
+    "e18_best": {
+      "path": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/formal/best.pt",
+      "bytes": 13635874,
+      "sha256": "627e77d91b499725ec0f51e51c494f8cfba658de18345573b276c4787d540158"
+    },
+    "e18_last": {
+      "path": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/formal/last.pt",
+      "bytes": 13635874,
+      "sha256": "515550b2cb352e34aec8497780f45c850c9d60a096024c41126819dd322a60e4"
+    },
+    "official_ligandmpnn": {
+      "path": "/data/yxhuang/enzyme_design/\u5efa\u6a21/03_LigandMPNN/\u590d\u73b0\u51c6\u5907/\u5b98\u65b9\u4ee3\u7801/LigandMPNN/model_params/ligandmpnn_v_32_010_25.pt",
+      "bytes": 10541943,
+      "sha256": "161cd264061fda9680cbb940255522ae42f2966c552d045d87913d9452a80970"
+    },
+    "official_lasermpnn": {
+      "path": "/data/yxhuang/enzyme_design/\u5efa\u6a21/03_LigandMPNN/\u590d\u73b0\u51c6\u5907/\u5b98\u65b9\u4ee3\u7801/LASErMPNN/model_weights/laser_weights_0p1A_noise_ligandmpnn_split.pt",
+      "bytes": 82712938,
+      "sha256": "4c76f879d6575a1433abd1604b4460754818477d4cbbc17cfe27395de8601e1f"
+    },
+    "official_adflip": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/adflip/results/weights/ADFLIP_v1.pt",
+      "bytes": 64096345,
+      "sha256": "94f6dfa4e94f966ed96a14ab3418507b5800977281434742730b9c99f5eaf752"
+    },
+    "pippack_checkpoint": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/adflip/PIPPack/model_weights/pippack_model_1_ckpt.pt",
+      "bytes": 22936773,
+      "sha256": "ebe675236b9f02cd6609c76a4b3654c14fe977706d150bae4ad0964e55162e32"
+    },
+    "pippack_model_config": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/adflip/PIPPack/model_weights/pippack_model_1_config.pickle",
+      "bytes": 19263,
+      "sha256": "eb4314c571eb4bc7ef1023d9f8f5a051229a77d44d6060c1a1a79eb00c676ee5"
+    },
+    "pippack_inference_config": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/adflip/PIPPack/model_weights/inference.pickle",
+      "bytes": 276,
+      "sha256": "f4d4e68c43b0639d5024017b613d2a33b65275051ff4d4c6a6311eb9a8c09d31"
+    },
+    "calibration_structure_metrics": {
+      "path": "/data_raid/yxhuang/ligandchorus_e18_temperature_20261127.MXbwh7/run/structure_metrics.jsonl",
+      "bytes": 792487,
+      "sha256": "6a021c3a6fd699f06b13d1121c26bcab872c2d55945c639e8c990fb24f570c31"
+    },
+    "coordinate_candidate_manifest": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/pinned_official_candidates.jsonl",
+      "bytes": 92968,
+      "sha256": "fbca3297d93a09bb2dd21666a20e6de29b4b8e5a7fa1cdab401203ab97ab0c3b"
+    },
+    "coordinate_preflight": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/four_model_coordinate_preflight.json",
+      "bytes": 91941,
+      "sha256": "81322dc404fc45f1b8c1c7303ab72e5e8e04f0071de0ff5b5023c6a8ddd79ff7"
+    },
+    "formal_input_manifest": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/common_panel.jsonl",
+      "bytes": 126925,
+      "sha256": "0db87bfde49d33fddb25d9826b170191b6302db419b21c57d3f781242064658a"
+    },
+    "formal_reference_enzyme": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/scoring_references_enzyme.jsonl",
+      "bytes": 210918,
+      "sha256": "7c284d33a26f1877840b81cbdb79921baf908ca0effbf4bc1956de5df00b72f9"
+    },
+    "formal_reference_nonenzyme": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/scoring_references_nonenzyme.jsonl",
+      "bytes": 121762,
+      "sha256": "96075839015476a0f20f34889a546ca1483558e6f2f964b354e6acddca7535d3"
+    },
+    "formal_score_report": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/resident_benchmark_20261127.Y2wmhzPD/formal/scores.json",
+      "bytes": 168181,
+      "sha256": "4ccb99e0cc95328d3883fb63e8b531d189efb0a194595122e73140d8f2cfd410"
+    },
+    "formal_timing_report": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/resident_benchmark_20261127.Y2wmhzPD/formal/timings.json",
+      "bytes": 131733,
+      "sha256": "fadd6f068d493b111009d3c2926cd742257b4701ce7888f2d23b022f12dd78a1"
+    },
+    "training_log": {
+      "path": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/formal/train.log",
+      "bytes": 14246,
+      "sha256": "eafb2aa0564dd500bcfbf85f75b2f62dbbf860af6ff4f0620b6e60b2ee50ae01"
+    }
+  },
+  "directories": {
+    "training_shard_root": "/data_raid/yxhuang/ligandmpnn_formal_abc/data",
+    "training_shards": "/data_raid/yxhuang/ligandmpnn_formal_abc/data/shards",
+    "enzyme_validation_run": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6",
+    "formal_input_root": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ",
+    "formal_cases": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/cases",
+    "development_fixtures": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/fixtures",
+    "benchmark_raw_predictions_and_timings": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/resident_benchmark_20261127.Y2wmhzPD/formal/models",
+    "normalized_predictions": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/resident_benchmark_20261127.Y2wmhzPD/formal/cases",
+    "calibration_run": "/data_raid/yxhuang/ligandchorus_e18_temperature_20261127.MXbwh7",
+    "ligandmpnn_source": "/data/yxhuang/enzyme_design/\u5efa\u6a21/03_LigandMPNN/\u590d\u73b0\u51c6\u5907/\u5b98\u65b9\u4ee3\u7801/LigandMPNN",
+    "lasermpnn_source": "/data/yxhuang/enzyme_design/\u5efa\u6a21/03_LigandMPNN/\u590d\u73b0\u51c6\u5907/\u5b98\u65b9\u4ee3\u7801/LASErMPNN",
+    "adflip_source": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/adflip"
+  },
+  "training_shard_inventory": {
+    "file_count": 444,
+    "bytes": 12236144896
+  },
+  "runtime": {
+    "python": "/data/yxhuang/anaconda3/envs/ligandmpnn/bin/python",
+    "python_version": "3.11.15",
+    "benchmark_python": "/data/yxhuang/enzyme_design/envs/lasermpnn/bin/python",
+    "input_parser_dependencies": "/data_raid/yxhuang/ligandmpnn_data_audit/deps",
+    "adflip_dependencies": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/adflip_deps"
+  }
+}

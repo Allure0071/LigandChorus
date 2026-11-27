@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-11-28T00:34:12+08:00",
+  "status": "passed",
+  "server_validation_run": "/data_raid/yxhuang/ligandchorus_reproduction_check_20261128.W1Kb7WkO",
+  "source_files_matched_to_original": 13,
+  "full_rescore": {
+    "enzyme_structures": 80,
+    "nonenzyme_structures": 60,
+    "matches_archived_report": true
+  },
+  "rebuilt_inputs": {
+    "structures": 140,
+    "PDB_NPZ_alignment_hashes_matched": true,
+    "parser_passes": {
+      "e18": 140,
+      "ligandmpnn": 140,
+      "lasermpnn": 140,
+      "adflip": 140
+    }
+  },
+  "inference": {
+    "development_structures": 1,
+    "output_shape": [
+      10,
+      152
+    ]
+  },
+  "training_smoke": {
+    "training_assemblies": 2,
+    "optimizer_steps": 1,
+    "validation_structures": 128,
+    "best_and_last_written": true
+  },
+  "calibration_smoke": {
+    "validation_structures": 2,
+    "formal_temperature_selection_preserved": true
+  },
+  "four_model_inference_smoke": {
+    "development_structures": 2,
+    "models": [
+      "e18",
+      "ligandmpnn",
+      "lasermpnn",
+      "adflip"
+    ],
+    "samples_per_model_per_structure": 10,
+    "scores_and_timings_written": true
+  },
+  "scope": {
+    "full_training_repeated": false,
+    "full_formal_sampling_repeated": false
+  }
+}

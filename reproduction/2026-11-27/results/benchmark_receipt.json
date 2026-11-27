@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "mode": "formal",
+  "config_sha256": "0fa15085180b6fa6d91338c927fc03e7a563b822b88ac6d41e62ca91cc86ba1f",
+  "total_cases": 140,
+  "samples_per_model": 10,
+  "completed_models": [
+    "e18",
+    "ligandmpnn",
+    "lasermpnn",
+    "adflip"
+  ],
+  "phase": "done"
+}

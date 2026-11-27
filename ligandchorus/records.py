@@ -48,6 +48,36 @@ def training_entries(manifest, limit):
     return list(islice(rows, limit))
 
 
+def targeted_training_entries(manifest, targets, limit):
+    """Select explicitly labeled training records in structural manifest order."""
+    labels_by_key = {}
+    for target in manifest_entries(targets):
+        key = target.get("key")
+        labels = target.get("chain_labels")
+        if not isinstance(key, str) or not key or key in labels_by_key:
+            raise ValueError(f"Training targets require unique nonempty keys: {key!r}")
+        if (not isinstance(labels, list) or not labels
+                or any(type(label) is not int or label < 0 for label in labels)
+                or len(set(labels)) != len(labels)):
+            raise ValueError(f"{key}: chain_labels must be distinct nonnegative integers")
+        labels_by_key[key] = labels
+    if not labels_by_key:
+        raise ValueError("The training target manifest is empty")
+
+    entries = {}
+    for entry in manifest_entries(manifest):
+        key = entry.get("key")
+        if key not in labels_by_key:
+            continue
+        if entry.get("split") != "train" or key in entries:
+            raise ValueError(f"Expected one explicit train record for {key!r}")
+        entries[key] = entry
+    missing = labels_by_key.keys() - entries.keys()
+    if missing:
+        raise ValueError(f"Training target keys absent from the structural manifest: {sorted(missing)}")
+    return list(islice(entries.values(), limit)), labels_by_key
+
+
 def find_entry(manifest, key):
     matches = [entry for entry in manifest_entries(manifest) if entry.get("key") == key]
     if len(matches) != 1:

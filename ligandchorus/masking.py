@@ -3,7 +3,7 @@
 import torch
 
 
-def corrupt_data(sequence, t, mask_token=20):
+def corrupt_data(sequence, t, mask_token=20, *, generator=None):
     """
     按时间步 t 损坏序列（离散流匹配的前向过程）
 
@@ -21,7 +21,7 @@ def corrupt_data(sequence, t, mask_token=20):
 
     # 每个位置以概率 t 保留真实氨基酸，1-t 替换为 mask
     # 注意：t 越大，保留越多（t=1 时完全保留）
-    keep_mask = torch.rand(B, L, device=device) < t.unsqueeze(-1)
+    keep_mask = torch.rand(B, L, device=device, generator=generator) < t.unsqueeze(-1)
 
     noisy_sequence = torch.where(
         keep_mask,

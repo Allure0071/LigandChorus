@@ -15,6 +15,7 @@ import torch
 from .features import structure_to_feature_dict
 from .model import build_model
 from .sampling import regional_temperature
+from .substitution_schedule import benchmark_schedule
 
 
 def verified_json(path, digest):
@@ -33,6 +34,9 @@ def main():
     parser.add_argument("--blosum", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--smoke", action="store_true")
+    parser.add_argument("--grade-table", type=Path, help="GraDe-IF's pinned BLOSUM temperature table (500 stages, stride 100)")
+    parser.add_argument("--updates", type=int, default=25_000, help="Training updates for a matched pilot or formal run")
+    parser.add_argument("--terminal-readout", choices=("sample", "argmax"), help="Default: sample for original protocol, argmax for GraDe-IF")
     parser.add_argument(
         "--resume",
         action="store_true",
@@ -49,6 +53,9 @@ def main():
         help="Archive of the E18 quality metrics for the same panel",
     )
     args = parser.parse_args()
+    if args.updates < 1:
+        parser.error("--updates must be positive")
+    readout = args.terminal_readout or ("argmax" if args.grade_table else "sample")
     rows = verified_json(
         args.selection,
         "1cfa56f24875d09d8ee26861e211d26568d8424178b4a214dc7ef751d30b4b41",
@@ -86,21 +93,8 @@ def main():
         [[int(table[a][lines[0].index(b)]) for b in alphabet] for a in alphabet],
         dtype=torch.float64,
     )
-    exchange = torch.exp2(scores / 2)
-    exchange /= exchange.sum(1, keepdim=True)
-    identity = torch.eye(20, dtype=torch.float64)
-    kernel = identity
-    cumulative = []
-    transitions = []
-    for beta in (0.10, 0.25, 0.45, 0.70):
-        transitions.append((1 - beta) * identity + beta * exchange)
-        kernel = kernel @ transitions[-1]
-        cumulative.append(kernel)
-    transitions.append(torch.full_like(kernel, 1 / 20))
-    cumulative.append(kernel @ transitions[-1])
-    torch.testing.assert_close(
-        torch.stack(cumulative).sum(-1), torch.ones(5, 20, dtype=torch.float64)
-    )
+    forward_weights, products, transitions, grid = benchmark_schedule(scores, args.grade_table)
+    horizon = grid[-1]
 
     if args.resume and not args.generation:
         parser.error("--resume requires --generation")
@@ -122,9 +116,9 @@ def main():
     assert not model.ligandmpnn.training and all(
         not p.requires_grad for p in model.ligandmpnn.parameters()
     )
-    cumulative = torch.stack(cumulative).float().to(device)
-    transitions = torch.stack(transitions).float().to(device)
-    products = torch.cat((identity.float().to(device)[None], cumulative))
+    forward_weights = forward_weights.float().to(device)
+    transitions = transitions.float().to(device)
+    products = products.float().to(device)
 
     @lru_cache(maxsize=24)
     def shard(name):
@@ -163,22 +157,25 @@ def main():
         state = torch.randint(20, mask.shape, generator=generator, device=device)
         state = state.masked_fill(~design, model.mask_token)
         history = [state]
-        for k in range(5, 0, -1):
-            clock = torch.full((samples,), k / 5, device=device)
+        for interval in reversed(range(len(grid) - 1)):
+            s, k = grid[interval:interval + 2]
+            clock = torch.full((samples,), k / horizon, device=device)
             logits = model.decode(encoded, mask, state, clock)[..., :20].float()
             clean = (logits / temperature).softmax(-1)
             # Mix q(x[k-1] | x[k], x[0]) using the decoder's distribution over x[0].
-            j = state.clamp_max(19)
-            denominator = products[k].T[j]
-            previous = ((clean / denominator) @ products[k - 1]) * transitions[k - 1].T[
-                j
-            ]
-            draw = torch.multinomial(previous.reshape(-1, 20), 1, generator=generator)
+            if s == 0 and readout == "argmax":
+                draw = logits.argmax(-1)
+            else:
+                j = state.clamp_max(19)
+                previous = ((clean / products[k].T[j]) @ products[s]) * transitions[interval].T[j]
+                if s == 0 and args.grade_table:
+                    previous = clean  # matched stochastic readout of the same terminal logits
+                draw = torch.multinomial(previous.reshape(-1, 20), 1, generator=generator)
             state = draw.reshape_as(state).masked_fill(~design, model.mask_token)
             history.append(state)
         return torch.stack(history)
 
-    steps = 8 if args.smoke else 25_000
+    steps = 8 if args.smoke else args.updates
     train_rows = rows[:16] if args.smoke else rows
     started = time.monotonic()
     print(
@@ -205,10 +202,10 @@ def main():
         valid = mask.bool() & chain.bool() & native.ge(0) & native.lt(20)
         noisy = native.clone()
         noisy[valid] = torch.multinomial(
-            cumulative[stage - 1, native[valid]], 1, generator=generator
+            forward_weights[stage, native[valid]], 1, generator=generator
         ).flatten()
         noisy[~mask.bool()] = 20
-        t = torch.full((native.shape[0],), stage / 5, device=device)
+        t = torch.full((native.shape[0],), stage / horizon, device=device)
         return (
             tuple(v.to(device) for v in encoded),
             native,
@@ -220,7 +217,7 @@ def main():
         )
 
     run_key = {
-        "protocol": "e18-blosum5-v1",
+        "protocol": "e18-grade500-v1" if args.grade_table else "e18-blosum5-v1",
         "structures": len(train_rows),
         "steps": steps,
         "encoder_sha256": hashlib.sha256(args.encoder_weights.read_bytes()).hexdigest(),
@@ -258,7 +255,7 @@ def main():
             optimizer.zero_grad(set_to_none=True)
             batch_loss = 0.0
             for index in rng.choice(len(train_rows), 4, replace=False):
-                stage = int(torch.randint(1, 6, ()).item())
+                stage = int(torch.randint(0 if args.grade_table else 1, horizon + 1, ()).item())
                 enc, native, noisy, t, mask, chain, valid = inputs(
                     train_entry(index), stage
                 )
@@ -365,6 +362,11 @@ def main():
                     "seed": seed,
                     "samples": len(candidates),
                     "steps": 5,
+                    "training_updates": steps,
+                    "protocol": run_key["protocol"],
+                    "time_grid": list(reversed(grid)),
+                    "terminal_readout": readout,
+                    "preterminal_sha256": hashlib.sha256(trajectory[:-1].cpu().numpy().tobytes()).hexdigest(),
                     "metrics": {},
                 }
                 for region, keep in (("global", valid), ("interface", pocket)):
@@ -406,7 +408,8 @@ def main():
                 )
             quality = {
                 **reference["metrics"],
-                "blosum5_regional_0.29_0.24": summaries["check"],
+                ("blosum5_regional_0.29_0.24" if not args.grade_table and readout == "sample"
+                 else f"{run_key['protocol']}_{readout}_{steps}updates"): summaries["check"],
             }
             differences = {
                 name: {
@@ -432,7 +435,7 @@ def main():
             entry = panel_entry(case["key"])
             for seed in panel["seeds"]:
                 generator = torch.Generator(device=device).manual_seed(seed)
-                for stage in range(1, 6):
+                for stage in grid[1:]:
                     enc, native, noisy, t, mask, _, valid = inputs(
                         entry, stage, generator
                     )

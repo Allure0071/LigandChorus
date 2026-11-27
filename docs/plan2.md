@@ -1,5 +1,19 @@
 # 方案二：替换噪声与天然残基交叉熵
 
+## 在固定 E18 面板上比较两种时间轴
+
+`python -m ligandchorus.recovery_benchmark` 沿用既有的训练清单、评测面板、官方冻结编码器及 BLOSUM62 文件。默认运行原五级方案。通过以下选项运行 GraDe-IF 时间轴或同预算对照。
+
+| 参数 | 含义 |
+|---|---|
+| `--grade-table PATH` | 读取作者发布的 [blosum_substitute.pt](https://raw.githubusercontent.com/ykiiiiii/GraDe_IF/562674761c94c44ad75492324a4a44e8f5a945b5/dataset_src/blosum_substitute.pt)，校验 SHA-256、字母序和 BLOSUM 分数。训练时均匀抽取整数 0…500，推理按 100 跨步。 |
+| `--terminal-readout sample` 或 `argmax` | 在同一末轮预测上抽样或取最高分。原五级默认抽样，GraDe-IF 时间轴默认取最高分。首四轮均为随机抽样，区域温度 0.29/0.24。 |
+| `--updates N` | 正式默认 25,000 步，配对试验可显式指定相同预算；`--smoke` 固定 8 步。 |
+
+GraDe-IF 发布的代码对温度缩放后的分数做 softmax。前向加噪以天然类别选列，反向后验使用作者的累计表与区间比值近似。项目将其字母序映射到 LigandMPNN 的类别顺序。我们保留 LigandMPNN 的配体条件、三层并行解码器、归一化时间输入和 E18 区域采样温度。每次网络调用同时预测所有有效设计位置的天然身份分布。
+
+在 `--generation` 下保存解码头、优化器和 RNG。对同一检查点切换末轮读出时，将其训练日志及检查点复制到独立输出目录，再用相同训练参数和 `--resume` 运行。逐结构 JSONL 内的 `preterminal_sha256` 覆盖随机初态与前四轮结果，可检验两份对照只在末轮分叉。
+
 正式协作仓库为 LigandChorus。方案一由同学负责，采用分轮揭开掩码。方案二在 `cloud` 分支开发，研究已有氨基酸能否在后续轮次得到修正。
 
 ## 训练目标

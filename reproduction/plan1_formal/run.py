@@ -126,7 +126,7 @@ def calibrate(out, model, validation, assets, smoke):
     grid = protocol["e18_temperature_grid"]
     configs = {f"{a:.2f}_{b:.2f}": (a,b) for a in grid for b in grid}
     if smoke:
-        configs = {"0.29_0.24": (0.29, 0.24)}
+        configs = {"0.29_0.24": (0.29, 0.24), "0.24_0.24": (0.24, 0.24)}
     pairs = torch.triu_indices(10, 10, 1, device=DEVICE)
     locks = {}
     for mode in MODES:

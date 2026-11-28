@@ -1,0 +1,12 @@
+{
+  "source": "E18 formal checkpoint calibration on the 128 validation structures",
+  "checkpoint": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/formal/best.pt",
+  "checkpoint_sha256": "627e77d91b499725ec0f51e51c494f8cfba658de18345573b276c4787d540158",
+  "protocol_sha256": "bd512dad79278c570b8fdb829f0af4568862fd9e155b2c807ab104c8bbc376e8",
+  "summary_sha256": "a69b59480a581495626404671b6676fec758149f0cc4f44624a3f09a4295fdf1",
+  "inside_temperature": 0.12,
+  "outside_temperature": 0.29,
+  "within_one_percentage_point_of_reference_for_both_diversities": true,
+  "validation_structures": 128,
+  "samples_per_structure": 10
+}

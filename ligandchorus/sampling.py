@@ -23,10 +23,10 @@ def sample(model, features, *, samples=10, steps=20, seed=0, inside=0.29, outsid
     if features["mask"].shape[0] != 1:
         raise ValueError("Expected features for one structure")
     model.eval()
-    torch.manual_seed(seed)
     encoded = model.ligandmpnn.encode(features)
     context = tuple(tensor.expand(samples, *tensor.shape[1:]) for tensor in encoded)
     device = encoded[0].device
+    generator = torch.Generator(device=device).manual_seed(seed)
     length = features["mask"].shape[-1]
     sequence = torch.full((samples, length), model.mask_token, dtype=torch.long, device=device)
     mask = features["mask"].expand(samples, -1)
@@ -38,6 +38,8 @@ def sample(model, features, *, samples=10, steps=20, seed=0, inside=0.29, outsid
         t = torch.full((samples,), step / steps, device=device)
         logits = model.decode(context, mask, sequence, t)
         probabilities = (logits / temperature).softmax(dim=-1)
-        proposed = torch.multinomial(probabilities.flatten(0, 1), 1).reshape_as(sequence)
+        proposed = torch.multinomial(
+            probabilities.flatten(0, 1), 1, generator=generator,
+        ).reshape_as(sequence)
         sequence = torch.where(unfilled, proposed, sequence)
     return sequence

@@ -1,0 +1,45 @@
+{
+  "panel": {
+    "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/common_panel.jsonl",
+    "sha256": "0db87bfde49d33fddb25d9826b170191b6302db419b21c57d3f781242064658a"
+  },
+  "samples_per_model_per_structure": 10,
+  "calibration": {
+    "source_server": "/data_raid/yxhuang/ligandchorus_e18_temperature_20261127.MXbwh7",
+    "selection_sha256": "8814b0065c9231c86327799c954dd779ed488fd9805315d28ebfce99f7793cca",
+    "protocol_sha256": "bd512dad79278c570b8fdb829f0af4568862fd9e155b2c807ab104c8bbc376e8",
+    "summary_sha256": "a69b59480a581495626404671b6676fec758149f0cc4f44624a3f09a4295fdf1",
+    "validation_manifest_sha256": "0b0e54e43a03cc93b0fbfdd6040785aa18b462287421f57348ae1bf21df1e74c",
+    "validation_structures": 128,
+    "selection_metric": "Match equal-weight structure-level mean chain and pocket pairwise diversity to the reference LigandMPNN run",
+    "mean_diversity_gap_percentage_points": {
+      "chain_diversity": 0.2263411122839898,
+      "pocket_diversity": 0.8579282795835752
+    }
+  },
+  "e18": {
+    "checkpoint": {
+      "sha256": "627e77d91b499725ec0f51e51c494f8cfba658de18345573b276c4787d540158",
+      "server_path": "/data_raid/yxhuang/ligandchorus_e18_formal_20261127.HU2EG6/formal/best.pt"
+    },
+    "sampling_source_sha256": "117895901d5dc3a20a591d6d1e162d6cecfa4e27d7af66a42449b548b41fe948",
+    "inside_temperature": 0.12,
+    "outside_temperature": 0.29,
+    "inside_rule": "C-alpha distance to any supplied context atom < 5 angstrom",
+    "max_steps": 20,
+    "parameter_source": "validation diversity calibration"
+  },
+  "ligandmpnn": {
+    "checkpoint": {
+      "sha256": "161cd264061fda9680cbb940255522ae42f2966c552d045d87913d9452a80970",
+      "server_path": "/data/yxhuang/enzyme_design/建模/03_LigandMPNN/复现准备/官方代码/LigandMPNN/model_params/ligandmpnn_v_32_010_25.pt"
+    },
+    "temperature": 0.1,
+    "parameter_source": "reference setting used for E18 calibration"
+  },
+  "other_baselines": {
+    "lasermpnn": "not covered by the cited calibration",
+    "adflip": "not covered by the cited calibration"
+  },
+  "stage": "Temperature settings pinned locally from existing validation evidence"
+}

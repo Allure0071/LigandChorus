@@ -1,0 +1,4939 @@
+{
+  "enzyme": {
+    "cases": [
+      {
+        "key": "1elb",
+        "target_positions": 240,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45458333333333334,
+            "pocket_recovery": 0.3,
+            "pocket_diversity": 0.09444444444444444,
+            "chain_diversity": 0.19296296296296298
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5345833333333333,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.2222222222222222,
+            "chain_diversity": 0.1749074074074074
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5479166666666667,
+            "pocket_recovery": 0.4583333333333333,
+            "pocket_diversity": 0.25555555555555554,
+            "chain_diversity": 0.23935185185185184
+          },
+          "adflip": {
+            "chain_recovery": 0.57375,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0077777777777777776
+          }
+        }
+      },
+      {
+        "key": "1elc",
+        "target_positions": 240,
+        "pocket_positions": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45125,
+            "pocket_recovery": 0.23157894736842105,
+            "pocket_diversity": 0.0783625730994152,
+            "chain_diversity": 0.1739814814814815
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5275,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.1649122807017544,
+            "chain_diversity": 0.16166666666666665
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5345833333333333,
+            "pocket_recovery": 0.3736842105263158,
+            "pocket_diversity": 0.3134502923976608,
+            "chain_diversity": 0.23657407407407408
+          },
+          "adflip": {
+            "chain_recovery": 0.5620833333333334,
+            "pocket_recovery": 0.42105263157894735,
+            "pocket_diversity": 0.02456140350877193,
+            "chain_diversity": 0.008333333333333333
+          }
+        }
+      },
+      {
+        "key": "1qb1",
+        "target_positions": 223,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4726457399103139,
+            "pocket_recovery": 0.4166666666666667,
+            "pocket_diversity": 0.27037037037037037,
+            "chain_diversity": 0.15984055804683608
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5955156950672645,
+            "pocket_recovery": 0.7083333333333334,
+            "pocket_diversity": 0.2037037037037037,
+            "chain_diversity": 0.17957149975087194
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5991031390134529,
+            "pocket_recovery": 0.6333333333333333,
+            "pocket_diversity": 0.2796296296296296,
+            "chain_diversity": 0.21305430991529647
+          },
+          "adflip": {
+            "chain_recovery": 0.6112107623318386,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0020926756352765323
+          }
+        }
+      },
+      {
+        "key": "1v2n",
+        "target_positions": 223,
+        "pocket_positions": 10,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4623318385650224,
+            "pocket_recovery": 0.43,
+            "pocket_diversity": 0.07555555555555556,
+            "chain_diversity": 0.15665171898355754
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5730941704035875,
+            "pocket_recovery": 0.66,
+            "pocket_diversity": 0.15555555555555556,
+            "chain_diversity": 0.16073741903338315
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5860986547085202,
+            "pocket_recovery": 0.54,
+            "pocket_diversity": 0.2,
+            "chain_diversity": 0.1998006975585451
+          },
+          "adflip": {
+            "chain_recovery": 0.6591928251121076,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.003288490284005979
+          }
+        }
+      },
+      {
+        "key": "3gy3",
+        "target_positions": 223,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4408071748878924,
+            "pocket_recovery": 0.3416666666666667,
+            "pocket_diversity": 0.19814814814814816,
+            "chain_diversity": 0.15944195316392626
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5820627802690583,
+            "pocket_recovery": 0.7333333333333333,
+            "pocket_diversity": 0.1425925925925926,
+            "chain_diversity": 0.18794220229197808
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.6152466367713004,
+            "pocket_recovery": 0.725,
+            "pocket_diversity": 0.11666666666666667,
+            "chain_diversity": 0.21943198804185352
+          },
+          "adflip": {
+            "chain_recovery": 0.6466367713004484,
+            "pocket_recovery": 0.75,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0015944195316392625
+          }
+        }
+      },
+      {
+        "key": "3m35",
+        "target_positions": 223,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44663677130044843,
+            "pocket_recovery": 0.3333333333333333,
+            "pocket_diversity": 0.05,
+            "chain_diversity": 0.14429496761335325
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5744394618834081,
+            "pocket_recovery": 0.5083333333333333,
+            "pocket_diversity": 0.22592592592592592,
+            "chain_diversity": 0.17917289486796215
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5964125560538116,
+            "pocket_recovery": 0.55,
+            "pocket_diversity": 0.2796296296296296,
+            "chain_diversity": 0.22152466367713006
+          },
+          "adflip": {
+            "chain_recovery": 0.636322869955157,
+            "pocket_recovery": 0.75,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0008968609865470852
+          }
+        }
+      },
+      {
+        "key": "1yc1",
+        "target_positions": 210,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45,
+            "pocket_recovery": 0.48,
+            "pocket_diversity": 0.1111111111111111,
+            "chain_diversity": 0.19153439153439153
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.54,
+            "pocket_recovery": 0.72,
+            "pocket_diversity": 0.20444444444444446,
+            "chain_diversity": 0.22592592592592592
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.53,
+            "pocket_recovery": 0.6466666666666666,
+            "pocket_diversity": 0.2607407407407407,
+            "chain_diversity": 0.2782010582010582
+          },
+          "adflip": {
+            "chain_recovery": 0.5261904761904762,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.057777777777777775,
+            "chain_diversity": 0.014074074074074074
+          }
+        }
+      },
+      {
+        "key": "2bsm",
+        "target_positions": 208,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4673076923076923,
+            "pocket_recovery": 0.37058823529411766,
+            "pocket_diversity": 0.18823529411764706,
+            "chain_diversity": 0.2094017094017094
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5884615384615385,
+            "pocket_recovery": 0.7235294117647059,
+            "pocket_diversity": 0.054901960784313725,
+            "chain_diversity": 0.22521367521367522
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5788461538461539,
+            "pocket_recovery": 0.6941176470588235,
+            "pocket_diversity": 0.2222222222222222,
+            "chain_diversity": 0.2748931623931624
+          },
+          "adflip": {
+            "chain_recovery": 0.5961538461538461,
+            "pocket_recovery": 0.5294117647058824,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008653846153846154
+          }
+        }
+      },
+      {
+        "key": "2iwx",
+        "target_positions": 214,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.39532710280373834,
+            "pocket_recovery": 0.5142857142857142,
+            "pocket_diversity": 0.14126984126984127,
+            "chain_diversity": 0.20093457943925233
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4934579439252336,
+            "pocket_recovery": 0.5928571428571429,
+            "pocket_diversity": 0.1349206349206349,
+            "chain_diversity": 0.2573208722741433
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5032710280373832,
+            "pocket_recovery": 0.6214285714285714,
+            "pocket_diversity": 0.20634920634920634,
+            "chain_diversity": 0.28110072689511945
+          },
+          "adflip": {
+            "chain_recovery": 0.4738317757009346,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.011630321910695742
+          }
+        }
+      },
+      {
+        "key": "2vw5",
+        "target_positions": 214,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.43177570093457945,
+            "pocket_recovery": 0.5611111111111111,
+            "pocket_diversity": 0.056790123456790124,
+            "chain_diversity": 0.18826583592938734
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4939252336448598,
+            "pocket_recovery": 0.5777777777777777,
+            "pocket_diversity": 0.0691358024691358,
+            "chain_diversity": 0.22658359293873312
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4976635514018692,
+            "pocket_recovery": 0.5888888888888889,
+            "pocket_diversity": 0.18765432098765433,
+            "chain_diversity": 0.2581516095534787
+          },
+          "adflip": {
+            "chain_recovery": 0.5196261682242991,
+            "pocket_recovery": 0.6111111111111112,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005088265835929387
+          }
+        }
+      },
+      {
+        "key": "2vwc",
+        "target_positions": 213,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.42488262910798125,
+            "pocket_recovery": 0.5411764705882353,
+            "pocket_diversity": 0.13594771241830064,
+            "chain_diversity": 0.2014606155451226
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5211267605633803,
+            "pocket_recovery": 0.5470588235294118,
+            "pocket_diversity": 0.24052287581699347,
+            "chain_diversity": 0.23098591549295774
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4896713615023474,
+            "pocket_recovery": 0.48823529411764705,
+            "pocket_diversity": 0.1450980392156863,
+            "chain_diversity": 0.25758998435054775
+          },
+          "adflip": {
+            "chain_recovery": 0.5093896713615024,
+            "pocket_recovery": 0.6470588235294118,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.009494001043296818
+          }
+        }
+      },
+      {
+        "key": "2weq",
+        "target_positions": 213,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4192488262910798,
+            "pocket_recovery": 0.5944444444444444,
+            "pocket_diversity": 0.13703703703703704,
+            "chain_diversity": 0.1904016692749087
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4887323943661972,
+            "pocket_recovery": 0.6111111111111112,
+            "pocket_diversity": 0.17160493827160495,
+            "chain_diversity": 0.2254564423578508
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.48732394366197185,
+            "pocket_recovery": 0.4222222222222222,
+            "pocket_diversity": 0.18518518518518517,
+            "chain_diversity": 0.28482003129890454
+          },
+          "adflip": {
+            "chain_recovery": 0.4779342723004695,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008555033907146584
+          }
+        }
+      },
+      {
+        "key": "2xab",
+        "target_positions": 208,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.47644230769230766,
+            "pocket_recovery": 0.60625,
+            "pocket_diversity": 0.15416666666666667,
+            "chain_diversity": 0.18472222222222223
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5745192307692307,
+            "pocket_recovery": 0.6875,
+            "pocket_diversity": 0.17222222222222222,
+            "chain_diversity": 0.2066239316239316
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5711538461538461,
+            "pocket_recovery": 0.6125,
+            "pocket_diversity": 0.25,
+            "chain_diversity": 0.22232905982905982
+          },
+          "adflip": {
+            "chain_recovery": 0.5721153846153846,
+            "pocket_recovery": 0.5625,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "2xht",
+        "target_positions": 212,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4363207547169811,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.12148148148148148,
+            "chain_diversity": 0.2050314465408805
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4995283018867924,
+            "pocket_recovery": 0.7666666666666667,
+            "pocket_diversity": 0.10518518518518519,
+            "chain_diversity": 0.20838574423480083
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4674528301886792,
+            "pocket_recovery": 0.5133333333333333,
+            "pocket_diversity": 0.20148148148148148,
+            "chain_diversity": 0.2720125786163522
+          },
+          "adflip": {
+            "chain_recovery": 0.48962264150943396,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.01310272536687631
+          }
+        }
+      },
+      {
+        "key": "2xjg",
+        "target_positions": 213,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4136150234741784,
+            "pocket_recovery": 0.4875,
+            "pocket_diversity": 0.05555555555555555,
+            "chain_diversity": 0.20594679186228482
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.460093896713615,
+            "pocket_recovery": 0.64375,
+            "pocket_diversity": 0.125,
+            "chain_diversity": 0.23463745435576422
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.46150234741784035,
+            "pocket_recovery": 0.58125,
+            "pocket_diversity": 0.2263888888888889,
+            "chain_diversity": 0.2899321857068336
+          },
+          "adflip": {
+            "chain_recovery": 0.4694835680751174,
+            "pocket_recovery": 0.6875,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0009389671361502347
+          }
+        }
+      },
+      {
+        "key": "2xjx",
+        "target_positions": 221,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.40542986425339367,
+            "pocket_recovery": 0.63125,
+            "pocket_diversity": 0.06805555555555555,
+            "chain_diversity": 0.16993464052287582
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5072398190045249,
+            "pocket_recovery": 0.7625,
+            "pocket_diversity": 0.1597222222222222,
+            "chain_diversity": 0.22011060834590246
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.49321266968325794,
+            "pocket_recovery": 0.5375,
+            "pocket_diversity": 0.2125,
+            "chain_diversity": 0.27159376571141275
+          },
+          "adflip": {
+            "chain_recovery": 0.49411764705882355,
+            "pocket_recovery": 0.75,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.001608848667672197
+          }
+        }
+      },
+      {
+        "key": "2yge",
+        "target_positions": 214,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.42336448598130844,
+            "pocket_recovery": 0.5722222222222222,
+            "pocket_diversity": 0.1765432098765432,
+            "chain_diversity": 0.2087227414330218
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5032710280373832,
+            "pocket_recovery": 0.5666666666666667,
+            "pocket_diversity": 0.15679012345679014,
+            "chain_diversity": 0.2375908618899273
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4742990654205608,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.291358024691358,
+            "chain_diversity": 0.2854620976116303
+          },
+          "adflip": {
+            "chain_recovery": 0.5060747663551401,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.016926272066458983
+          }
+        }
+      },
+      {
+        "key": "2ygf",
+        "target_positions": 213,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4323943661971831,
+            "pocket_recovery": 0.5777777777777777,
+            "pocket_diversity": 0.20123456790123456,
+            "chain_diversity": 0.21471048513302035
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4868544600938967,
+            "pocket_recovery": 0.5388888888888889,
+            "pocket_diversity": 0.11234567901234568,
+            "chain_diversity": 0.198226395409494
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.49014084507042255,
+            "pocket_recovery": 0.4722222222222222,
+            "pocket_diversity": 0.23950617283950618,
+            "chain_diversity": 0.2733437663015128
+          },
+          "adflip": {
+            "chain_recovery": 0.5014084507042254,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.011111111111111112,
+            "chain_diversity": 0.0028169014084507044
+          }
+        }
+      },
+      {
+        "key": "2yi0",
+        "target_positions": 209,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4483253588516746,
+            "pocket_recovery": 0.62,
+            "pocket_diversity": 0.13925925925925925,
+            "chain_diversity": 0.2074428495481127
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5760765550239234,
+            "pocket_recovery": 0.6733333333333333,
+            "pocket_diversity": 0.2,
+            "chain_diversity": 0.23285486443381181
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5349282296650718,
+            "pocket_recovery": 0.6266666666666667,
+            "pocket_diversity": 0.17777777777777778,
+            "chain_diversity": 0.24635832004253058
+          },
+          "adflip": {
+            "chain_recovery": 0.5358851674641149,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "2yi7",
+        "target_positions": 209,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.46124401913875596,
+            "pocket_recovery": 0.5214285714285715,
+            "pocket_diversity": 0.06825396825396825,
+            "chain_diversity": 0.20627325890483786
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5751196172248804,
+            "pocket_recovery": 0.6928571428571428,
+            "pocket_diversity": 0.13174603174603175,
+            "chain_diversity": 0.22381711855396066
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5258373205741627,
+            "pocket_recovery": 0.5571428571428572,
+            "pocket_diversity": 0.2857142857142857,
+            "chain_diversity": 0.2800637958532695
+          },
+          "adflip": {
+            "chain_recovery": 0.5454545454545454,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0035087719298245615
+          }
+        }
+      },
+      {
+        "key": "3ekr",
+        "target_positions": 217,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4465437788018433,
+            "pocket_recovery": 0.5666666666666667,
+            "pocket_diversity": 0.15407407407407409,
+            "chain_diversity": 0.19549411162314387
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5377880184331797,
+            "pocket_recovery": 0.6733333333333333,
+            "pocket_diversity": 0.16,
+            "chain_diversity": 0.2363543266769073
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5387096774193548,
+            "pocket_recovery": 0.5133333333333333,
+            "pocket_diversity": 0.18962962962962962,
+            "chain_diversity": 0.280184331797235
+          },
+          "adflip": {
+            "chain_recovery": 0.5493087557603686,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004198668714797747
+          }
+        }
+      },
+      {
+        "key": "3hek",
+        "target_positions": 220,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4395454545454546,
+            "pocket_recovery": 0.4647058823529412,
+            "pocket_diversity": 0.12549019607843137,
+            "chain_diversity": 0.19414141414141414
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5304545454545454,
+            "pocket_recovery": 0.6470588235294118,
+            "pocket_diversity": 0.14901960784313725,
+            "chain_diversity": 0.20424242424242425
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5218181818181818,
+            "pocket_recovery": 0.7176470588235294,
+            "pocket_diversity": 0.2457516339869281,
+            "chain_diversity": 0.26232323232323235
+          },
+          "adflip": {
+            "chain_recovery": 0.55,
+            "pocket_recovery": 0.5294117647058824,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0034343434343434343
+          }
+        }
+      },
+      {
+        "key": "3k97",
+        "target_positions": 210,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4552380952380952,
+            "pocket_recovery": 0.66,
+            "pocket_diversity": 0.06074074074074074,
+            "chain_diversity": 0.20264550264550266
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5752380952380952,
+            "pocket_recovery": 0.7466666666666667,
+            "pocket_diversity": 0.11851851851851852,
+            "chain_diversity": 0.211005291005291
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.569047619047619,
+            "pocket_recovery": 0.72,
+            "pocket_diversity": 0.21481481481481482,
+            "chain_diversity": 0.23544973544973544
+          },
+          "adflip": {
+            "chain_recovery": 0.5685714285714286,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.00708994708994709
+          }
+        }
+      },
+      {
+        "key": "3vha",
+        "target_positions": 215,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4474418604651163,
+            "pocket_recovery": 0.4866666666666667,
+            "pocket_diversity": 0.08,
+            "chain_diversity": 0.20103359173126614
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5241860465116279,
+            "pocket_recovery": 0.7333333333333333,
+            "pocket_diversity": 0.07111111111111111,
+            "chain_diversity": 0.20795865633074936
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5302325581395348,
+            "pocket_recovery": 0.5466666666666666,
+            "pocket_diversity": 0.18962962962962962,
+            "chain_diversity": 0.2717312661498708
+          },
+          "adflip": {
+            "chain_recovery": 0.5083720930232558,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0021705426356589145
+          }
+        }
+      },
+      {
+        "key": "3vhc",
+        "target_positions": 216,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45787037037037037,
+            "pocket_recovery": 0.2625,
+            "pocket_diversity": 0.1125,
+            "chain_diversity": 0.19032921810699588
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5638888888888889,
+            "pocket_recovery": 0.6125,
+            "pocket_diversity": 0.14305555555555555,
+            "chain_diversity": 0.19619341563786008
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5268518518518519,
+            "pocket_recovery": 0.45,
+            "pocket_diversity": 0.19722222222222222,
+            "chain_diversity": 0.276440329218107
+          },
+          "adflip": {
+            "chain_recovery": 0.538425925925926,
+            "pocket_recovery": 0.625,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005246913580246914
+          }
+        }
+      },
+      {
+        "key": "3vhd",
+        "target_positions": 213,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.49061032863849763,
+            "pocket_recovery": 0.35,
+            "pocket_diversity": 0.21428571428571427,
+            "chain_diversity": 0.20333854981742305
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5690140845070423,
+            "pocket_recovery": 0.6571428571428571,
+            "pocket_diversity": 0.0746031746031746,
+            "chain_diversity": 0.21898800208659364
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5535211267605634,
+            "pocket_recovery": 0.44285714285714284,
+            "pocket_diversity": 0.2841269841269841,
+            "chain_diversity": 0.23234220135628586
+          },
+          "adflip": {
+            "chain_recovery": 0.5497652582159624,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004277516953573292
+          }
+        }
+      },
+      {
+        "key": "3wha",
+        "target_positions": 209,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.46076555023923443,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.09583333333333334,
+            "chain_diversity": 0.17107921318447633
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5712918660287082,
+            "pocket_recovery": 0.7375,
+            "pocket_diversity": 0.1,
+            "chain_diversity": 0.1995746943115364
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5507177033492823,
+            "pocket_recovery": 0.53125,
+            "pocket_diversity": 0.13194444444444445,
+            "chain_diversity": 0.2506113769271664
+          },
+          "adflip": {
+            "chain_recovery": 0.5282296650717704,
+            "pocket_recovery": 0.5625,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.002551834130781499
+          }
+        }
+      },
+      {
+        "key": "4egk",
+        "target_positions": 214,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.46401869158878506,
+            "pocket_recovery": 0.64,
+            "pocket_diversity": 0.0874074074074074,
+            "chain_diversity": 0.1836967808930426
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5588785046728972,
+            "pocket_recovery": 0.7466666666666667,
+            "pocket_diversity": 0.1362962962962963,
+            "chain_diversity": 0.19937694704049844
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5308411214953271,
+            "pocket_recovery": 0.68,
+            "pocket_diversity": 0.18222222222222223,
+            "chain_diversity": 0.2782969885773624
+          },
+          "adflip": {
+            "chain_recovery": 0.5275700934579439,
+            "pocket_recovery": 0.4666666666666667,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0038421599169262723
+          }
+        }
+      },
+      {
+        "key": "4fcq",
+        "target_positions": 208,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4230769230769231,
+            "pocket_recovery": 0.43333333333333335,
+            "pocket_diversity": 0.14962962962962964,
+            "chain_diversity": 0.21923076923076923
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5394230769230769,
+            "pocket_recovery": 0.6733333333333333,
+            "pocket_diversity": 0.10222222222222223,
+            "chain_diversity": 0.24893162393162394
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.46490384615384617,
+            "pocket_recovery": 0.36,
+            "pocket_diversity": 0.20592592592592593,
+            "chain_diversity": 0.2882478632478632
+          },
+          "adflip": {
+            "chain_recovery": 0.5298076923076923,
+            "pocket_recovery": 0.7466666666666667,
+            "pocket_diversity": 0.023703703703703703,
+            "chain_diversity": 0.006837606837606838
+          }
+        }
+      },
+      {
+        "key": "4nh8",
+        "target_positions": 209,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4688995215311005,
+            "pocket_recovery": 0.6333333333333333,
+            "pocket_diversity": 0.10740740740740741,
+            "chain_diversity": 0.19914938862307283
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5885167464114832,
+            "pocket_recovery": 0.7333333333333333,
+            "pocket_diversity": 0.09135802469135802,
+            "chain_diversity": 0.18373205741626794
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.562200956937799,
+            "pocket_recovery": 0.5888888888888889,
+            "pocket_diversity": 0.16296296296296298,
+            "chain_diversity": 0.24667729930887825
+          },
+          "adflip": {
+            "chain_recovery": 0.5636363636363636,
+            "pocket_recovery": 0.6111111111111112,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0017012227538543328
+          }
+        }
+      },
+      {
+        "key": "4o04",
+        "target_positions": 208,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.46442307692307694,
+            "pocket_recovery": 0.5066666666666667,
+            "pocket_diversity": 0.21777777777777776,
+            "chain_diversity": 0.1986111111111111
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5711538461538461,
+            "pocket_recovery": 0.72,
+            "pocket_diversity": 0.1925925925925926,
+            "chain_diversity": 0.2032051282051282
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.525,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.13037037037037036,
+            "chain_diversity": 0.26292735042735044
+          },
+          "adflip": {
+            "chain_recovery": 0.5528846153846154,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004914529914529914
+          }
+        }
+      },
+      {
+        "key": "4o05",
+        "target_positions": 209,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4818181818181818,
+            "pocket_recovery": 0.5764705882352941,
+            "pocket_diversity": 0.1437908496732026,
+            "chain_diversity": 0.19043062200956937
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5688995215311005,
+            "pocket_recovery": 0.7235294117647059,
+            "pocket_diversity": 0.14640522875816994,
+            "chain_diversity": 0.21477937267410951
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5851674641148326,
+            "pocket_recovery": 0.7529411764705882,
+            "pocket_diversity": 0.19477124183006536,
+            "chain_diversity": 0.2704944178628389
+          },
+          "adflip": {
+            "chain_recovery": 0.5598086124401914,
+            "pocket_recovery": 0.6470588235294118,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "4o07",
+        "target_positions": 209,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.47129186602870815,
+            "pocket_recovery": 0.5833333333333334,
+            "pocket_diversity": 0.1308641975308642,
+            "chain_diversity": 0.2148856990962254
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5712918660287082,
+            "pocket_recovery": 0.6777777777777778,
+            "pocket_diversity": 0.12098765432098765,
+            "chain_diversity": 0.20138224348750663
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5430622009569378,
+            "pocket_recovery": 0.5277777777777778,
+            "pocket_diversity": 0.29506172839506173,
+            "chain_diversity": 0.27634237107921317
+          },
+          "adflip": {
+            "chain_recovery": 0.5559808612440191,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.011111111111111112,
+            "chain_diversity": 0.007442849548112706
+          }
+        }
+      },
+      {
+        "key": "4o09",
+        "target_positions": 209,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4688995215311005,
+            "pocket_recovery": 0.6277777777777778,
+            "pocket_diversity": 0.08148148148148149,
+            "chain_diversity": 0.19627857522594364
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5784688995215311,
+            "pocket_recovery": 0.7166666666666667,
+            "pocket_diversity": 0.06790123456790123,
+            "chain_diversity": 0.20318979266347686
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5636363636363636,
+            "pocket_recovery": 0.5944444444444444,
+            "pocket_diversity": 0.2,
+            "chain_diversity": 0.2609250398724083
+          },
+          "adflip": {
+            "chain_recovery": 0.5545454545454546,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.006060606060606061
+          }
+        }
+      },
+      {
+        "key": "4o0b",
+        "target_positions": 209,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4779904306220096,
+            "pocket_recovery": 0.6611111111111111,
+            "pocket_diversity": 0.1382716049382716,
+            "chain_diversity": 0.19893673577884105
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5803827751196172,
+            "pocket_recovery": 0.7666666666666667,
+            "pocket_diversity": 0.04567901234567901,
+            "chain_diversity": 0.19043062200956937
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5794258373205742,
+            "pocket_recovery": 0.6611111111111111,
+            "pocket_diversity": 0.2,
+            "chain_diversity": 0.281658692185008
+          },
+          "adflip": {
+            "chain_recovery": 0.5454545454545454,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004465709728867623
+          }
+        }
+      },
+      {
+        "key": "4xip",
+        "target_positions": 208,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4596153846153846,
+            "pocket_recovery": 0.45,
+            "pocket_diversity": 0.20416666666666666,
+            "chain_diversity": 0.20085470085470086
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5855769230769231,
+            "pocket_recovery": 0.65625,
+            "pocket_diversity": 0.12638888888888888,
+            "chain_diversity": 0.20384615384615384
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5591346153846154,
+            "pocket_recovery": 0.5375,
+            "pocket_diversity": 0.1361111111111111,
+            "chain_diversity": 0.24711538461538463
+          },
+          "adflip": {
+            "chain_recovery": 0.5456730769230769,
+            "pocket_recovery": 0.625,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.011752136752136752
+          }
+        }
+      },
+      {
+        "key": "4xir",
+        "target_positions": 208,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.46490384615384617,
+            "pocket_recovery": 0.5705882352941176,
+            "pocket_diversity": 0.17777777777777778,
+            "chain_diversity": 0.21314102564102563
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5697115384615384,
+            "pocket_recovery": 0.7294117647058823,
+            "pocket_diversity": 0.10588235294117647,
+            "chain_diversity": 0.19391025641025642
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5514423076923077,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.13333333333333333,
+            "chain_diversity": 0.23985042735042736
+          },
+          "adflip": {
+            "chain_recovery": 0.5677884615384615,
+            "pocket_recovery": 0.6470588235294118,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0019230769230769232
+          }
+        }
+      },
+      {
+        "key": "5lny",
+        "target_positions": 207,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.43816425120772945,
+            "pocket_recovery": 0.3941176470588235,
+            "pocket_diversity": 0.17124183006535948,
+            "chain_diversity": 0.22286634460547505
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5468599033816425,
+            "pocket_recovery": 0.7470588235294118,
+            "pocket_diversity": 0.1869281045751634,
+            "chain_diversity": 0.20783682232957595
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5458937198067633,
+            "pocket_recovery": 0.7058823529411765,
+            "pocket_diversity": 0.2222222222222222,
+            "chain_diversity": 0.2537842190016103
+          },
+          "adflip": {
+            "chain_recovery": 0.5362318840579711,
+            "pocket_recovery": 0.7058823529411765,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.003542673107890499
+          }
+        }
+      },
+      {
+        "key": "5nyh",
+        "target_positions": 209,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.46124401913875596,
+            "pocket_recovery": 0.48125,
+            "pocket_diversity": 0.16111111111111112,
+            "chain_diversity": 0.2273258904837852
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5966507177033493,
+            "pocket_recovery": 0.81875,
+            "pocket_diversity": 0.14027777777777778,
+            "chain_diversity": 0.22594364699627859
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5980861244019139,
+            "pocket_recovery": 0.8625,
+            "pocket_diversity": 0.10138888888888889,
+            "chain_diversity": 0.24146730462519936
+          },
+          "adflip": {
+            "chain_recovery": 0.5502392344497608,
+            "pocket_recovery": 0.6875,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0035087719298245615
+          }
+        }
+      },
+      {
+        "key": "6el5",
+        "target_positions": 208,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4625,
+            "pocket_recovery": 0.55,
+            "pocket_diversity": 0.11388888888888889,
+            "chain_diversity": 0.20181623931623932
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5644230769230769,
+            "pocket_recovery": 0.78125,
+            "pocket_diversity": 0.14027777777777778,
+            "chain_diversity": 0.19754273504273503
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5326923076923077,
+            "pocket_recovery": 0.55,
+            "pocket_diversity": 0.13333333333333333,
+            "chain_diversity": 0.2520299145299145
+          },
+          "adflip": {
+            "chain_recovery": 0.5543269230769231,
+            "pocket_recovery": 0.75,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008333333333333333
+          }
+        }
+      },
+      {
+        "key": "6elo",
+        "target_positions": 207,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4463768115942029,
+            "pocket_recovery": 0.44375,
+            "pocket_diversity": 0.18055555555555555,
+            "chain_diversity": 0.19388083735909822
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5685990338164251,
+            "pocket_recovery": 0.63125,
+            "pocket_diversity": 0.1375,
+            "chain_diversity": 0.22758990874932905
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5357487922705314,
+            "pocket_recovery": 0.5625,
+            "pocket_diversity": 0.21944444444444444,
+            "chain_diversity": 0.2647342995169082
+          },
+          "adflip": {
+            "chain_recovery": 0.5507246376811594,
+            "pocket_recovery": 0.5625,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.010950080515297906
+          }
+        }
+      },
+      {
+        "key": "6elp",
+        "target_positions": 207,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4652173913043478,
+            "pocket_recovery": 0.5733333333333334,
+            "pocket_diversity": 0.14666666666666667,
+            "chain_diversity": 0.20805152979066022
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5603864734299517,
+            "pocket_recovery": 0.82,
+            "pocket_diversity": 0.11703703703703704,
+            "chain_diversity": 0.2158883521202362
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5483091787439613,
+            "pocket_recovery": 0.5933333333333334,
+            "pocket_diversity": 0.16148148148148148,
+            "chain_diversity": 0.24261943102522812
+          },
+          "adflip": {
+            "chain_recovery": 0.5608695652173913,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.03111111111111111,
+            "chain_diversity": 0.012453032742887815
+          }
+        }
+      },
+      {
+        "key": "6ey9",
+        "target_positions": 207,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4400966183574879,
+            "pocket_recovery": 0.35294117647058826,
+            "pocket_diversity": 0.21830065359477124,
+            "chain_diversity": 0.22565754159957058
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5371980676328503,
+            "pocket_recovery": 0.7647058823529411,
+            "pocket_diversity": 0.19869281045751633,
+            "chain_diversity": 0.21996779388083737
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.523671497584541,
+            "pocket_recovery": 0.7352941176470589,
+            "pocket_diversity": 0.16209150326797386,
+            "chain_diversity": 0.3012345679012346
+          },
+          "adflip": {
+            "chain_recovery": 0.5333333333333333,
+            "pocket_recovery": 0.8176470588235294,
+            "pocket_diversity": 0.011764705882352941,
+            "chain_diversity": 0.011808910359634998
+          }
+        }
+      },
+      {
+        "key": "6eyb",
+        "target_positions": 207,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4454106280193237,
+            "pocket_recovery": 0.37058823529411766,
+            "pocket_diversity": 0.12941176470588237,
+            "chain_diversity": 0.18722490606548578
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5454106280193237,
+            "pocket_recovery": 0.7176470588235294,
+            "pocket_diversity": 0.11895424836601307,
+            "chain_diversity": 0.22265163714439076
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5381642512077295,
+            "pocket_recovery": 0.7294117647058823,
+            "pocket_diversity": 0.11241830065359477,
+            "chain_diversity": 0.2646269457863661
+          },
+          "adflip": {
+            "chain_recovery": 0.5608695652173913,
+            "pocket_recovery": 0.7058823529411765,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005797101449275362
+          }
+        }
+      },
+      {
+        "key": "6f1n",
+        "target_positions": 209,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.430622009569378,
+            "pocket_recovery": 0.3,
+            "pocket_diversity": 0.1738562091503268,
+            "chain_diversity": 0.18862307283359914
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5488038277511962,
+            "pocket_recovery": 0.7058823529411765,
+            "pocket_diversity": 0.12287581699346405,
+            "chain_diversity": 0.2250930356193514
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5191387559808612,
+            "pocket_recovery": 0.611764705882353,
+            "pocket_diversity": 0.23921568627450981,
+            "chain_diversity": 0.2531632110579479
+          },
+          "adflip": {
+            "chain_recovery": 0.5559808612440191,
+            "pocket_recovery": 0.7058823529411765,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.003615098351940457
+          }
+        }
+      },
+      {
+        "key": "6n8x",
+        "target_positions": 210,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4595238095238095,
+            "pocket_recovery": 0.5588235294117647,
+            "pocket_diversity": 0.15816993464052287,
+            "chain_diversity": 0.22306878306878306
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5561904761904762,
+            "pocket_recovery": 0.7352941176470589,
+            "pocket_diversity": 0.1411764705882353,
+            "chain_diversity": 0.22021164021164022
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5595238095238095,
+            "pocket_recovery": 0.6529411764705882,
+            "pocket_diversity": 0.1869281045751634,
+            "chain_diversity": 0.23671957671957672
+          },
+          "adflip": {
+            "chain_recovery": 0.5780952380952381,
+            "pocket_recovery": 0.8235294117647058,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004232804232804233
+          }
+        }
+      },
+      {
+        "key": "6olx",
+        "target_positions": 209,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45933014354066987,
+            "pocket_recovery": 0.611764705882353,
+            "pocket_diversity": 0.16470588235294117,
+            "chain_diversity": 0.1953216374269006
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5732057416267943,
+            "pocket_recovery": 0.7294117647058823,
+            "pocket_diversity": 0.12026143790849673,
+            "chain_diversity": 0.22445507708665605
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5511961722488038,
+            "pocket_recovery": 0.7294117647058823,
+            "pocket_diversity": 0.21830065359477124,
+            "chain_diversity": 0.24465709728867624
+          },
+          "adflip": {
+            "chain_recovery": 0.5856459330143541,
+            "pocket_recovery": 0.8235294117647058,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.002551834130781499
+          }
+        }
+      },
+      {
+        "key": "1yqj",
+        "target_positions": 356,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4306179775280899,
+            "pocket_recovery": 0.45555555555555555,
+            "pocket_diversity": 0.13703703703703704,
+            "chain_diversity": 0.21435705368289637
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5280898876404494,
+            "pocket_recovery": 0.7333333333333333,
+            "pocket_diversity": 0.14444444444444443,
+            "chain_diversity": 0.18726591760299627
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.500561797752809,
+            "pocket_recovery": 0.5111111111111111,
+            "pocket_diversity": 0.23950617283950618,
+            "chain_diversity": 0.26092384519350814
+          },
+          "adflip": {
+            "chain_recovery": 0.5390449438202247,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.025925925925925925,
+            "chain_diversity": 0.011173533083645442
+          }
+        }
+      },
+      {
+        "key": "2baj",
+        "target_positions": 337,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4379821958456973,
+            "pocket_recovery": 0.49523809523809526,
+            "pocket_diversity": 0.10582010582010581,
+            "chain_diversity": 0.2166172106824926
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4857566765578635,
+            "pocket_recovery": 0.6619047619047619,
+            "pocket_diversity": 0.14708994708994708,
+            "chain_diversity": 0.19320804484009232
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.48100890207715136,
+            "pocket_recovery": 0.6142857142857143,
+            "pocket_diversity": 0.2740740740740741,
+            "chain_diversity": 0.2693702604681833
+          },
+          "adflip": {
+            "chain_recovery": 0.5044510385756676,
+            "pocket_recovery": 0.6190476190476191,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "2bak",
+        "target_positions": 334,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44640718562874254,
+            "pocket_recovery": 0.5761904761904761,
+            "pocket_diversity": 0.1693121693121693,
+            "chain_diversity": 0.21743180306054558
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5227544910179641,
+            "pocket_recovery": 0.719047619047619,
+            "pocket_diversity": 0.1037037037037037,
+            "chain_diversity": 0.21510312707917498
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5107784431137724,
+            "pocket_recovery": 0.7047619047619048,
+            "pocket_diversity": 0.2306878306878307,
+            "chain_diversity": 0.24890219560878243
+          },
+          "adflip": {
+            "chain_recovery": 0.5179640718562875,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.025396825396825397,
+            "chain_diversity": 0.005455755156353959
+          }
+        }
+      },
+      {
+        "key": "2bal",
+        "target_positions": 338,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4467455621301775,
+            "pocket_recovery": 0.38125,
+            "pocket_diversity": 0.16805555555555557,
+            "chain_diversity": 0.20230111768573308
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.556508875739645,
+            "pocket_recovery": 0.60625,
+            "pocket_diversity": 0.19444444444444445,
+            "chain_diversity": 0.1985535831689678
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5585798816568047,
+            "pocket_recovery": 0.5875,
+            "pocket_diversity": 0.3013888888888889,
+            "chain_diversity": 0.2626561472715319
+          },
+          "adflip": {
+            "chain_recovery": 0.5810650887573965,
+            "pocket_recovery": 0.6875,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005785667324128862
+          }
+        }
+      },
+      {
+        "key": "2ojg",
+        "target_positions": 337,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44629080118694364,
+            "pocket_recovery": 0.3625,
+            "pocket_diversity": 0.2763888888888889,
+            "chain_diversity": 0.20316518298714145
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.568545994065282,
+            "pocket_recovery": 0.59375,
+            "pocket_diversity": 0.14583333333333334,
+            "chain_diversity": 0.1842400263765249
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5572700296735905,
+            "pocket_recovery": 0.65,
+            "pocket_diversity": 0.08611111111111111,
+            "chain_diversity": 0.2168150346191889
+          },
+          "adflip": {
+            "chain_recovery": 0.542433234421365,
+            "pocket_recovery": 0.6875,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.006594131223211342
+          }
+        }
+      },
+      {
+        "key": "2ojj",
+        "target_positions": 344,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4558139534883721,
+            "pocket_recovery": 0.40588235294117647,
+            "pocket_diversity": 0.22483660130718955,
+            "chain_diversity": 0.21059431524547803
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5616279069767441,
+            "pocket_recovery": 0.5941176470588235,
+            "pocket_diversity": 0.1869281045751634,
+            "chain_diversity": 0.19760981912144704
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5642441860465116,
+            "pocket_recovery": 0.6882352941176471,
+            "pocket_diversity": 0.12418300653594772,
+            "chain_diversity": 0.22596899224806202
+          },
+          "adflip": {
+            "chain_recovery": 0.5593023255813954,
+            "pocket_recovery": 0.5882352941176471,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004457364341085271
+          }
+        }
+      },
+      {
+        "key": "2yix",
+        "target_positions": 351,
+        "pocket_positions": 20,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4586894586894587,
+            "pocket_recovery": 0.575,
+            "pocket_diversity": 0.18444444444444444,
+            "chain_diversity": 0.20658436213991768
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5415954415954416,
+            "pocket_recovery": 0.595,
+            "pocket_diversity": 0.07777777777777778,
+            "chain_diversity": 0.16353276353276353
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.541025641025641,
+            "pocket_recovery": 0.635,
+            "pocket_diversity": 0.23222222222222222,
+            "chain_diversity": 0.24704020259575815
+          },
+          "adflip": {
+            "chain_recovery": 0.5726495726495726,
+            "pocket_recovery": 0.85,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0031655587211142765
+          }
+        }
+      },
+      {
+        "key": "3d7z",
+        "target_positions": 349,
+        "pocket_positions": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4558739255014327,
+            "pocket_recovery": 0.4263157894736842,
+            "pocket_diversity": 0.14502923976608187,
+            "chain_diversity": 0.19840815027061445
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5618911174785101,
+            "pocket_recovery": 0.7473684210526316,
+            "pocket_diversity": 0.10058479532163743,
+            "chain_diversity": 0.1691181152499204
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5578796561604584,
+            "pocket_recovery": 0.6210526315789474,
+            "pocket_diversity": 0.3064327485380117,
+            "chain_diversity": 0.228525947150589
+          },
+          "adflip": {
+            "chain_recovery": 0.5839541547277937,
+            "pocket_recovery": 0.6842105263157895,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008022922636103151
+          }
+        }
+      },
+      {
+        "key": "3d83",
+        "target_positions": 349,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4521489971346705,
+            "pocket_recovery": 0.6523809523809524,
+            "pocket_diversity": 0.1523809523809524,
+            "chain_diversity": 0.20560331104743712
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5469914040114613,
+            "pocket_recovery": 0.8047619047619048,
+            "pocket_diversity": 0.009523809523809525,
+            "chain_diversity": 0.16440624005093918
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5570200573065902,
+            "pocket_recovery": 0.7095238095238096,
+            "pocket_diversity": 0.13756613756613756,
+            "chain_diversity": 0.21056988220312003
+          },
+          "adflip": {
+            "chain_recovery": 0.5472779369627507,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.016931216931216932,
+            "chain_diversity": 0.004202483285577842
+          }
+        }
+      },
+      {
+        "key": "3gcs",
+        "target_positions": 331,
+        "pocket_positions": 22,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4670694864048338,
+            "pocket_recovery": 0.5909090909090909,
+            "pocket_diversity": 0.19595959595959597,
+            "chain_diversity": 0.20080563947633434
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5540785498489426,
+            "pocket_recovery": 0.6818181818181818,
+            "pocket_diversity": 0.14343434343434344,
+            "chain_diversity": 0.1761664988251091
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5404833836858006,
+            "pocket_recovery": 0.6772727272727272,
+            "pocket_diversity": 0.17474747474747473,
+            "chain_diversity": 0.2501510574018127
+          },
+          "adflip": {
+            "chain_recovery": 0.56797583081571,
+            "pocket_recovery": 0.7727272727272727,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "3gcu",
+        "target_positions": 339,
+        "pocket_positions": 24,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.46106194690265484,
+            "pocket_recovery": 0.525,
+            "pocket_diversity": 0.08796296296296297,
+            "chain_diversity": 0.19619796787938382
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5607669616519174,
+            "pocket_recovery": 0.6125,
+            "pocket_diversity": 0.1037037037037037,
+            "chain_diversity": 0.1662405768600459
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5625368731563422,
+            "pocket_recovery": 0.675,
+            "pocket_diversity": 0.26666666666666666,
+            "chain_diversity": 0.2317273025237627
+          },
+          "adflip": {
+            "chain_recovery": 0.5646017699115045,
+            "pocket_recovery": 0.5416666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0015732546705998034
+          }
+        }
+      },
+      {
+        "key": "3iph",
+        "target_positions": 347,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.43314121037463976,
+            "pocket_recovery": 0.3333333333333333,
+            "pocket_diversity": 0.12962962962962962,
+            "chain_diversity": 0.22676913224463657
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5331412103746398,
+            "pocket_recovery": 0.5888888888888889,
+            "pocket_diversity": 0.12222222222222222,
+            "chain_diversity": 0.16810758885686838
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5276657060518732,
+            "pocket_recovery": 0.4722222222222222,
+            "pocket_diversity": 0.17530864197530865,
+            "chain_diversity": 0.20294588536663466
+          },
+          "adflip": {
+            "chain_recovery": 0.5446685878962536,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.001601024655779699
+          }
+        }
+      },
+      {
+        "key": "3iw6",
+        "target_positions": 337,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4664688427299703,
+            "pocket_recovery": 0.35,
+            "pocket_diversity": 0.18395061728395062,
+            "chain_diversity": 0.2178041543026706
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5275964391691395,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.2654320987654321,
+            "chain_diversity": 0.18753709198813057
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5436201780415431,
+            "pocket_recovery": 0.5166666666666667,
+            "pocket_diversity": 0.22098765432098766,
+            "chain_diversity": 0.21793603692713484
+          },
+          "adflip": {
+            "chain_recovery": 0.5272997032640949,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.002967359050445104
+          }
+        }
+      },
+      {
+        "key": "3o8p",
+        "target_positions": 336,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45476190476190476,
+            "pocket_recovery": 0.6882352941176471,
+            "pocket_diversity": 0.11372549019607843,
+            "chain_diversity": 0.21964285714285714
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.537797619047619,
+            "pocket_recovery": 0.7470588235294118,
+            "pocket_diversity": 0.12418300653594772,
+            "chain_diversity": 0.18042328042328043
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5476190476190477,
+            "pocket_recovery": 0.7588235294117647,
+            "pocket_diversity": 0.1437908496732026,
+            "chain_diversity": 0.2337962962962963
+          },
+          "adflip": {
+            "chain_recovery": 0.5511904761904762,
+            "pocket_recovery": 0.7058823529411765,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.00376984126984127
+          }
+        }
+      },
+      {
+        "key": "4qyy",
+        "target_positions": 337,
+        "pocket_positions": 20,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4836795252225519,
+            "pocket_recovery": 0.505,
+            "pocket_diversity": 0.23,
+            "chain_diversity": 0.18991097922848665
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.568545994065282,
+            "pocket_recovery": 0.565,
+            "pocket_diversity": 0.2611111111111111,
+            "chain_diversity": 0.1916254533465216
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5750741839762611,
+            "pocket_recovery": 0.495,
+            "pocket_diversity": 0.2722222222222222,
+            "chain_diversity": 0.22195845697329378
+          },
+          "adflip": {
+            "chain_recovery": 0.5795252225519287,
+            "pocket_recovery": 0.45,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005802835476425981
+          }
+        }
+      },
+      {
+        "key": "5jq5",
+        "target_positions": 287,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.5020905923344948,
+            "pocket_recovery": 0.525,
+            "pocket_diversity": 0.13472222222222222,
+            "chain_diversity": 0.19790940766550522
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5832752613240418,
+            "pocket_recovery": 0.7875,
+            "pocket_diversity": 0.07777777777777778,
+            "chain_diversity": 0.16964769647696476
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5749128919860628,
+            "pocket_recovery": 0.63125,
+            "pocket_diversity": 0.19583333333333333,
+            "chain_diversity": 0.19605110336817655
+          },
+          "adflip": {
+            "chain_recovery": 0.5627177700348432,
+            "pocket_recovery": 0.875,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004490902051877662
+          }
+        }
+      },
+      {
+        "key": "5l2s",
+        "target_positions": 263,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45817490494296575,
+            "pocket_recovery": 0.575,
+            "pocket_diversity": 0.10555555555555556,
+            "chain_diversity": 0.20616814533164343
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5250950570342205,
+            "pocket_recovery": 0.6875,
+            "pocket_diversity": 0.07777777777777778,
+            "chain_diversity": 0.18715673848753697
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5296577946768061,
+            "pocket_recovery": 0.675,
+            "pocket_diversity": 0.12916666666666668,
+            "chain_diversity": 0.24672581326573723
+          },
+          "adflip": {
+            "chain_recovery": 0.5277566539923955,
+            "pocket_recovery": 0.6875,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004900718208702999
+          }
+        }
+      },
+      {
+        "key": "6cpw",
+        "target_positions": 328,
+        "pocket_positions": 24,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4844512195121951,
+            "pocket_recovery": 0.5041666666666667,
+            "pocket_diversity": 0.15925925925925927,
+            "chain_diversity": 0.19336043360433605
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5817073170731707,
+            "pocket_recovery": 0.5666666666666667,
+            "pocket_diversity": 0.21296296296296297,
+            "chain_diversity": 0.17981029810298102
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5960365853658537,
+            "pocket_recovery": 0.49583333333333335,
+            "pocket_diversity": 0.2898148148148148,
+            "chain_diversity": 0.20799457994579945
+          },
+          "adflip": {
+            "chain_recovery": 0.5923780487804878,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004471544715447155
+          }
+        }
+      },
+      {
+        "key": "3zm9",
+        "target_positions": 354,
+        "pocket_positions": 25,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4485875706214689,
+            "pocket_recovery": 0.4,
+            "pocket_diversity": 0.2568888888888889,
+            "chain_diversity": 0.2268675455116133
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5401129943502825,
+            "pocket_recovery": 0.604,
+            "pocket_diversity": 0.22577777777777777,
+            "chain_diversity": 0.23339610797237917
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.496045197740113,
+            "pocket_recovery": 0.42,
+            "pocket_diversity": 0.26222222222222225,
+            "chain_diversity": 0.25254237288135595
+          },
+          "adflip": {
+            "chain_recovery": 0.4562146892655367,
+            "pocket_recovery": 0.4,
+            "pocket_diversity": 0.008,
+            "chain_diversity": 0.008097928436911487
+          }
+        }
+      },
+      {
+        "key": "4cga",
+        "target_positions": 354,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4514124293785311,
+            "pocket_recovery": 0.2846153846153846,
+            "pocket_diversity": 0.18803418803418803,
+            "chain_diversity": 0.23013182674199623
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5353107344632768,
+            "pocket_recovery": 0.5076923076923077,
+            "pocket_diversity": 0.17606837606837608,
+            "chain_diversity": 0.23082234777150032
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.503954802259887,
+            "pocket_recovery": 0.2076923076923077,
+            "pocket_diversity": 0.3247863247863248,
+            "chain_diversity": 0.2975517890772128
+          },
+          "adflip": {
+            "chain_recovery": 0.4728813559322034,
+            "pocket_recovery": 0.23076923076923078,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.006905210295040804
+          }
+        }
+      },
+      {
+        "key": "4da5",
+        "target_positions": 352,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.42329545454545453,
+            "pocket_recovery": 0.2916666666666667,
+            "pocket_diversity": 0.2537037037037037,
+            "chain_diversity": 0.24696969696969698
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5017045454545455,
+            "pocket_recovery": 0.55,
+            "pocket_diversity": 0.24074074074074073,
+            "chain_diversity": 0.24210858585858586
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.48409090909090907,
+            "pocket_recovery": 0.23333333333333334,
+            "pocket_diversity": 0.3574074074074074,
+            "chain_diversity": 0.2884469696969697
+          },
+          "adflip": {
+            "chain_recovery": 0.45738636363636365,
+            "pocket_recovery": 0.25,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0026515151515151517
+          }
+        }
+      },
+      {
+        "key": "5eqp",
+        "target_positions": 352,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4127840909090909,
+            "pocket_recovery": 0.24166666666666667,
+            "pocket_diversity": 0.17222222222222222,
+            "chain_diversity": 0.2556186868686869
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.48551136363636366,
+            "pocket_recovery": 0.4166666666666667,
+            "pocket_diversity": 0.21481481481481482,
+            "chain_diversity": 0.25258838383838383
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4647727272727273,
+            "pocket_recovery": 0.26666666666666666,
+            "pocket_diversity": 0.5,
+            "chain_diversity": 0.3047348484848485
+          },
+          "adflip": {
+            "chain_recovery": 0.45454545454545453,
+            "pocket_recovery": 0.25,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0005681818181818182
+          }
+        }
+      },
+      {
+        "key": "5eqy",
+        "target_positions": 352,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.40994318181818185,
+            "pocket_recovery": 0.3,
+            "pocket_diversity": 0.3619047619047619,
+            "chain_diversity": 0.2634469696969697
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.46732954545454547,
+            "pocket_recovery": 0.35714285714285715,
+            "pocket_diversity": 0.25555555555555554,
+            "chain_diversity": 0.2571338383838384
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.46988636363636366,
+            "pocket_recovery": 0.24285714285714285,
+            "pocket_diversity": 0.2634920634920635,
+            "chain_diversity": 0.31988636363636364
+          },
+          "adflip": {
+            "chain_recovery": 0.4375,
+            "pocket_recovery": 0.21428571428571427,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "5fut",
+        "target_positions": 355,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.43915492957746477,
+            "pocket_recovery": 0.26,
+            "pocket_diversity": 0.19111111111111112,
+            "chain_diversity": 0.22954616588419405
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5233802816901408,
+            "pocket_recovery": 0.38666666666666666,
+            "pocket_diversity": 0.13925925925925925,
+            "chain_diversity": 0.23280125195618154
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.508169014084507,
+            "pocket_recovery": 0.22666666666666666,
+            "pocket_diversity": 0.2562962962962963,
+            "chain_diversity": 0.28544600938967135
+          },
+          "adflip": {
+            "chain_recovery": 0.4501408450704225,
+            "pocket_recovery": 0.26666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.007636932707355243
+          }
+        }
+      },
+      {
+        "key": "4yml",
+        "target_positions": 231,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.5298701298701298,
+            "pocket_recovery": 0.5222222222222223,
+            "pocket_diversity": 0.18765432098765433,
+            "chain_diversity": 0.18412698412698414
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5943722943722943,
+            "pocket_recovery": 0.6944444444444444,
+            "pocket_diversity": 0.1654320987654321,
+            "chain_diversity": 0.1797979797979798
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5748917748917749,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.20246913580246914,
+            "chain_diversity": 0.23742183742183742
+          },
+          "adflip": {
+            "chain_recovery": 0.5887445887445888,
+            "pocket_recovery": 0.6111111111111112,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008465608465608466
+          }
+        }
+      },
+      {
+        "key": "6c2r",
+        "target_positions": 250,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.454,
+            "pocket_recovery": 0.42,
+            "pocket_diversity": 0.1437037037037037,
+            "chain_diversity": 0.2023111111111111
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5204,
+            "pocket_recovery": 0.6333333333333333,
+            "pocket_diversity": 0.20592592592592593,
+            "chain_diversity": 0.2088
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5032,
+            "pocket_recovery": 0.5866666666666667,
+            "pocket_diversity": 0.24888888888888888,
+            "chain_diversity": 0.26
+          },
+          "adflip": {
+            "chain_recovery": 0.5156,
+            "pocket_recovery": 0.4066666666666667,
+            "pocket_diversity": 0.013333333333333334,
+            "chain_diversity": 0.0036444444444444445
+          }
+        }
+      },
+      {
+        "key": "2o0u",
+        "target_positions": 331,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.427190332326284,
+            "pocket_recovery": 0.52,
+            "pocket_diversity": 0.12296296296296297,
+            "chain_diversity": 0.22994293387042633
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5211480362537765,
+            "pocket_recovery": 0.5933333333333334,
+            "pocket_diversity": 0.09925925925925926,
+            "chain_diversity": 0.21866398120174554
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5314199395770393,
+            "pocket_recovery": 0.6866666666666666,
+            "pocket_diversity": 0.16148148148148148,
+            "chain_diversity": 0.2743202416918429
+          },
+          "adflip": {
+            "chain_recovery": 0.5226586102719033,
+            "pocket_recovery": 0.6666666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0018126888217522659
+          }
+        }
+      },
+      {
+        "key": "3myg",
+        "target_positions": 252,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4623015873015873,
+            "pocket_recovery": 0.4588235294117647,
+            "pocket_diversity": 0.134640522875817,
+            "chain_diversity": 0.18236331569664904
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5444444444444444,
+            "pocket_recovery": 0.6058823529411764,
+            "pocket_diversity": 0.06797385620915032,
+            "chain_diversity": 0.1792768959435626
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5297619047619048,
+            "pocket_recovery": 0.6176470588235294,
+            "pocket_diversity": 0.16732026143790849,
+            "chain_diversity": 0.25379188712522044
+          },
+          "adflip": {
+            "chain_recovery": 0.5436507936507936,
+            "pocket_recovery": 0.5882352941176471,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0026455026455026454
+          }
+        }
+      },
+      {
+        "key": "4k0y",
+        "target_positions": 274,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.48175182481751827,
+            "pocket_recovery": 0.56875,
+            "pocket_diversity": 0.16805555555555557,
+            "chain_diversity": 0.19099756690997566
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5802919708029197,
+            "pocket_recovery": 0.875,
+            "pocket_diversity": 0.10416666666666667,
+            "chain_diversity": 0.208110300081103
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5591240875912409,
+            "pocket_recovery": 0.8125,
+            "pocket_diversity": 0.07222222222222222,
+            "chain_diversity": 0.2619626926196269
+          },
+          "adflip": {
+            "chain_recovery": 0.5598540145985401,
+            "pocket_recovery": 0.9375,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004379562043795621
+          }
+        }
+      },
+      {
+        "key": "5op5",
+        "target_positions": 259,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45366795366795365,
+            "pocket_recovery": 0.5692307692307692,
+            "pocket_diversity": 0.13675213675213677,
+            "chain_diversity": 0.2168168168168168
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5351351351351351,
+            "pocket_recovery": 0.7384615384615385,
+            "pocket_diversity": 0.05811965811965812,
+            "chain_diversity": 0.19356499356499357
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5208494208494209,
+            "pocket_recovery": 0.6923076923076923,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.24804804804804806
+          },
+          "adflip": {
+            "chain_recovery": 0.5366795366795367,
+            "pocket_recovery": 0.7692307692307693,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0007722007722007722
+          }
+        }
+      },
+      {
+        "key": "5oq8",
+        "target_positions": 261,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44022988505747124,
+            "pocket_recovery": 0.7833333333333333,
+            "pocket_diversity": 0.12222222222222222,
+            "chain_diversity": 0.23175819497658579
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5026819923371647,
+            "pocket_recovery": 0.7833333333333333,
+            "pocket_diversity": 0.14629629629629629,
+            "chain_diversity": 0.21285653469561516
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5153256704980843,
+            "pocket_recovery": 0.7916666666666666,
+            "pocket_diversity": 0.07592592592592592,
+            "chain_diversity": 0.2830140485312899
+          },
+          "adflip": {
+            "chain_recovery": 0.5314176245210728,
+            "pocket_recovery": 0.8333333333333334,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004257130693912303
+          }
+        }
+      },
+      {
+        "key": "5v82",
+        "target_positions": 273,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4816849816849817,
+            "pocket_recovery": 0.7,
+            "pocket_diversity": 0.12810457516339868,
+            "chain_diversity": 0.19446479446479448
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6014652014652014,
+            "pocket_recovery": 0.9411764705882353,
+            "pocket_diversity": 0.06274509803921569,
+            "chain_diversity": 0.1960927960927961
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5765567765567765,
+            "pocket_recovery": 0.8411764705882353,
+            "pocket_diversity": 0.11633986928104575,
+            "chain_diversity": 0.2498982498982499
+          },
+          "adflip": {
+            "chain_recovery": 0.5494505494505495,
+            "pocket_recovery": 0.8235294117647058,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "6no9",
+        "target_positions": 273,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.47692307692307695,
+            "pocket_recovery": 0.7,
+            "pocket_diversity": 0.1843137254901961,
+            "chain_diversity": 0.21310541310541312
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5835164835164836,
+            "pocket_recovery": 0.7823529411764706,
+            "pocket_diversity": 0.10457516339869281,
+            "chain_diversity": 0.20154660154660153
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5912087912087912,
+            "pocket_recovery": 0.7647058823529411,
+            "pocket_diversity": 0.19477124183006536,
+            "chain_diversity": 0.24289784289784289
+          },
+          "adflip": {
+            "chain_recovery": 0.5688644688644688,
+            "pocket_recovery": 0.8235294117647058,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0047212047212047215
+          }
+        }
+      }
+    ],
+    "summary": {
+      "e18": {
+        "chain_recovery": {
+          "median": 0.45429166666666665,
+          "mean": 0.45249548341262863
+        },
+        "pocket_recovery": {
+          "median": 0.5058333333333334,
+          "mean": 0.4911033570295374
+        },
+        "pocket_diversity": {
+          "median": 0.14441004471964225,
+          "mean": 0.15096968450342418
+        },
+        "chain_diversity": {
+          "mean": 0.20301462397797862,
+          "median": 0.2020586785009862
+        }
+      },
+      "ligandmpnn": {
+        "chain_recovery": {
+          "median": 0.5514411888000694,
+          "mean": 0.5470008329769864
+        },
+        "pocket_recovery": {
+          "median": 0.6846590909090908,
+          "mean": 0.6683469872888119
+        },
+        "pocket_diversity": {
+          "median": 0.13976851851851851,
+          "mean": 0.14118879086742864
+        },
+        "chain_diversity": {
+          "mean": 0.2053665826165208,
+          "median": 0.20404428904428906
+        }
+      },
+      "lasermpnn": {
+        "chain_recovery": {
+          "median": 0.5384369643135422,
+          "mean": 0.5368504355012915
+        },
+        "pocket_recovery": {
+          "median": 0.5938888888888889,
+          "mean": 0.5841412056349653
+        },
+        "pocket_diversity": {
+          "median": 0.20197530864197533,
+          "mean": 0.20739931064592443
+        },
+        "chain_diversity": {
+          "mean": 0.2545283355439051,
+          "median": 0.2534737150297791
+        }
+      },
+      "adflip": {
+        "chain_recovery": {
+          "median": 0.5482933463615597,
+          "mean": 0.5422558793513925
+        },
+        "pocket_recovery": {
+          "median": 0.6470588235294118,
+          "mean": 0.6208833479364633
+        },
+        "pocket_diversity": {
+          "median": 0.0,
+          "mean": 0.0032591028224155157
+        },
+        "chain_diversity": {
+          "mean": 0.005000973738318803,
+          "median": 0.004267323823742798
+        }
+      }
+    },
+    "family_summary": {
+      "1elb|1": {
+        "structures": 6,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4547091429995017,
+            "pocket_recovery": 0.3422076023391813,
+            "pocket_diversity": 0.12781351526965562,
+            "chain_diversity": 0.16452894037535293
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5645325734927753,
+            "pocket_recovery": 0.6072222222222222,
+            "pocket_diversity": 0.18581871345029238,
+            "chain_diversity": 0.17399968166971155
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5798934977578475,
+            "pocket_recovery": 0.5467251461988304,
+            "pocket_diversity": 0.24082196231319036,
+            "chain_diversity": 0.22162293085312518
+          },
+          "adflip": {
+            "chain_recovery": 0.6148660936721475,
+            "pocket_recovery": 0.6146198830409356,
+            "pocket_diversity": 0.004093567251461989,
+            "chain_diversity": 0.003997259591429995
+          }
+        }
+      },
+      "1yc1|1": {
+        "structures": 41,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44968577307790947,
+            "pocket_recovery": 0.5192135797408394,
+            "pocket_diversity": 0.13791094486575117,
+            "chain_diversity": 0.2007779763306378
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5485439016866671,
+            "pocket_recovery": 0.6952906731798411,
+            "pocket_diversity": 0.13206207505585793,
+            "chain_diversity": 0.21604914780994788
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5320351520527752,
+            "pocket_recovery": 0.5953297579194279,
+            "pocket_diversity": 0.19860193219112396,
+            "chain_diversity": 0.26323187847721713
+          },
+          "adflip": {
+            "chain_recovery": 0.5385226453672423,
+            "pocket_recovery": 0.631442406230785,
+            "pocket_diversity": 0.0035751102609065306,
+            "chain_diversity": 0.005880520356808749
+          }
+        }
+      },
+      "1yqj|1": {
+        "structures": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4562452643497937,
+            "pocket_recovery": 0.4972082950950883,
+            "pocket_diversity": 0.15931754160761277,
+            "chain_diversity": 0.2080828503972914
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5456270653119005,
+            "pocket_recovery": 0.6548081651026901,
+            "pocket_diversity": 0.13674708546130523,
+            "chain_diversity": 0.18412720218905318
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5451260620499978,
+            "pocket_recovery": 0.621326611102764,
+            "pocket_diversity": 0.20853642096662572,
+            "chain_diversity": 0.23444101479574816
+          },
+          "adflip": {
+            "chain_recovery": 0.5520481600558974,
+            "pocket_recovery": 0.6678395932367742,
+            "pocket_diversity": 0.003592314118629908,
+            "chain_diversity": 0.004223557089057479
+          }
+        }
+      },
+      "3myg|1": {
+        "structures": 2,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4581507936507937,
+            "pocket_recovery": 0.43941176470588234,
+            "pocket_diversity": 0.13917211328976034,
+            "chain_diversity": 0.19233721340388008
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5324222222222221,
+            "pocket_recovery": 0.6196078431372549,
+            "pocket_diversity": 0.13694989106753813,
+            "chain_diversity": 0.19403844797178132
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5164809523809524,
+            "pocket_recovery": 0.602156862745098,
+            "pocket_diversity": 0.2081045751633987,
+            "chain_diversity": 0.25689594356261025
+          },
+          "adflip": {
+            "chain_recovery": 0.5296253968253968,
+            "pocket_recovery": 0.49745098039215685,
+            "pocket_diversity": 0.006666666666666667,
+            "chain_diversity": 0.003144973544973545
+          }
+        }
+      },
+      "3zm9|1": {
+        "structures": 6,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.43086294280836535,
+            "pocket_recovery": 0.2963247863247863,
+            "pocket_diversity": 0.23731081264414597,
+            "chain_diversity": 0.2420968152788595
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5088915775081925,
+            "pocket_recovery": 0.4703614163614164,
+            "pocket_diversity": 0.20870275403608737,
+            "chain_diversity": 0.2414750859634782
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.48781983568075116,
+            "pocket_recovery": 0.2662026862026862,
+            "pocket_diversity": 0.32736738570071905,
+            "chain_diversity": 0.29143472552773697
+          },
+          "adflip": {
+            "chain_recovery": 0.4547781180749968,
+            "pocket_recovery": 0.2686202686202686,
+            "pocket_diversity": 0.0013333333333333333,
+            "chain_diversity": 0.00430996140150075
+          }
+        }
+      },
+      "4k0y|1": {
+        "structures": 3,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.48011996114185895,
+            "pocket_recovery": 0.65625,
+            "pocket_diversity": 0.16015795206971678,
+            "chain_diversity": 0.1995225914933944
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5884245519282015,
+            "pocket_recovery": 0.8661764705882353,
+            "pocket_diversity": 0.09049564270152506,
+            "chain_diversity": 0.20191656590683354
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5756298851189362,
+            "pocket_recovery": 0.8061274509803922,
+            "pocket_diversity": 0.12777777777777777,
+            "chain_diversity": 0.2515862618052399
+          },
+          "adflip": {
+            "chain_recovery": 0.5593896776378529,
+            "pocket_recovery": 0.8615196078431372,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.003033588921666781
+          }
+        }
+      },
+      "4yml|1": {
+        "structures": 1,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.5298701298701298,
+            "pocket_recovery": 0.5222222222222223,
+            "pocket_diversity": 0.18765432098765433,
+            "chain_diversity": 0.18412698412698414
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5943722943722943,
+            "pocket_recovery": 0.6944444444444444,
+            "pocket_diversity": 0.1654320987654321,
+            "chain_diversity": 0.1797979797979798
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5748917748917749,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.20246913580246914,
+            "chain_diversity": 0.23742183742183742
+          },
+          "adflip": {
+            "chain_recovery": 0.5887445887445888,
+            "pocket_recovery": 0.6111111111111112,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008465608465608466
+          }
+        }
+      },
+      "5op5|1": {
+        "structures": 2,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4469489193627124,
+            "pocket_recovery": 0.6762820512820513,
+            "pocket_diversity": 0.1294871794871795,
+            "chain_diversity": 0.2242875058967013
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5189085637361499,
+            "pocket_recovery": 0.7608974358974359,
+            "pocket_diversity": 0.1022079772079772,
+            "chain_diversity": 0.20321076413030437
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5180875456737526,
+            "pocket_recovery": 0.7419871794871795,
+            "pocket_diversity": 0.03796296296296296,
+            "chain_diversity": 0.265531048289669
+          },
+          "adflip": {
+            "chain_recovery": 0.5340485806003048,
+            "pocket_recovery": 0.8012820512820513,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0025146657330565375
+          }
+        }
+      }
+    },
+    "structures": 80
+  },
+  "nonenzyme": {
+    "cases": [
+      {
+        "key": "1a28",
+        "target_positions": 251,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4095617529880478,
+            "pocket_recovery": 0.43333333333333335,
+            "pocket_diversity": 0.18306878306878308,
+            "chain_diversity": 0.2463036741921204
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4434262948207171,
+            "pocket_recovery": 0.49523809523809526,
+            "pocket_diversity": 0.10899470899470899,
+            "chain_diversity": 0.2549800796812749
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4609561752988048,
+            "pocket_recovery": 0.5285714285714286,
+            "pocket_diversity": 0.24656084656084656,
+            "chain_diversity": 0.30137228862328463
+          },
+          "adflip": {
+            "chain_recovery": 0.4306772908366534,
+            "pocket_recovery": 0.42857142857142855,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.007259849490925188
+          }
+        }
+      },
+      {
+        "key": "1e3g",
+        "target_positions": 250,
+        "pocket_positions": 20,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.3604,
+            "pocket_recovery": 0.445,
+            "pocket_diversity": 0.13555555555555557,
+            "chain_diversity": 0.2623111111111111
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4264,
+            "pocket_recovery": 0.445,
+            "pocket_diversity": 0.16333333333333333,
+            "chain_diversity": 0.2495111111111111
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4092,
+            "pocket_recovery": 0.43,
+            "pocket_diversity": 0.23333333333333334,
+            "chain_diversity": 0.3279111111111111
+          },
+          "adflip": {
+            "chain_recovery": 0.3904,
+            "pocket_recovery": 0.415,
+            "pocket_diversity": 0.04666666666666667,
+            "chain_diversity": 0.018488888888888888
+          }
+        }
+      },
+      {
+        "key": "1i37",
+        "target_positions": 246,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.3752032520325203,
+            "pocket_recovery": 0.5285714285714286,
+            "pocket_diversity": 0.1544973544973545,
+            "chain_diversity": 0.25600722673893406
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4211382113821138,
+            "pocket_recovery": 0.4857142857142857,
+            "pocket_diversity": 0.17142857142857143,
+            "chain_diversity": 0.27154471544715447
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.38943089430894307,
+            "pocket_recovery": 0.4238095238095238,
+            "pocket_diversity": 0.3576719576719577,
+            "chain_diversity": 0.35600722673893404
+          },
+          "adflip": {
+            "chain_recovery": 0.4,
+            "pocket_recovery": 0.42857142857142855,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.015718157181571817
+          }
+        }
+      },
+      {
+        "key": "1sqn",
+        "target_positions": 248,
+        "pocket_positions": 20,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.3866935483870968,
+            "pocket_recovery": 0.345,
+            "pocket_diversity": 0.16333333333333333,
+            "chain_diversity": 0.24453405017921148
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.44879032258064516,
+            "pocket_recovery": 0.425,
+            "pocket_diversity": 0.29,
+            "chain_diversity": 0.24265232974910395
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4407258064516129,
+            "pocket_recovery": 0.545,
+            "pocket_diversity": 0.2777777777777778,
+            "chain_diversity": 0.296326164874552
+          },
+          "adflip": {
+            "chain_recovery": 0.4629032258064516,
+            "pocket_recovery": 0.45,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.010304659498207885
+          }
+        }
+      },
+      {
+        "key": "1z95",
+        "target_positions": 238,
+        "pocket_positions": 23,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4008403361344538,
+            "pocket_recovery": 0.4608695652173913,
+            "pocket_diversity": 0.178743961352657,
+            "chain_diversity": 0.24061624649859945
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4676470588235294,
+            "pocket_recovery": 0.4782608695652174,
+            "pocket_diversity": 0.242512077294686,
+            "chain_diversity": 0.249953314659197
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4760504201680672,
+            "pocket_recovery": 0.5173913043478261,
+            "pocket_diversity": 0.22995169082125605,
+            "chain_diversity": 0.28141923436041083
+          },
+          "adflip": {
+            "chain_recovery": 0.42857142857142855,
+            "pocket_recovery": 0.391304347826087,
+            "pocket_diversity": 0.015458937198067632,
+            "chain_diversity": 0.0014939309056956115
+          }
+        }
+      },
+      {
+        "key": "2ihq",
+        "target_positions": 248,
+        "pocket_positions": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.38306451612903225,
+            "pocket_recovery": 0.4631578947368421,
+            "pocket_diversity": 0.1847953216374269,
+            "chain_diversity": 0.2621863799283154
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4475806451612903,
+            "pocket_recovery": 0.6368421052631579,
+            "pocket_diversity": 0.2760233918128655,
+            "chain_diversity": 0.2994623655913978
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.432258064516129,
+            "pocket_recovery": 0.4105263157894737,
+            "pocket_diversity": 0.30292397660818715,
+            "chain_diversity": 0.3301075268817204
+          },
+          "adflip": {
+            "chain_recovery": 0.4149193548387097,
+            "pocket_recovery": 0.4368421052631579,
+            "pocket_diversity": 0.02456140350877193,
+            "chain_diversity": 0.012275985663082438
+          }
+        }
+      },
+      {
+        "key": "2oax",
+        "target_positions": 233,
+        "pocket_positions": 25,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.35107296137339056,
+            "pocket_recovery": 0.432,
+            "pocket_diversity": 0.14044444444444446,
+            "chain_diversity": 0.2847877920839294
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4257510729613734,
+            "pocket_recovery": 0.552,
+            "pocket_diversity": 0.26311111111111113,
+            "chain_diversity": 0.2777300906056271
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4407725321888412,
+            "pocket_recovery": 0.612,
+            "pocket_diversity": 0.3191111111111111,
+            "chain_diversity": 0.3414401525989509
+          },
+          "adflip": {
+            "chain_recovery": 0.39742489270386266,
+            "pocket_recovery": 0.48,
+            "pocket_diversity": 0.018666666666666668,
+            "chain_diversity": 0.013733905579399141
+          }
+        }
+      },
+      {
+        "key": "3b5r",
+        "target_positions": 247,
+        "pocket_positions": 22,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.38906882591093117,
+            "pocket_recovery": 0.44545454545454544,
+            "pocket_diversity": 0.19090909090909092,
+            "chain_diversity": 0.2304093567251462
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4348178137651822,
+            "pocket_recovery": 0.40454545454545454,
+            "pocket_diversity": 0.3595959595959596,
+            "chain_diversity": 0.27188484030589294
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.45587044534412957,
+            "pocket_recovery": 0.4318181818181818,
+            "pocket_diversity": 0.2878787878787879,
+            "chain_diversity": 0.30409356725146197
+          },
+          "adflip": {
+            "chain_recovery": 0.41983805668016194,
+            "pocket_recovery": 0.36363636363636365,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008726945569050832
+          }
+        }
+      },
+      {
+        "key": "3b65",
+        "target_positions": 247,
+        "pocket_positions": 22,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.3765182186234818,
+            "pocket_recovery": 0.37272727272727274,
+            "pocket_diversity": 0.20404040404040405,
+            "chain_diversity": 0.2413855150697256
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4311740890688259,
+            "pocket_recovery": 0.2772727272727273,
+            "pocket_diversity": 0.29292929292929293,
+            "chain_diversity": 0.29383715699505175
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4493927125506073,
+            "pocket_recovery": 0.4681818181818182,
+            "pocket_diversity": 0.35353535353535354,
+            "chain_diversity": 0.3338731443994602
+          },
+          "adflip": {
+            "chain_recovery": 0.4174089068825911,
+            "pocket_recovery": 0.32272727272727275,
+            "pocket_diversity": 0.03434343434343434,
+            "chain_diversity": 0.008277103013945119
+          }
+        }
+      },
+      {
+        "key": "5hcv",
+        "target_positions": 236,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.3360169491525424,
+            "pocket_recovery": 0.44285714285714284,
+            "pocket_diversity": 0.13015873015873017,
+            "chain_diversity": 0.25574387947269306
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.39533898305084747,
+            "pocket_recovery": 0.4,
+            "pocket_diversity": 0.17566137566137566,
+            "chain_diversity": 0.27570621468926554
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.37966101694915255,
+            "pocket_recovery": 0.4,
+            "pocket_diversity": 0.2560846560846561,
+            "chain_diversity": 0.35555555555555557
+          },
+          "adflip": {
+            "chain_recovery": 0.4038135593220339,
+            "pocket_recovery": 0.5238095238095238,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.014218455743879473
+          }
+        }
+      },
+      {
+        "key": "1gx8",
+        "target_positions": 161,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.40248447204968946,
+            "pocket_recovery": 0.29333333333333333,
+            "pocket_diversity": 0.30814814814814817,
+            "chain_diversity": 0.2673567977915804
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.47577639751552797,
+            "pocket_recovery": 0.26,
+            "pocket_diversity": 0.2651851851851852,
+            "chain_diversity": 0.2443064182194617
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.45714285714285713,
+            "pocket_recovery": 0.42,
+            "pocket_diversity": 0.3466666666666667,
+            "chain_diversity": 0.2608695652173913
+          },
+          "adflip": {
+            "chain_recovery": 0.4161490683229814,
+            "pocket_recovery": 0.13333333333333333,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "4gny",
+        "target_positions": 157,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4713375796178344,
+            "pocket_recovery": 0.5611111111111111,
+            "pocket_diversity": 0.11234567901234568,
+            "chain_diversity": 0.20721868365180468
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5452229299363057,
+            "pocket_recovery": 0.5666666666666667,
+            "pocket_diversity": 0.10864197530864197,
+            "chain_diversity": 0.2288747346072187
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5121019108280255,
+            "pocket_recovery": 0.6833333333333333,
+            "pocket_diversity": 0.10246913580246914,
+            "chain_diversity": 0.2656758669497523
+          },
+          "adflip": {
+            "chain_recovery": 0.535031847133758,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "6gf9",
+        "target_positions": 161,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45217391304347826,
+            "pocket_recovery": 0.4714285714285714,
+            "pocket_diversity": 0.1259259259259259,
+            "chain_diversity": 0.23464458247066944
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5043478260869565,
+            "pocket_recovery": 0.5857142857142857,
+            "pocket_diversity": 0.14708994708994708,
+            "chain_diversity": 0.21076604554865425
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4720496894409938,
+            "pocket_recovery": 0.5142857142857142,
+            "pocket_diversity": 0.17777777777777778,
+            "chain_diversity": 0.3028295376121463
+          },
+          "adflip": {
+            "chain_recovery": 0.4906832298136646,
+            "pocket_recovery": 0.5714285714285714,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0037267080745341614
+          }
+        }
+      },
+      {
+        "key": "6gfs",
+        "target_positions": 162,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4660493827160494,
+            "pocket_recovery": 0.5166666666666667,
+            "pocket_diversity": 0.1469135802469136,
+            "chain_diversity": 0.23333333333333334
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5117283950617284,
+            "pocket_recovery": 0.6222222222222222,
+            "pocket_diversity": 0.16913580246913582,
+            "chain_diversity": 0.2056241426611797
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5098765432098765,
+            "pocket_recovery": 0.5888888888888889,
+            "pocket_diversity": 0.1925925925925926,
+            "chain_diversity": 0.2857338820301783
+          },
+          "adflip": {
+            "chain_recovery": 0.5067901234567901,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005624142661179698
+          }
+        }
+      },
+      {
+        "key": "6ghh",
+        "target_positions": 162,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45987654320987653,
+            "pocket_recovery": 0.5944444444444444,
+            "pocket_diversity": 0.12345679012345678,
+            "chain_diversity": 0.22976680384087791
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.519753086419753,
+            "pocket_recovery": 0.6611111111111111,
+            "pocket_diversity": 0.16049382716049382,
+            "chain_diversity": 0.22194787379972566
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.504320987654321,
+            "pocket_recovery": 0.4888888888888889,
+            "pocket_diversity": 0.3567901234567901,
+            "chain_diversity": 0.30644718792866943
+          },
+          "adflip": {
+            "chain_recovery": 0.5407407407407407,
+            "pocket_recovery": 0.5555555555555556,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.009876543209876543
+          }
+        }
+      },
+      {
+        "key": "1kdk",
+        "target_positions": 177,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.496045197740113,
+            "pocket_recovery": 0.4888888888888889,
+            "pocket_diversity": 0.22469135802469137,
+            "chain_diversity": 0.19598242310106717
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5847457627118644,
+            "pocket_recovery": 0.6888888888888889,
+            "pocket_diversity": 0.2123456790123457,
+            "chain_diversity": 0.21431261770244822
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5344632768361582,
+            "pocket_recovery": 0.6444444444444445,
+            "pocket_diversity": 0.2679012345679012,
+            "chain_diversity": 0.2844946641556811
+          },
+          "adflip": {
+            "chain_recovery": 0.5536723163841808,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005649717514124294
+          }
+        }
+      },
+      {
+        "key": "1lhu",
+        "target_positions": 175,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.5028571428571429,
+            "pocket_recovery": 0.58125,
+            "pocket_diversity": 0.10416666666666667,
+            "chain_diversity": 0.17142857142857143
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6102857142857143,
+            "pocket_recovery": 0.65,
+            "pocket_diversity": 0.10555555555555556,
+            "chain_diversity": 0.18146031746031746
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5811428571428572,
+            "pocket_recovery": 0.7,
+            "pocket_diversity": 0.10277777777777777,
+            "chain_diversity": 0.21434920634920634
+          },
+          "adflip": {
+            "chain_recovery": 0.5714285714285714,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.029166666666666667,
+            "chain_diversity": 0.0026666666666666666
+          }
+        }
+      },
+      {
+        "key": "1qkt",
+        "target_positions": 248,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.3786290322580645,
+            "pocket_recovery": 0.49411764705882355,
+            "pocket_diversity": 0.18169934640522875,
+            "chain_diversity": 0.29829749103942654
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4532258064516129,
+            "pocket_recovery": 0.5588235294117647,
+            "pocket_diversity": 0.13986928104575164,
+            "chain_diversity": 0.2547491039426523
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4459677419354839,
+            "pocket_recovery": 0.5352941176470588,
+            "pocket_diversity": 0.09281045751633987,
+            "chain_diversity": 0.3089605734767025
+          },
+          "adflip": {
+            "chain_recovery": 0.42379032258064514,
+            "pocket_recovery": 0.4117647058823529,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008691756272401433
+          }
+        }
+      },
+      {
+        "key": "1sj0",
+        "target_positions": 243,
+        "pocket_positions": 23,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.37983539094650204,
+            "pocket_recovery": 0.5043478260869565,
+            "pocket_diversity": 0.20676328502415459,
+            "chain_diversity": 0.28550525834476453
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4337448559670782,
+            "pocket_recovery": 0.6608695652173913,
+            "pocket_diversity": 0.1855072463768116,
+            "chain_diversity": 0.254320987654321
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.391358024691358,
+            "pocket_recovery": 0.5260869565217391,
+            "pocket_diversity": 0.23091787439613526,
+            "chain_diversity": 0.3154092363968907
+          },
+          "adflip": {
+            "chain_recovery": 0.42386831275720166,
+            "pocket_recovery": 0.6086956521739131,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "2ayr",
+        "target_positions": 246,
+        "pocket_positions": 24,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4089430894308943,
+            "pocket_recovery": 0.5041666666666667,
+            "pocket_diversity": 0.2824074074074074,
+            "chain_diversity": 0.27353206865401986
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4869918699186992,
+            "pocket_recovery": 0.7041666666666667,
+            "pocket_diversity": 0.16574074074074074,
+            "chain_diversity": 0.22908762420957543
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4524390243902439,
+            "pocket_recovery": 0.5291666666666667,
+            "pocket_diversity": 0.20555555555555555,
+            "chain_diversity": 0.2622402890695574
+          },
+          "adflip": {
+            "chain_recovery": 0.4398373983739837,
+            "pocket_recovery": 0.5416666666666666,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.023396567299006323
+          }
+        }
+      },
+      {
+        "key": "2e2r",
+        "target_positions": 227,
+        "pocket_positions": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4392070484581498,
+            "pocket_recovery": 0.4842105263157895,
+            "pocket_diversity": 0.1216374269005848,
+            "chain_diversity": 0.23230543318649047
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4977973568281938,
+            "pocket_recovery": 0.6263157894736842,
+            "pocket_diversity": 0.17660818713450294,
+            "chain_diversity": 0.2419970631424376
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5118942731277533,
+            "pocket_recovery": 0.7315789473684211,
+            "pocket_diversity": 0.10760233918128655,
+            "chain_diversity": 0.2714635340186001
+          },
+          "adflip": {
+            "chain_recovery": 0.4713656387665198,
+            "pocket_recovery": 0.47368421052631576,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.001762114537444934
+          }
+        }
+      },
+      {
+        "key": "2p7g",
+        "target_positions": 222,
+        "pocket_positions": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44684684684684683,
+            "pocket_recovery": 0.6263157894736842,
+            "pocket_diversity": 0.07953216374269007,
+            "chain_diversity": 0.25135135135135134
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.47702702702702704,
+            "pocket_recovery": 0.6684210526315789,
+            "pocket_diversity": 0.1976608187134503,
+            "chain_diversity": 0.2998998998998999
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.481981981981982,
+            "pocket_recovery": 0.7,
+            "pocket_diversity": 0.11929824561403508,
+            "chain_diversity": 0.2936936936936937
+          },
+          "adflip": {
+            "chain_recovery": 0.4518018018018018,
+            "pocket_recovery": 0.5736842105263158,
+            "pocket_diversity": 0.010526315789473684,
+            "chain_diversity": 0.011011011011011011
+          }
+        }
+      },
+      {
+        "key": "2p7z",
+        "target_positions": 207,
+        "pocket_positions": 24,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4033816425120773,
+            "pocket_recovery": 0.425,
+            "pocket_diversity": 0.23703703703703705,
+            "chain_diversity": 0.23864734299516907
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4115942028985507,
+            "pocket_recovery": 0.45416666666666666,
+            "pocket_diversity": 0.28055555555555556,
+            "chain_diversity": 0.26108427267847556
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4391304347826087,
+            "pocket_recovery": 0.45416666666666666,
+            "pocket_diversity": 0.16666666666666666,
+            "chain_diversity": 0.27364465915190556
+          },
+          "adflip": {
+            "chain_recovery": 0.4178743961352657,
+            "pocket_recovery": 0.4375,
+            "pocket_diversity": 0.023148148148148147,
+            "chain_diversity": 0.0036500268384326356
+          }
+        }
+      },
+      {
+        "key": "2pog",
+        "target_positions": 233,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.37553648068669526,
+            "pocket_recovery": 0.4722222222222222,
+            "pocket_diversity": 0.18395061728395062,
+            "chain_diversity": 0.2654268001907487
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.45278969957081544,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.19753086419753085,
+            "chain_diversity": 0.24215546018121126
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4356223175965665,
+            "pocket_recovery": 0.6277777777777778,
+            "pocket_diversity": 0.2,
+            "chain_diversity": 0.2591320934668574
+          },
+          "adflip": {
+            "chain_recovery": 0.4278969957081545,
+            "pocket_recovery": 0.5277777777777778,
+            "pocket_diversity": 0.04567901234567901,
+            "chain_diversity": 0.0117310443490701
+          }
+        }
+      },
+      {
+        "key": "2qe4",
+        "target_positions": 207,
+        "pocket_positions": 20,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.36666666666666664,
+            "pocket_recovery": 0.36,
+            "pocket_diversity": 0.20666666666666667,
+            "chain_diversity": 0.26247987117552335
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.45120772946859905,
+            "pocket_recovery": 0.55,
+            "pocket_diversity": 0.20444444444444446,
+            "chain_diversity": 0.24455179817498657
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.41884057971014493,
+            "pocket_recovery": 0.57,
+            "pocket_diversity": 0.27444444444444444,
+            "chain_diversity": 0.3158346752549651
+          },
+          "adflip": {
+            "chain_recovery": 0.42028985507246375,
+            "pocket_recovery": 0.405,
+            "pocket_diversity": 0.01,
+            "chain_diversity": 0.001932367149758454
+          }
+        }
+      },
+      {
+        "key": "6i61",
+        "target_positions": 224,
+        "pocket_positions": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.47544642857142855,
+            "pocket_recovery": 0.6263157894736842,
+            "pocket_diversity": 0.19649122807017544,
+            "chain_diversity": 0.2429563492063492
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5174107142857143,
+            "pocket_recovery": 0.7473684210526316,
+            "pocket_diversity": 0.10175438596491228,
+            "chain_diversity": 0.2443452380952381
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5299107142857142,
+            "pocket_recovery": 0.7631578947368421,
+            "pocket_diversity": 0.05847953216374269,
+            "chain_diversity": 0.2439484126984127
+          },
+          "adflip": {
+            "chain_recovery": 0.5258928571428572,
+            "pocket_recovery": 0.5789473684210527,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.01498015873015873
+          }
+        }
+      },
+      {
+        "key": "6i64",
+        "target_positions": 224,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4616071428571429,
+            "pocket_recovery": 0.6588235294117647,
+            "pocket_diversity": 0.1830065359477124,
+            "chain_diversity": 0.24206349206349206
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5174107142857143,
+            "pocket_recovery": 0.8,
+            "pocket_diversity": 0.14640522875816994,
+            "chain_diversity": 0.22490079365079366
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5138392857142857,
+            "pocket_recovery": 0.7529411764705882,
+            "pocket_diversity": 0.0915032679738562,
+            "chain_diversity": 0.26378968253968255
+          },
+          "adflip": {
+            "chain_recovery": 0.5125,
+            "pocket_recovery": 0.5882352941176471,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.003373015873015873
+          }
+        }
+      },
+      {
+        "key": "6i67",
+        "target_positions": 225,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44755555555555554,
+            "pocket_recovery": 0.5538461538461539,
+            "pocket_diversity": 0.24444444444444444,
+            "chain_diversity": 0.24592592592592594
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5022222222222222,
+            "pocket_recovery": 0.7076923076923077,
+            "pocket_diversity": 0.19316239316239317,
+            "chain_diversity": 0.23377777777777778
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5151111111111111,
+            "pocket_recovery": 0.8153846153846154,
+            "pocket_diversity": 0.08547008547008547,
+            "chain_diversity": 0.28325925925925927
+          },
+          "adflip": {
+            "chain_recovery": 0.5111111111111111,
+            "pocket_recovery": 0.6923076923076923,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.006913580246913581
+          }
+        }
+      },
+      {
+        "key": "2ydw",
+        "target_positions": 105,
+        "pocket_positions": 16,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4219047619047619,
+            "pocket_recovery": 0.4875,
+            "pocket_diversity": 0.2111111111111111,
+            "chain_diversity": 0.24105820105820105
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5428571428571428,
+            "pocket_recovery": 0.68125,
+            "pocket_diversity": 0.15555555555555556,
+            "chain_diversity": 0.2778835978835979
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5676190476190476,
+            "pocket_recovery": 0.65625,
+            "pocket_diversity": 0.1875,
+            "chain_diversity": 0.2651851851851852
+          },
+          "adflip": {
+            "chain_recovery": 0.5171428571428571,
+            "pocket_recovery": 0.625,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008888888888888889
+          }
+        }
+      },
+      {
+        "key": "2yek",
+        "target_positions": 114,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.43859649122807015,
+            "pocket_recovery": 0.4714285714285714,
+            "pocket_diversity": 0.17936507936507937,
+            "chain_diversity": 0.22417153996101363
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5201754385964912,
+            "pocket_recovery": 0.7214285714285714,
+            "pocket_diversity": 0.19523809523809524,
+            "chain_diversity": 0.2341130604288499
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5114035087719299,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.28050682261208576
+          },
+          "adflip": {
+            "chain_recovery": 0.5701754385964912,
+            "pocket_recovery": 0.5714285714285714,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "4lyw",
+        "target_positions": 127,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4858267716535433,
+            "pocket_recovery": 0.6214285714285714,
+            "pocket_diversity": 0.15714285714285714,
+            "chain_diversity": 0.1910761154855643
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5582677165354331,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.0873015873015873,
+            "chain_diversity": 0.21872265966754156
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5417322834645669,
+            "pocket_recovery": 0.5928571428571429,
+            "pocket_diversity": 0.2222222222222222,
+            "chain_diversity": 0.26071741032370954
+          },
+          "adflip": {
+            "chain_recovery": 0.6188976377952756,
+            "pocket_recovery": 0.6428571428571429,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.007874015748031496
+          }
+        }
+      },
+      {
+        "key": "4qev",
+        "target_positions": 110,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4636363636363636,
+            "pocket_recovery": 0.5846153846153846,
+            "pocket_diversity": 0.12307692307692308,
+            "chain_diversity": 0.25191919191919193
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5872727272727273,
+            "pocket_recovery": 0.7384615384615385,
+            "pocket_diversity": 0.07692307692307693,
+            "chain_diversity": 0.19575757575757577
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5790909090909091,
+            "pocket_recovery": 0.676923076923077,
+            "pocket_diversity": 0.11965811965811966,
+            "chain_diversity": 0.21818181818181817
+          },
+          "adflip": {
+            "chain_recovery": 0.5363636363636364,
+            "pocket_recovery": 0.6153846153846154,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "4qew",
+        "target_positions": 112,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45982142857142855,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.2512820512820513,
+            "chain_diversity": 0.2400793650793651
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5875,
+            "pocket_recovery": 0.7538461538461538,
+            "pocket_diversity": 0.07179487179487179,
+            "chain_diversity": 0.24603174603174602
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5366071428571428,
+            "pocket_recovery": 0.6692307692307692,
+            "pocket_diversity": 0.11282051282051282,
+            "chain_diversity": 0.24067460317460318
+          },
+          "adflip": {
+            "chain_recovery": 0.5357142857142857,
+            "pocket_recovery": 0.6153846153846154,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "4uyf",
+        "target_positions": 119,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.42857142857142855,
+            "pocket_recovery": 0.5769230769230769,
+            "pocket_diversity": 0.19145299145299147,
+            "chain_diversity": 0.20933706816059758
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5487394957983194,
+            "pocket_recovery": 0.7846153846153846,
+            "pocket_diversity": 0.08717948717948718,
+            "chain_diversity": 0.211577964519141
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5470588235294118,
+            "pocket_recovery": 0.7538461538461538,
+            "pocket_diversity": 0.17094017094017094,
+            "chain_diversity": 0.2634920634920635
+          },
+          "adflip": {
+            "chain_recovery": 0.5462184873949579,
+            "pocket_recovery": 0.6153846153846154,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004668534080298786
+          }
+        }
+      },
+      {
+        "key": "5acy",
+        "target_positions": 127,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4811023622047244,
+            "pocket_recovery": 0.39285714285714285,
+            "pocket_diversity": 0.21428571428571427,
+            "chain_diversity": 0.21924759405074365
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6141732283464567,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.14126984126984127,
+            "chain_diversity": 0.18285214348206474
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5787401574803149,
+            "pocket_recovery": 0.6285714285714286,
+            "pocket_diversity": 0.34285714285714286,
+            "chain_diversity": 0.2715660542432196
+          },
+          "adflip": {
+            "chain_recovery": 0.6141732283464567,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.008398950131233596
+          }
+        }
+      },
+      {
+        "key": "5d26",
+        "target_positions": 127,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.47874015748031495,
+            "pocket_recovery": 0.6076923076923076,
+            "pocket_diversity": 0.1452991452991453,
+            "chain_diversity": 0.19510061242344706
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6007874015748031,
+            "pocket_recovery": 0.7384615384615385,
+            "pocket_diversity": 0.10085470085470086,
+            "chain_diversity": 0.20349956255468066
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5992125984251968,
+            "pocket_recovery": 0.7692307692307693,
+            "pocket_diversity": 0.042735042735042736,
+            "chain_diversity": 0.21137357830271217
+          },
+          "adflip": {
+            "chain_recovery": 0.6535433070866141,
+            "pocket_recovery": 0.6923076923076923,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "5d3h",
+        "target_positions": 125,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4736,
+            "pocket_recovery": 0.5461538461538461,
+            "pocket_diversity": 0.13333333333333333,
+            "chain_diversity": 0.20604444444444445
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5992,
+            "pocket_recovery": 0.7461538461538462,
+            "pocket_diversity": 0.11965811965811966,
+            "chain_diversity": 0.16782222222222223
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5688,
+            "pocket_recovery": 0.5846153846153846,
+            "pocket_diversity": 0.15042735042735042,
+            "chain_diversity": 0.23822222222222222
+          },
+          "adflip": {
+            "chain_recovery": 0.648,
+            "pocket_recovery": 0.7692307692307693,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "5d3j",
+        "target_positions": 126,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.48253968253968255,
+            "pocket_recovery": 0.5857142857142857,
+            "pocket_diversity": 0.14285714285714285,
+            "chain_diversity": 0.19947089947089947
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5841269841269842,
+            "pocket_recovery": 0.75,
+            "pocket_diversity": 0.09206349206349207,
+            "chain_diversity": 0.19347442680776014
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.6039682539682539,
+            "pocket_recovery": 0.7214285714285714,
+            "pocket_diversity": 0.13968253968253969,
+            "chain_diversity": 0.25202821869488534
+          },
+          "adflip": {
+            "chain_recovery": 0.6746031746031746,
+            "pocket_recovery": 0.7857142857142857,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "5d3l",
+        "target_positions": 127,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.49606299212598426,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.0873015873015873,
+            "chain_diversity": 0.17812773403324583
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5606299212598426,
+            "pocket_recovery": 0.7428571428571429,
+            "pocket_diversity": 0.08253968253968254,
+            "chain_diversity": 0.1931758530183727
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5551181102362205,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.025396825396825397,
+            "chain_diversity": 0.26281714785651794
+          },
+          "adflip": {
+            "chain_recovery": 0.6086614173228346,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.007349081364829396
+          }
+        }
+      },
+      {
+        "key": "5d3t",
+        "target_positions": 127,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.49921259842519683,
+            "pocket_recovery": 0.6714285714285714,
+            "pocket_diversity": 0.1,
+            "chain_diversity": 0.20192475940507437
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6055118110236221,
+            "pocket_recovery": 0.7142857142857143,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.19037620297462818
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5881889763779528,
+            "pocket_recovery": 0.6571428571428571,
+            "pocket_diversity": 0.20476190476190476,
+            "chain_diversity": 0.2062992125984252
+          },
+          "adflip": {
+            "chain_recovery": 0.6220472440944882,
+            "pocket_recovery": 0.7857142857142857,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0
+          }
+        }
+      },
+      {
+        "key": "5dlx",
+        "target_positions": 125,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4912,
+            "pocket_recovery": 0.4866666666666667,
+            "pocket_diversity": 0.14814814814814814,
+            "chain_diversity": 0.21173333333333333
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6432,
+            "pocket_recovery": 0.7133333333333334,
+            "pocket_diversity": 0.06962962962962962,
+            "chain_diversity": 0.1784888888888889
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5872,
+            "pocket_recovery": 0.7,
+            "pocket_diversity": 0.10962962962962963,
+            "chain_diversity": 0.24035555555555554
+          },
+          "adflip": {
+            "chain_recovery": 0.6376,
+            "pocket_recovery": 0.6,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0037333333333333333
+          }
+        }
+      },
+      {
+        "key": "5e74",
+        "target_positions": 116,
+        "pocket_positions": 12,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.36379310344827587,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.17592592592592593,
+            "chain_diversity": 0.2553639846743295
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4862068965517241,
+            "pocket_recovery": 0.6916666666666667,
+            "pocket_diversity": 0.06851851851851852,
+            "chain_diversity": 0.22796934865900384
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.44051724137931036,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.24814814814814815,
+            "chain_diversity": 0.3325670498084291
+          },
+          "adflip": {
+            "chain_recovery": 0.4896551724137931,
+            "pocket_recovery": 0.5833333333333334,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.011877394636015325
+          }
+        }
+      },
+      {
+        "key": "6mh1",
+        "target_positions": 127,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.48346456692913387,
+            "pocket_recovery": 0.56,
+            "pocket_diversity": 0.13333333333333333,
+            "chain_diversity": 0.18285214348206474
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6062992125984252,
+            "pocket_recovery": 0.86,
+            "pocket_diversity": 0.013333333333333334,
+            "chain_diversity": 0.1711286089238845
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5448818897637795,
+            "pocket_recovery": 0.7266666666666667,
+            "pocket_diversity": 0.19111111111111112,
+            "chain_diversity": 0.24864391951006123
+          },
+          "adflip": {
+            "chain_recovery": 0.6165354330708661,
+            "pocket_recovery": 0.7333333333333333,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0055993000874890635
+          }
+        }
+      },
+      {
+        "key": "6mh7",
+        "target_positions": 127,
+        "pocket_positions": 14,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.49133858267716535,
+            "pocket_recovery": 0.6214285714285714,
+            "pocket_diversity": 0.05396825396825397,
+            "chain_diversity": 0.20297462817147857
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6188976377952756,
+            "pocket_recovery": 0.9285714285714286,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.17515310586176727
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.6165354330708661,
+            "pocket_recovery": 0.85,
+            "pocket_diversity": 0.1634920634920635,
+            "chain_diversity": 0.2169728783902012
+          },
+          "adflip": {
+            "chain_recovery": 0.6456692913385826,
+            "pocket_recovery": 0.7857142857142857,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0027996500437445318
+          }
+        }
+      },
+      {
+        "key": "2yfe",
+        "target_positions": 264,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.45606060606060606,
+            "pocket_recovery": 0.38333333333333336,
+            "pocket_diversity": 0.2074074074074074,
+            "chain_diversity": 0.2383838383838384
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.48068181818181815,
+            "pocket_recovery": 0.42777777777777776,
+            "pocket_diversity": 0.2234567901234568,
+            "chain_diversity": 0.24326599326599327
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.49924242424242427,
+            "pocket_recovery": 0.42777777777777776,
+            "pocket_diversity": 0.3234567901234568,
+            "chain_diversity": 0.26405723905723905
+          },
+          "adflip": {
+            "chain_recovery": 0.4810606060606061,
+            "pocket_recovery": 0.2777777777777778,
+            "pocket_diversity": 0.011111111111111112,
+            "chain_diversity": 0.007828282828282828
+          }
+        }
+      },
+      {
+        "key": "4a4v",
+        "target_positions": 264,
+        "pocket_positions": 18,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.41439393939393937,
+            "pocket_recovery": 0.2,
+            "pocket_diversity": 0.24691358024691357,
+            "chain_diversity": 0.2526094276094276
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.47878787878787876,
+            "pocket_recovery": 0.36666666666666664,
+            "pocket_diversity": 0.24444444444444444,
+            "chain_diversity": 0.24671717171717172
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.45984848484848484,
+            "pocket_recovery": 0.3111111111111111,
+            "pocket_diversity": 0.35555555555555557,
+            "chain_diversity": 0.2692760942760943
+          },
+          "adflip": {
+            "chain_recovery": 0.46325757575757576,
+            "pocket_recovery": 0.16666666666666666,
+            "pocket_diversity": 0.037037037037037035,
+            "chain_diversity": 0.018686868686868686
+          }
+        }
+      },
+      {
+        "key": "4a4w",
+        "target_positions": 263,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44980988593155896,
+            "pocket_recovery": 0.40476190476190477,
+            "pocket_diversity": 0.20634920634920634,
+            "chain_diversity": 0.25171102661596956
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.49049429657794674,
+            "pocket_recovery": 0.4142857142857143,
+            "pocket_diversity": 0.2984126984126984,
+            "chain_diversity": 0.2552598225602028
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4756653992395437,
+            "pocket_recovery": 0.4523809523809524,
+            "pocket_diversity": 0.33121693121693124,
+            "chain_diversity": 0.29835234474017747
+          },
+          "adflip": {
+            "chain_recovery": 0.45019011406844106,
+            "pocket_recovery": 0.23809523809523808,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0122517955217575
+          }
+        }
+      },
+      {
+        "key": "5f9b",
+        "target_positions": 250,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.356,
+            "pocket_recovery": 0.17333333333333334,
+            "pocket_diversity": 0.07851851851851852,
+            "chain_diversity": 0.3015111111111111
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4516,
+            "pocket_recovery": 0.13333333333333333,
+            "pocket_diversity": 0.31407407407407406,
+            "chain_diversity": 0.28613333333333335
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4,
+            "pocket_recovery": 0.2,
+            "pocket_diversity": 0.28444444444444444,
+            "chain_diversity": 0.33155555555555555
+          },
+          "adflip": {
+            "chain_recovery": 0.4736,
+            "pocket_recovery": 0.06666666666666667,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.007288888888888889
+          }
+        }
+      },
+      {
+        "key": "5lsg",
+        "target_positions": 256,
+        "pocket_positions": 22,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.41171875,
+            "pocket_recovery": 0.2681818181818182,
+            "pocket_diversity": 0.22323232323232323,
+            "chain_diversity": 0.25625
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.473046875,
+            "pocket_recovery": 0.42727272727272725,
+            "pocket_diversity": 0.23434343434343435,
+            "chain_diversity": 0.23802083333333332
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.445703125,
+            "pocket_recovery": 0.39545454545454545,
+            "pocket_diversity": 0.22727272727272727,
+            "chain_diversity": 0.2911458333333333
+          },
+          "adflip": {
+            "chain_recovery": 0.47109375,
+            "pocket_recovery": 0.45454545454545453,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.009982638888888888
+          }
+        }
+      },
+      {
+        "key": "6dgq",
+        "target_positions": 257,
+        "pocket_positions": 24,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.40155642023346305,
+            "pocket_recovery": 0.32916666666666666,
+            "pocket_diversity": 0.24074074074074073,
+            "chain_diversity": 0.25421530479896237
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4622568093385214,
+            "pocket_recovery": 0.39166666666666666,
+            "pocket_diversity": 0.3453703703703704,
+            "chain_diversity": 0.25395590142671853
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4622568093385214,
+            "pocket_recovery": 0.42083333333333334,
+            "pocket_diversity": 0.23703703703703705,
+            "chain_diversity": 0.30099437959360137
+          },
+          "adflip": {
+            "chain_recovery": 0.4785992217898833,
+            "pocket_recovery": 0.2916666666666667,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005015131863380891
+          }
+        }
+      },
+      {
+        "key": "6dgr",
+        "target_positions": 261,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.41226053639846744,
+            "pocket_recovery": 0.3904761904761905,
+            "pocket_diversity": 0.2878306878306878,
+            "chain_diversity": 0.27296722009365687
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4885057471264368,
+            "pocket_recovery": 0.5142857142857142,
+            "pocket_diversity": 0.164021164021164,
+            "chain_diversity": 0.2515112813963389
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.46704980842911875,
+            "pocket_recovery": 0.37142857142857144,
+            "pocket_diversity": 0.2783068783068783,
+            "chain_diversity": 0.2593444018731375
+          },
+          "adflip": {
+            "chain_recovery": 0.47088122605363986,
+            "pocket_recovery": 0.4238095238095238,
+            "pocket_diversity": 0.009523809523809525,
+            "chain_diversity": 0.005959982971477224
+          }
+        }
+      },
+      {
+        "key": "1nhz",
+        "target_positions": 239,
+        "pocket_positions": 20,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.37447698744769875,
+            "pocket_recovery": 0.46,
+            "pocket_diversity": 0.18777777777777777,
+            "chain_diversity": 0.2385867038586704
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.43556485355648533,
+            "pocket_recovery": 0.48,
+            "pocket_diversity": 0.18444444444444444,
+            "chain_diversity": 0.22807996280799628
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4476987447698745,
+            "pocket_recovery": 0.53,
+            "pocket_diversity": 0.22444444444444445,
+            "chain_diversity": 0.3198512319851232
+          },
+          "adflip": {
+            "chain_recovery": 0.402092050209205,
+            "pocket_recovery": 0.35,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.013389121338912133
+          }
+        }
+      },
+      {
+        "key": "2b4l",
+        "target_positions": 268,
+        "pocket_positions": 10,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4809701492537313,
+            "pocket_recovery": 0.3,
+            "pocket_diversity": 0.24666666666666667,
+            "chain_diversity": 0.2126865671641791
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5552238805970149,
+            "pocket_recovery": 0.53,
+            "pocket_diversity": 0.4066666666666667,
+            "chain_diversity": 0.23291873963515755
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5384328358208955,
+            "pocket_recovery": 0.19,
+            "pocket_diversity": 0.5955555555555555,
+            "chain_diversity": 0.2906301824212272
+          },
+          "adflip": {
+            "chain_recovery": 0.5466417910447762,
+            "pocket_recovery": 0.3,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0041459369817578775
+          }
+        }
+      },
+      {
+        "key": "2yel",
+        "target_positions": 127,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.49133858267716535,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.22393162393162394,
+            "chain_diversity": 0.22904636920384952
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.6078740157480315,
+            "pocket_recovery": 0.7692307692307693,
+            "pocket_diversity": 0.015384615384615385,
+            "chain_diversity": 0.19195100612423446
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.6149606299212599,
+            "pocket_recovery": 0.7692307692307693,
+            "pocket_diversity": 0.10598290598290598,
+            "chain_diversity": 0.2468941382327209
+          },
+          "adflip": {
+            "chain_recovery": 0.6377952755905512,
+            "pocket_recovery": 0.6923076923076923,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005774278215223097
+          }
+        }
+      },
+      {
+        "key": "3nq3",
+        "target_positions": 162,
+        "pocket_positions": 15,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.42901234567901236,
+            "pocket_recovery": 0.46,
+            "pocket_diversity": 0.1437037037037037,
+            "chain_diversity": 0.2438957475994513
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5123456790123457,
+            "pocket_recovery": 0.5866666666666667,
+            "pocket_diversity": 0.11703703703703704,
+            "chain_diversity": 0.25102880658436216
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.47098765432098766,
+            "pocket_recovery": 0.4533333333333333,
+            "pocket_diversity": 0.2,
+            "chain_diversity": 0.2934156378600823
+          },
+          "adflip": {
+            "chain_recovery": 0.5030864197530864,
+            "pocket_recovery": 0.5333333333333333,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.015912208504801097
+          }
+        }
+      },
+      {
+        "key": "3uew",
+        "target_positions": 156,
+        "pocket_positions": 17,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.42948717948717946,
+            "pocket_recovery": 0.4764705882352941,
+            "pocket_diversity": 0.19084967320261437,
+            "chain_diversity": 0.248005698005698
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.48333333333333334,
+            "pocket_recovery": 0.5294117647058824,
+            "pocket_diversity": 0.19738562091503267,
+            "chain_diversity": 0.24088319088319088
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.44166666666666665,
+            "pocket_recovery": 0.4294117647058823,
+            "pocket_diversity": 0.13202614379084968,
+            "chain_diversity": 0.3041310541310541
+          },
+          "adflip": {
+            "chain_recovery": 0.46794871794871795,
+            "pocket_recovery": 0.47058823529411764,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005982905982905983
+          }
+        }
+      },
+      {
+        "key": "3uex",
+        "target_positions": 159,
+        "pocket_positions": 21,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44842767295597485,
+            "pocket_recovery": 0.43333333333333335,
+            "pocket_diversity": 0.1291005291005291,
+            "chain_diversity": 0.22879105520614954
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.47924528301886793,
+            "pocket_recovery": 0.4666666666666667,
+            "pocket_diversity": 0.17142857142857143,
+            "chain_diversity": 0.2496156533892383
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4490566037735849,
+            "pocket_recovery": 0.49523809523809526,
+            "pocket_diversity": 0.28465608465608466,
+            "chain_diversity": 0.33473095737246683
+          },
+          "adflip": {
+            "chain_recovery": 0.4641509433962264,
+            "pocket_recovery": 0.5238095238095238,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.004472396925227114
+          }
+        }
+      },
+      {
+        "key": "4flp",
+        "target_positions": 106,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.43113207547169813,
+            "pocket_recovery": 0.49230769230769234,
+            "pocket_diversity": 0.14871794871794872,
+            "chain_diversity": 0.21530398322851152
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5443396226415095,
+            "pocket_recovery": 0.8,
+            "pocket_diversity": 0.041025641025641026,
+            "chain_diversity": 0.23018867924528302
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4811320754716981,
+            "pocket_recovery": 0.7923076923076923,
+            "pocket_diversity": 0.0735042735042735,
+            "chain_diversity": 0.28553459119496855
+          },
+          "adflip": {
+            "chain_recovery": 0.5273584905660378,
+            "pocket_recovery": 0.6153846153846154,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005660377358490566
+          }
+        }
+      },
+      {
+        "key": "4kcx",
+        "target_positions": 106,
+        "pocket_positions": 13,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4160377358490566,
+            "pocket_recovery": 0.3923076923076923,
+            "pocket_diversity": 0.13504273504273503,
+            "chain_diversity": 0.24758909853249475
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5339622641509434,
+            "pocket_recovery": 0.6153846153846154,
+            "pocket_diversity": 0.1606837606837607,
+            "chain_diversity": 0.24675052410901469
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5330188679245284,
+            "pocket_recovery": 0.5615384615384615,
+            "pocket_diversity": 0.1794871794871795,
+            "chain_diversity": 0.30041928721174005
+          },
+          "adflip": {
+            "chain_recovery": 0.5,
+            "pocket_recovery": 0.6153846153846154,
+            "pocket_diversity": 0.042735042735042736,
+            "chain_diversity": 0.005241090146750524
+          }
+        }
+      },
+      {
+        "key": "6md0",
+        "target_positions": 255,
+        "pocket_positions": 20,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.41568627450980394,
+            "pocket_recovery": 0.275,
+            "pocket_diversity": 0.2588888888888889,
+            "chain_diversity": 0.25350762527233117
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.48705882352941177,
+            "pocket_recovery": 0.365,
+            "pocket_diversity": 0.19666666666666666,
+            "chain_diversity": 0.24226579520697167
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4792156862745098,
+            "pocket_recovery": 0.415,
+            "pocket_diversity": 0.2611111111111111,
+            "chain_diversity": 0.30483660130718954
+          },
+          "adflip": {
+            "chain_recovery": 0.5027450980392156,
+            "pocket_recovery": 0.4,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.018997821350762528
+          }
+        }
+      }
+    ],
+    "summary": {
+      "e18": {
+        "chain_recovery": {
+          "median": 0.4303096274794388,
+          "mean": 0.4310116724916856
+        },
+        "pocket_recovery": {
+          "median": 0.4803405572755418,
+          "mean": 0.47452172053223846
+        },
+        "pocket_diversity": {
+          "median": 0.18053221288515406,
+          "mean": 0.17563978158863106
+        },
+        "chain_diversity": {
+          "mean": 0.2376341700598041,
+          "median": 0.24122185806396335
+        }
+      },
+      "ligandmpnn": {
+        "chain_recovery": {
+          "median": 0.4941458267030703,
+          "mean": 0.5087252266249066
+        },
+        "pocket_recovery": {
+          "median": 0.6188034188034188,
+          "mean": 0.5920575423535125
+        },
+        "pocket_diversity": {
+          "median": 0.1674382716049383,
+          "mean": 0.16963304886565905
+        },
+        "chain_diversity": {
+          "mean": 0.2346999675156953,
+          "median": 0.24207626166182444
+        }
+      },
+      "lasermpnn": {
+        "chain_recovery": {
+          "median": 0.480173880873104,
+          "mean": 0.4945686978572605
+        },
+        "pocket_recovery": {
+          "median": 0.5532692307692308,
+          "mean": 0.5657179219754112
+        },
+        "pocket_diversity": {
+          "median": 0.20515873015873015,
+          "mean": 0.20949990192299348
+        },
+        "chain_diversity": {
+          "mean": 0.28241092103270665,
+          "median": 0.2838769617074702
+        }
+      },
+      "adflip": {
+        "chain_recovery": {
+          "median": 0.49016920111372886,
+          "mean": 0.503036386565581
+        },
+        "pocket_recovery": {
+          "median": 0.5305555555555556,
+          "mean": 0.5120091600722406
+        },
+        "pocket_diversity": {
+          "median": 0.0,
+          "mean": 0.005977070862342919
+        },
+        "chain_diversity": {
+          "mean": 0.007221036278941351,
+          "median": 0.005971444477191603
+        }
+      }
+    },
+    "family_summary": {
+      "1a28|1": {
+        "structures": 11,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.3766288498344723,
+            "pocket_recovery": 0.4389973802634506,
+            "pocket_diversity": 0.16848406879777797,
+            "chain_diversity": 0.2511701759871324
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4343299404700918,
+            "pocket_recovery": 0.4618066852362671,
+            "pocket_diversity": 0.22982129696421355,
+            "chain_diversity": 0.2650311074220975
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4347288011405602,
+            "pocket_recovery": 0.4815725975016593,
+            "pocket_diversity": 0.2808430850752465,
+            "chain_diversity": 0.32254156403459683
+          },
+          "adflip": {
+            "chain_recovery": 0.415277160531918,
+            "pocket_recovery": 0.41731477003684203,
+            "pocket_diversity": 0.012699737125782477,
+            "chain_diversity": 0.011262454806687139
+          }
+        }
+      },
+      "1gx8|1": {
+        "structures": 8,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.44485613609488683,
+            "pocket_recovery": 0.4758485060690943,
+            "pocket_diversity": 0.16005550368295465,
+            "chain_diversity": 0.23662658773744558
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5039691162981024,
+            "pocket_recovery": 0.5348074229691877,
+            "pocket_diversity": 0.16704974582425564,
+            "chain_diversity": 0.23163085821162893
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.47715036412966416,
+            "pocket_recovery": 0.509172502334267,
+            "pocket_diversity": 0.22412231559290383,
+            "chain_diversity": 0.2942292111377176
+          },
+          "adflip": {
+            "chain_recovery": 0.4905726363207457,
+            "pocket_recovery": 0.48739495798319327,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.005699363169815575
+          }
+        }
+      },
+      "1kdk|1": {
+        "structures": 2,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.49945117029862796,
+            "pocket_recovery": 0.5350694444444445,
+            "pocket_diversity": 0.16442901234567903,
+            "chain_diversity": 0.1837054972648193
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5975157384987894,
+            "pocket_recovery": 0.6694444444444445,
+            "pocket_diversity": 0.15895061728395063,
+            "chain_diversity": 0.19788646758138284
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5578030669895078,
+            "pocket_recovery": 0.6722222222222223,
+            "pocket_diversity": 0.1853395061728395,
+            "chain_diversity": 0.24942193525244372
+          },
+          "adflip": {
+            "chain_recovery": 0.5625504439063761,
+            "pocket_recovery": 0.5,
+            "pocket_diversity": 0.014583333333333334,
+            "chain_diversity": 0.00415819209039548
+          }
+        }
+      },
+      "1qkt|1": {
+        "structures": 11,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4166959386172749,
+            "pocket_recovery": 0.5190332864141587,
+            "pocket_diversity": 0.19305783263000476,
+            "chain_diversity": 0.25804467128484193
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4728565635385661,
+            "pocket_recovery": 0.6434385453466084,
+            "pocket_diversity": 0.18083992237220578,
+            "chain_diversity": 0.24826091085521537
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4669177717570229,
+            "pocket_recovery": 0.6368686199309432,
+            "pocket_diversity": 0.14843167899837706,
+            "chain_diversity": 0.28103419172968425
+          },
+          "adflip": {
+            "chain_recovery": 0.4569298808590913,
+            "pocket_recovery": 0.5308421434908849,
+            "pocket_diversity": 0.008123043298481895,
+            "chain_diversity": 0.007949240209746643
+          }
+        }
+      },
+      "2b4l|1": {
+        "structures": 1,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4809701492537313,
+            "pocket_recovery": 0.3,
+            "pocket_diversity": 0.24666666666666667,
+            "chain_diversity": 0.2126865671641791
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5552238805970149,
+            "pocket_recovery": 0.53,
+            "pocket_diversity": 0.4066666666666667,
+            "chain_diversity": 0.23291873963515755
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5384328358208955,
+            "pocket_recovery": 0.19,
+            "pocket_diversity": 0.5955555555555555,
+            "chain_diversity": 0.2906301824212272
+          },
+          "adflip": {
+            "chain_recovery": 0.5466417910447762,
+            "pocket_recovery": 0.3,
+            "pocket_diversity": 0.0,
+            "chain_diversity": 0.0041459369817578775
+          }
+        }
+      },
+      "2ydw|1": {
+        "structures": 19,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.4619957729154734,
+            "pocket_recovery": 0.5437781954887217,
+            "pocket_diversity": 0.15555662660925818,
+            "chain_diversity": 0.21591689821672896
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.5763169219409332,
+            "pocket_recovery": 0.7462167437825332,
+            "pocket_diversity": 0.08310284257652678,
+            "chain_diversity": 0.20720616721896093
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.5576729447027573,
+            "pocket_recovery": 0.6862321669558512,
+            "pocket_diversity": 0.1468609022556391,
+            "chain_diversity": 0.254865881936375
+          },
+          "adflip": {
+            "chain_recovery": 0.5894818093389949,
+            "pocket_recovery": 0.6722334682860999,
+            "pocket_diversity": 0.002249212775528565,
+            "chain_diversity": 0.004098152317596243
+          }
+        }
+      },
+      "2yfe|1": {
+        "structures": 8,
+        "models": {
+          "e18": {
+            "chain_recovery": 0.41468580156597984,
+            "pocket_recovery": 0.30303165584415587,
+            "pocket_diversity": 0.2187351691518358,
+            "chain_diversity": 0.26014444423566213
+          },
+          "ligandmpnn": {
+            "chain_recovery": 0.4765540310677517,
+            "pocket_recovery": 0.380036075036075,
+            "pocket_diversity": 0.25259870530703865,
+            "chain_diversity": 0.25214126653000796
+          },
+          "lasermpnn": {
+            "chain_recovery": 0.4611227171715753,
+            "pocket_recovery": 0.37424828643578645,
+            "pocket_diversity": 0.28730018438351773,
+            "chain_diversity": 0.289945306217041
+          },
+          "adflip": {
+            "chain_recovery": 0.4739284489711702,
+            "pocket_recovery": 0.2899034992784993,
+            "pocket_diversity": 0.007208994708994709,
+            "chain_diversity": 0.010751426375038429
+          }
+        }
+      }
+    },
+    "structures": 60
+  }
+}

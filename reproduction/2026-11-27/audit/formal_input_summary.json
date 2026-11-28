@@ -1,0 +1,86 @@
+{
+  "status": "shared_input_panel_frozen_after_all_parse_checks",
+  "candidate_manifest_sha256": "fbca3297d93a09bb2dd21666a20e6de29b4b8e5a7fa1cdab401203ab97ab0c3b",
+  "server_directory": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ",
+  "materialized_inputs": 140,
+  "shared_parser_panel_size": 140,
+  "shared_parser_panel_counts": {
+    "enzyme": 80,
+    "nonenzyme": 60
+  },
+  "family_counts": {
+    "enzyme": 8,
+    "nonenzyme": 7
+  },
+  "parser_audit": {
+    "e18": {
+      "counts": {
+        "pass": 140
+      },
+      "max_backbone_delta_A": 8.329679129921083e-06,
+      "max_ligand_delta_A": 7.320915903256128e-06,
+      "cases_with_internal_ligand_caps": 0,
+      "report_sha256": "93ae7b6e15c374573ca650badf2d3ee369970dbf878bd97747dc46b1762db019"
+    },
+    "ligandmpnn": {
+      "counts": {
+        "pass": 140
+      },
+      "max_backbone_delta_A": 8.329679129921083e-06,
+      "max_ligand_delta_A": 7.320915903256128e-06,
+      "cases_with_internal_ligand_caps": 0,
+      "report_sha256": "93ae7b6e15c374573ca650badf2d3ee369970dbf878bd97747dc46b1762db019"
+    },
+    "lasermpnn": {
+      "counts": {
+        "pass": 140
+      },
+      "max_backbone_delta_A": 8.329679129921083e-06,
+      "max_ligand_delta_A": 7.320915903256128e-06,
+      "cases_with_internal_ligand_caps": 3,
+      "report_sha256": "adc074769975fbc49b6b99b405f5be0ff626ee911b6d7bac7c3e5df49c39650d"
+    },
+    "adflip": {
+      "counts": {
+        "pass": 140
+      },
+      "max_backbone_delta_A": 8.329679129921083e-06,
+      "max_ligand_delta_A": 7.320915903256128e-06,
+      "cases_with_internal_ligand_caps": 0,
+      "report_sha256": "93ae7b6e15c374573ca650badf2d3ee369970dbf878bd97747dc46b1762db019"
+    }
+  },
+  "active_input_manifest": {
+    "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/common_panel.jsonl",
+    "sha256": "0db87bfde49d33fddb25d9826b170191b6302db419b21c57d3f781242064658a"
+  },
+  "group_scoring_references": {
+    "enzyme": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/scoring_references_enzyme.jsonl",
+      "sha256": "7c284d33a26f1877840b81cbdb79921baf908ca0effbf4bc1956de5df00b72f9",
+      "structures": 80
+    },
+    "nonenzyme": {
+      "path": "/data_raid/yxhuang/ligandchorus_baseline_integration_20261127.Q63llc/formal_inputs_20261127.v40feGpQ/scoring_references_nonenzyme.jsonl",
+      "sha256": "96075839015476a0f20f34889a546ca1483558e6f2f964b354e6acddca7535d3",
+      "structures": 60
+    }
+  },
+  "ligand_parser_flags": {
+    "lasermpnn_noncanonical_ligand_cases": 3,
+    "ligand_altloc_cases": 1
+  },
+  "excluded": [],
+  "formal_scoring_budget": {
+    "models": [
+      "e18",
+      "ligandmpnn",
+      "lasermpnn",
+      "adflip"
+    ],
+    "samples_per_model_per_structure": 10,
+    "planned_total_sequences": 5600,
+    "formal_sequences_generated": 0,
+    "remaining": "Freeze per-model runtime sampling settings and verify production runners before sequence generation"
+  }
+}

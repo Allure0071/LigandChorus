@@ -1,0 +1,279 @@
+Validating 128 structures every 1000 steps and at the final step with seed 0
+Loading 5044 training assemblies
+Target-chain supervision enabled for 3460336 known residues
+Step 1/25000: loss = 3.3446
+Step 100/25000: loss = 1.8349
+Step 200/25000: loss = 1.4829
+Step 300/25000: loss = 1.7174
+Step 400/25000: loss = 1.6544
+Step 500/25000: loss = 1.5522
+Step 600/25000: loss = 1.3666
+Step 700/25000: loss = 1.5777
+Step 800/25000: loss = 1.5612
+Step 900/25000: loss = 1.4495
+Step 1000/25000: loss = 1.4196
+Validation {"step": 1000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.6383179789409041, "chain_recovery": 0.47878555953502655, "pocket_recovery": 0.438770055770874, "pocket_diversity": 0.2161918357014656, "saved_best": true}
+Step 1100/25000: loss = 1.8393
+Step 1200/25000: loss = 1.6363
+Step 1300/25000: loss = 1.5143
+Step 1400/25000: loss = 1.4011
+Step 1500/25000: loss = 1.5461
+Step 1600/25000: loss = 1.7078
+Step 1700/25000: loss = 1.3625
+Step 1800/25000: loss = 1.4168
+Step 1900/25000: loss = 1.2259
+Step 2000/25000: loss = 1.4757
+Validation {"step": 2000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.6219457224942744, "chain_recovery": 0.47876985371112823, "pocket_recovery": 0.4585714340209961, "pocket_diversity": 0.22077497839927673, "saved_best": true}
+Step 2100/25000: loss = 1.2943
+Step 2200/25000: loss = 1.2021
+Step 2300/25000: loss = 1.4714
+Step 2400/25000: loss = 1.3580
+Step 2500/25000: loss = 1.5644
+Step 2600/25000: loss = 1.3636
+Step 2700/25000: loss = 1.6056
+Step 2800/25000: loss = 1.4725
+Step 2900/25000: loss = 1.3695
+Step 3000/25000: loss = 1.2350
+Validation {"step": 3000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.6208384037017822, "chain_recovery": 0.4803256243467331, "pocket_recovery": 0.45527273416519165, "pocket_diversity": 0.19907407462596893, "saved_best": false}
+Step 3100/25000: loss = 1.4612
+Step 3200/25000: loss = 1.4526
+Step 3300/25000: loss = 1.5039
+Step 3400/25000: loss = 1.3114
+Step 3500/25000: loss = 1.6951
+Step 3600/25000: loss = 1.1991
+Step 3700/25000: loss = 1.5230
+Step 3800/25000: loss = 1.0252
+Step 3900/25000: loss = 1.1998
+Step 4000/25000: loss = 1.1841
+Validation {"step": 4000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.636876855045557, "chain_recovery": 0.484684482216835, "pocket_recovery": 0.463333323597908, "pocket_diversity": 0.20055556297302246, "saved_best": true}
+Step 4100/25000: loss = 1.3505
+Step 4200/25000: loss = 1.1740
+Step 4300/25000: loss = 0.9659
+Step 4400/25000: loss = 1.4287
+Step 4500/25000: loss = 1.4309
+Step 4600/25000: loss = 1.3134
+Step 4700/25000: loss = 1.4120
+Step 4800/25000: loss = 1.4272
+Step 4900/25000: loss = 1.3140
+Step 5000/25000: loss = 1.1019
+Validation {"step": 5000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.6358338631689548, "chain_recovery": 0.4818354994058609, "pocket_recovery": 0.45000000298023224, "pocket_diversity": 0.20082788914442062, "saved_best": false}
+Step 5100/25000: loss = 1.2561
+Step 5200/25000: loss = 1.1527
+Step 5300/25000: loss = 1.2607
+Step 5400/25000: loss = 1.4630
+Step 5500/25000: loss = 1.4652
+Step 5600/25000: loss = 0.8406
+Step 5700/25000: loss = 1.1497
+Step 5800/25000: loss = 1.3431
+Step 5900/25000: loss = 1.2869
+Step 6000/25000: loss = 0.8779
+Validation {"step": 6000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.655781561974436, "chain_recovery": 0.4774400144815445, "pocket_recovery": 0.4412587434053421, "pocket_diversity": 0.1960233971476555, "saved_best": false}
+Step 6100/25000: loss = 1.0375
+Step 6200/25000: loss = 0.9830
+Step 6300/25000: loss = 1.4215
+Step 6400/25000: loss = 1.3257
+Step 6500/25000: loss = 1.2710
+Step 6600/25000: loss = 1.3200
+Step 6700/25000: loss = 1.4604
+Step 6800/25000: loss = 1.2198
+Step 6900/25000: loss = 0.8492
+Step 7000/25000: loss = 1.3640
+Validation {"step": 7000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.6699318056926131, "chain_recovery": 0.47412216663360596, "pocket_recovery": 0.45147058367729187, "pocket_diversity": 0.17974359542131424, "saved_best": false}
+Step 7100/25000: loss = 1.1685
+Step 7200/25000: loss = 1.2027
+Step 7300/25000: loss = 1.3296
+Step 7400/25000: loss = 1.0811
+Step 7500/25000: loss = 1.1839
+Step 7600/25000: loss = 1.3515
+Step 7700/25000: loss = 1.2687
+Step 7800/25000: loss = 0.8081
+Step 7900/25000: loss = 1.2870
+Step 8000/25000: loss = 1.2843
+Validation {"step": 8000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.6928496109321713, "chain_recovery": 0.46834249794483185, "pocket_recovery": 0.45000000298023224, "pocket_diversity": 0.17685185372829437, "saved_best": false}
+Step 8100/25000: loss = 0.8723
+Step 8200/25000: loss = 0.7618
+Step 8300/25000: loss = 1.4365
+Step 8400/25000: loss = 0.7942
+Step 8500/25000: loss = 1.1493
+Step 8600/25000: loss = 1.2178
+Step 8700/25000: loss = 1.5136
+Step 8800/25000: loss = 1.1148
+Step 8900/25000: loss = 1.2865
+Step 9000/25000: loss = 1.5271
+Validation {"step": 9000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.716424566693604, "chain_recovery": 0.4653986543416977, "pocket_recovery": 0.4375, "pocket_diversity": 0.1829131692647934, "saved_best": false}
+Step 9100/25000: loss = 1.5950
+Step 9200/25000: loss = 0.9203
+Step 9300/25000: loss = 0.9148
+Step 9400/25000: loss = 1.0369
+Step 9500/25000: loss = 0.7493
+Step 9600/25000: loss = 1.0700
+Step 9700/25000: loss = 1.6801
+Step 9800/25000: loss = 1.0366
+Step 9900/25000: loss = 1.3013
+Step 10000/25000: loss = 0.8045
+Validation {"step": 10000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.6755689182318747, "chain_recovery": 0.4702656716108322, "pocket_recovery": 0.43416666984558105, "pocket_diversity": 0.18949034810066223, "saved_best": false}
+Step 10100/25000: loss = 1.1287
+Step 10200/25000: loss = 1.5413
+Step 10300/25000: loss = 1.3318
+Step 10400/25000: loss = 1.0580
+Step 10500/25000: loss = 1.0010
+Step 10600/25000: loss = 0.8855
+Step 10700/25000: loss = 0.8774
+Step 10800/25000: loss = 1.1654
+Step 10900/25000: loss = 1.2828
+Step 11000/25000: loss = 1.0506
+Validation {"step": 11000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.7311547305434942, "chain_recovery": 0.4679886996746063, "pocket_recovery": 0.4418831169605255, "pocket_diversity": 0.16457516700029373, "saved_best": false}
+Step 11100/25000: loss = 0.7481
+Step 11200/25000: loss = 1.0264
+Step 11300/25000: loss = 0.7237
+Step 11400/25000: loss = 0.7073
+Step 11500/25000: loss = 0.7708
+Step 11600/25000: loss = 0.9044
+Step 11700/25000: loss = 0.9304
+Step 11800/25000: loss = 1.2404
+Step 11900/25000: loss = 0.8540
+Step 12000/25000: loss = 0.8345
+Validation {"step": 12000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.7997582661919296, "chain_recovery": 0.4596199244260788, "pocket_recovery": 0.42991071939468384, "pocket_diversity": 0.1531623974442482, "saved_best": false}
+Step 12100/25000: loss = 0.7867
+Step 12200/25000: loss = 1.0869
+Step 12300/25000: loss = 1.0594
+Step 12400/25000: loss = 1.0589
+Step 12500/25000: loss = 0.6182
+Step 12600/25000: loss = 1.0561
+Step 12700/25000: loss = 0.9033
+Step 12800/25000: loss = 0.6555
+Step 12900/25000: loss = 0.7134
+Step 13000/25000: loss = 0.9097
+Validation {"step": 13000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.7474636225961149, "chain_recovery": 0.46717168390750885, "pocket_recovery": 0.4310096204280853, "pocket_diversity": 0.18466666340827942, "saved_best": false}
+Step 13100/25000: loss = 0.5604
+Step 13200/25000: loss = 0.8761
+Step 13300/25000: loss = 1.2115
+Step 13400/25000: loss = 0.9790
+Step 13500/25000: loss = 1.2464
+Step 13600/25000: loss = 0.7343
+Step 13700/25000: loss = 1.1354
+Step 13800/25000: loss = 0.6909
+Step 13900/25000: loss = 0.9504
+Step 14000/25000: loss = 0.4810
+Validation {"step": 14000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.7956627868115902, "chain_recovery": 0.46556153893470764, "pocket_recovery": 0.436397060751915, "pocket_diversity": 0.15266107022762299, "saved_best": false}
+Step 14100/25000: loss = 1.2599
+Step 14200/25000: loss = 0.8199
+Step 14300/25000: loss = 1.1712
+Step 14400/25000: loss = 0.9362
+Step 14500/25000: loss = 0.3982
+Step 14600/25000: loss = 1.0768
+Step 14700/25000: loss = 1.0024
+Step 14800/25000: loss = 0.4944
+Step 14900/25000: loss = 1.5116
+Step 15000/25000: loss = 1.4393
+Validation {"step": 15000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.7732657263986766, "chain_recovery": 0.4575997143983841, "pocket_recovery": 0.42752525210380554, "pocket_diversity": 0.1710910052061081, "saved_best": false}
+Step 15100/25000: loss = 0.8058
+Step 15200/25000: loss = 1.2550
+Step 15300/25000: loss = 0.4777
+Step 15400/25000: loss = 1.0688
+Step 15500/25000: loss = 1.0665
+Step 15600/25000: loss = 1.0441
+Step 15700/25000: loss = 0.6027
+Step 15800/25000: loss = 1.0054
+Step 15900/25000: loss = 0.8895
+Step 16000/25000: loss = 0.8107
+Validation {"step": 16000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.7953859036788344, "chain_recovery": 0.4621155112981796, "pocket_recovery": 0.4177865535020828, "pocket_diversity": 0.15293209999799728, "saved_best": false}
+Step 16100/25000: loss = 0.7078
+Step 16200/25000: loss = 0.5647
+Step 16300/25000: loss = 0.7931
+Step 16400/25000: loss = 0.9044
+Step 16500/25000: loss = 0.7731
+Step 16600/25000: loss = 0.8209
+Step 16700/25000: loss = 0.5470
+Step 16800/25000: loss = 0.8266
+Step 16900/25000: loss = 0.9025
+Step 17000/25000: loss = 0.9067
+Validation {"step": 17000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.7887993659824133, "chain_recovery": 0.4625987708568573, "pocket_recovery": 0.408391609787941, "pocket_diversity": 0.16235432028770447, "saved_best": false}
+Step 17100/25000: loss = 0.8333
+Step 17200/25000: loss = 0.6123
+Step 17300/25000: loss = 0.6224
+Step 17400/25000: loss = 0.7279
+Step 17500/25000: loss = 1.1902
+Step 17600/25000: loss = 0.8217
+Step 17700/25000: loss = 1.0205
+Step 17800/25000: loss = 1.0134
+Step 17900/25000: loss = 0.7388
+Step 18000/25000: loss = 1.2060
+Validation {"step": 18000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.881848206743598, "chain_recovery": 0.4594995528459549, "pocket_recovery": 0.41277173161506653, "pocket_diversity": 0.1442222222685814, "saved_best": false}
+Step 18100/25000: loss = 0.6398
+Step 18200/25000: loss = 0.7000
+Step 18300/25000: loss = 0.9550
+Step 18400/25000: loss = 1.0679
+Step 18500/25000: loss = 1.4245
+Step 18600/25000: loss = 0.6355
+Step 18700/25000: loss = 0.8749
+Step 18800/25000: loss = 0.8124
+Step 18900/25000: loss = 1.0617
+Step 19000/25000: loss = 0.9863
+Validation {"step": 19000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.8134570578113198, "chain_recovery": 0.45160894095897675, "pocket_recovery": 0.4126984179019928, "pocket_diversity": 0.16199813783168793, "saved_best": false}
+Step 19100/25000: loss = 1.1124
+Step 19200/25000: loss = 0.8955
+Step 19300/25000: loss = 0.4243
+Step 19400/25000: loss = 0.9442
+Step 19500/25000: loss = 0.9524
+Step 19600/25000: loss = 0.8791
+Step 19700/25000: loss = 0.9605
+Step 19800/25000: loss = 0.9682
+Step 19900/25000: loss = 0.9489
+Step 20000/25000: loss = 1.3356
+Validation {"step": 20000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.8162930184043944, "chain_recovery": 0.4586399048566818, "pocket_recovery": 0.38708335161209106, "pocket_diversity": 0.1436126008629799, "saved_best": false}
+Step 20100/25000: loss = 0.3251
+Step 20200/25000: loss = 1.0487
+Step 20300/25000: loss = 0.4814
+Step 20400/25000: loss = 0.9685
+Step 20500/25000: loss = 1.2510
+Step 20600/25000: loss = 0.8350
+Step 20700/25000: loss = 1.1359
+Step 20800/25000: loss = 0.9477
+Step 20900/25000: loss = 0.5226
+Step 21000/25000: loss = 1.2994
+Validation {"step": 21000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.8989899144507945, "chain_recovery": 0.4528803378343582, "pocket_recovery": 0.40294119715690613, "pocket_diversity": 0.13377778232097626, "saved_best": false}
+Step 21100/25000: loss = 0.7788
+Step 21200/25000: loss = 0.9423
+Step 21300/25000: loss = 1.1160
+Step 21400/25000: loss = 0.9503
+Step 21500/25000: loss = 0.1883
+Step 21600/25000: loss = 0.8567
+Step 21700/25000: loss = 1.2600
+Step 21800/25000: loss = 1.1263
+Step 21900/25000: loss = 1.1462
+Step 22000/25000: loss = 0.9436
+Validation {"step": 22000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.9038339741528034, "chain_recovery": 0.45351698994636536, "pocket_recovery": 0.3932126760482788, "pocket_diversity": 0.14108310639858246, "saved_best": false}
+Step 22100/25000: loss = 0.5139
+Step 22200/25000: loss = 0.6845
+Step 22300/25000: loss = 0.6802
+Step 22400/25000: loss = 1.0582
+Step 22500/25000: loss = 0.5667
+Step 22600/25000: loss = 0.8533
+Step 22700/25000: loss = 0.9487
+Step 22800/25000: loss = 0.6776
+Step 22900/25000: loss = 0.9656
+Step 23000/25000: loss = 0.5605
+Validation {"step": 23000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.8953870427794755, "chain_recovery": 0.46104322373867035, "pocket_recovery": 0.4025000035762787, "pocket_diversity": 0.15373466908931732, "saved_best": false}
+Step 23100/25000: loss = 0.8498
+Step 23200/25000: loss = 0.4448
+Step 23300/25000: loss = 1.1267
+Step 23400/25000: loss = 0.4283
+Step 23500/25000: loss = 0.8093
+Step 23600/25000: loss = 0.9709
+Step 23700/25000: loss = 0.1926
+Step 23800/25000: loss = 0.9072
+Step 23900/25000: loss = 0.6113
+Step 24000/25000: loss = 0.5978
+Validation {"step": 24000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.9200687943957746, "chain_recovery": 0.4584656059741974, "pocket_recovery": 0.3934873938560486, "pocket_diversity": 0.14701754599809647, "saved_best": false}
+Step 24100/25000: loss = 0.9400
+Step 24200/25000: loss = 0.8130
+Step 24300/25000: loss = 0.7765
+Step 24400/25000: loss = 0.7627
+Step 24500/25000: loss = 0.9337
+Step 24600/25000: loss = 0.5639
+Step 24700/25000: loss = 0.7175
+Step 24800/25000: loss = 1.6745
+Step 24900/25000: loss = 0.9417
+Step 25000/25000: loss = 0.6751
+Validation {"step": 25000, "structures": 128, "samples_per_structure": 10, "masked_ce": 1.9441824033856392, "chain_recovery": 0.45667538046836853, "pocket_recovery": 0.40909090638160706, "pocket_diversity": 0.14754042029380798, "saved_best": false}

@@ -14,6 +14,7 @@ import torch
 
 from .features import structure_to_feature_dict
 from .model import build_model
+from .quota_masking import masked_training_input, quota_trajectory
 from .sampling import regional_temperature
 from .substitution_schedule import benchmark_schedule
 
@@ -31,7 +32,8 @@ def main():
     parser.add_argument("--selection", type=Path, required=True)
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--encoder-weights", type=Path, required=True)
-    parser.add_argument("--blosum", type=Path, required=True)
+    parser.add_argument("--blosum", type=Path)
+    parser.add_argument("--plan1", action="store_true", help="Train five masked stages and reveal locked confidence-ranked quotas")
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--smoke", action="store_true")
     parser.add_argument("--grade-table", type=Path, help="GraDe-IF's pinned BLOSUM temperature table (500 stages, stride 100)")
@@ -55,6 +57,10 @@ def main():
     args = parser.parse_args()
     if args.updates < 1:
         parser.error("--updates must be positive")
+    if args.plan1 and (args.grade_table or args.terminal_readout):
+        parser.error("--plan1 uses quota sampling and its own time grid")
+    if not args.plan1 and not args.blosum:
+        parser.error("substitution benchmarks require --blosum")
     readout = args.terminal_readout or ("argmax" if args.grade_table else "sample")
     rows = verified_json(
         args.selection,
@@ -76,24 +82,27 @@ def main():
     ):
         raise ValueError("Missing or overlapping benchmark structures")
 
-    matrix = args.blosum.read_bytes()
-    if (
-        hashlib.sha256(matrix).hexdigest()
-        != "85510d3846ee6d5f4778e425cf8daf6e0dbb889b306f2d13434e1254780efb40"
-    ):
-        raise ValueError("Expected Biopython BLOSUM62 (half-bit units)")
-    lines = [
-        line.split()
-        for line in matrix.decode().splitlines()
-        if line.strip() and not line.startswith("#")
-    ]
-    table = {line[0]: line[1:] for line in lines[1:]}
-    alphabet = "ACDEFGHIKLMNPQRSTVWY"
-    scores = torch.tensor(
-        [[int(table[a][lines[0].index(b)]) for b in alphabet] for a in alphabet],
-        dtype=torch.float64,
-    )
-    forward_weights, products, transitions, grid = benchmark_schedule(scores, args.grade_table)
+    if args.plan1:
+        grid = (0, 1, 2, 3, 4, 5)
+    else:
+        matrix = args.blosum.read_bytes()
+        if (
+            hashlib.sha256(matrix).hexdigest()
+            != "85510d3846ee6d5f4778e425cf8daf6e0dbb889b306f2d13434e1254780efb40"
+        ):
+            raise ValueError("Expected Biopython BLOSUM62 (half-bit units)")
+        lines = [
+            line.split()
+            for line in matrix.decode().splitlines()
+            if line.strip() and not line.startswith("#")
+        ]
+        table = {line[0]: line[1:] for line in lines[1:]}
+        alphabet = "ACDEFGHIKLMNPQRSTVWY"
+        scores = torch.tensor(
+            [[int(table[a][lines[0].index(b)]) for b in alphabet] for a in alphabet],
+            dtype=torch.float64,
+        )
+        forward_weights, products, transitions, grid = benchmark_schedule(scores, args.grade_table)
     horizon = grid[-1]
 
     if args.resume and not args.generation:
@@ -116,9 +125,10 @@ def main():
     assert not model.ligandmpnn.training and all(
         not p.requires_grad for p in model.ligandmpnn.parameters()
     )
-    forward_weights = forward_weights.float().to(device)
-    transitions = transitions.float().to(device)
-    products = products.float().to(device)
+    if not args.plan1:
+        forward_weights = forward_weights.float().to(device)
+        transitions = transitions.float().to(device)
+        products = products.float().to(device)
 
     @lru_cache(maxsize=24)
     def shard(name):
@@ -154,6 +164,8 @@ def main():
         design = mask.bool() & chain.to(device).bool()
         temperature = temperature.to(device)
         generator = torch.Generator(device=device).manual_seed(seed)
+        if args.plan1:
+            return quota_trajectory(model, encoded, mask, design, temperature, generator)
         state = torch.randint(20, mask.shape, generator=generator, device=device)
         state = state.masked_fill(~design, model.mask_token)
         history = [state]
@@ -185,7 +197,7 @@ def main():
                 "structures": len(train_rows),
                 "updates": steps,
                 "device": torch.cuda.get_device_name(),
-                "objective": "native-substitution-CE",
+                "objective": "masked-native-CE" if args.plan1 else "native-substitution-CE",
             }
         ),
         flush=True,
@@ -200,12 +212,15 @@ def main():
         native = native.to(device)
         mask, chain = mask.to(device), chain.to(device)
         valid = mask.bool() & chain.bool() & native.ge(0) & native.lt(20)
-        noisy = native.clone()
-        noisy[valid] = torch.multinomial(
-            forward_weights[stage, native[valid]], 1, generator=generator
-        ).flatten()
-        noisy[~mask.bool()] = 20
-        t = torch.full((native.shape[0],), stage / horizon, device=device)
+        if args.plan1:
+            noisy, t, valid = masked_training_input(native, valid, stage, generator)
+        else:
+            noisy = native.clone()
+            noisy[valid] = torch.multinomial(
+                forward_weights[stage, native[valid]], 1, generator=generator
+            ).flatten()
+            noisy[~mask.bool()] = 20
+            t = torch.full((native.shape[0],), stage / horizon, device=device)
         return (
             tuple(v.to(device) for v in encoded),
             native,
@@ -217,7 +232,7 @@ def main():
         )
 
     run_key = {
-        "protocol": "e18-grade500-v1" if args.grade_table else "e18-blosum5-v1",
+        "protocol": "e18-maskquota5-v1" if args.plan1 else ("e18-grade500-v1" if args.grade_table else "e18-blosum5-v1"),
         "structures": len(train_rows),
         "steps": steps,
         "encoder_sha256": hashlib.sha256(args.encoder_weights.read_bytes()).hexdigest(),
@@ -260,7 +275,7 @@ def main():
                     train_entry(index), stage
                 )
                 loss = model.compute_substitution_loss(
-                    {"mask": mask, "chain_mask": chain}, native, noisy, t, encoded=enc
+                    {"mask": mask, "chain_mask": valid if args.plan1 else chain}, native, noisy, t, encoded=enc
                 )
                 (loss / 4).backward()
                 batch_loss += float(loss.detach()) / 4
@@ -329,7 +344,7 @@ def main():
                 "position_zero_based": position,
                 "states": after[:, sample, position].tolist(),
             }
-        if args.smoke and example is None:
+        if args.smoke and not args.plan1 and example is None:
             raise RuntimeError("No same-site repeated revision observed in smoke test")
         audit = {
             "step": steps,
@@ -364,11 +379,19 @@ def main():
                     "steps": 5,
                     "training_updates": steps,
                     "protocol": run_key["protocol"],
-                    "time_grid": list(reversed(grid)),
+                    "time_grid": list(grid) if args.plan1 else list(reversed(grid)),
                     "terminal_readout": readout,
                     "preterminal_sha256": hashlib.sha256(trajectory[:-1].cpu().numpy().tobytes()).hexdigest(),
                     "metrics": {},
                 }
+                if args.plan1:
+                    designed = (mask.bool() & chain.bool())[0].to(device)
+                    filled = trajectory.ne(20).sum(-1)
+                    expected = (torch.arange(6, device=device) * designed.sum() + 4) // 5
+                    torch.testing.assert_close(filled, expected[:, None].expand_as(filled))
+                    if ((trajectory[:-1] != 20) & (trajectory[:-1] != trajectory[1:])).any() or trajectory[:, :, ~designed].ne(20).any():
+                        raise RuntimeError("Quota sampler overwrote a locked or excluded site")
+                    row["filled_by_round"] = filled[:, 0].tolist()
                 for region, keep in (("global", valid), ("interface", pocket)):
                     keep = keep[0].to(device)
                     if not keep.any():
@@ -408,7 +431,7 @@ def main():
                 )
             quality = {
                 **reference["metrics"],
-                ("blosum5_regional_0.29_0.24" if not args.grade_table and readout == "sample"
+                ("blosum5_regional_0.29_0.24" if not args.plan1 and not args.grade_table and readout == "sample"
                  else f"{run_key['protocol']}_{readout}_{steps}updates"): summaries["check"],
             }
             differences = {
@@ -423,7 +446,7 @@ def main():
                     {
                         "check_pdbs": reference["check_pdbs"],
                         "metrics": quality,
-                        "scheme2_minus_reference_pp": differences,
+                        ("scheme1_minus_reference_pp" if args.plan1 else "scheme2_minus_reference_pp"): differences,
                     },
                     indent=2,
                 )
